@@ -23,9 +23,9 @@ entity sel_disp is
 end entity;
 
 architecture arch of sel_disp is
-
-	signal BCD	: std_logic_vector (3 downto 0);
-	signal SSD	: std_logic_vector (6 downto 0);
+	signal sel : std_logic_vector (2 downto 0);
+	signal BCD_in	: std_logic_vector (3 downto 0);
+	signal SSD_out, tmp	: std_logic_vector (6 downto 0);
 	
 	component bcd2ssd
 		port 
@@ -37,23 +37,27 @@ architecture arch of sel_disp is
 	
 begin
 
-	bcd0: bcd2ssd port map (BCD => BCD,
-	                        SSD => SSD );
-									
-	BCD <=	BCD_secU when sel_in = "000" else
-				BCD_secD when sel_in = "001" else
-				BCD_minU when sel_in = "010" else
-				BCD_minD when sel_in = "011" else
-				BCD_horU when sel_in = "100" else
-				BCD_horD when sel_in = "101";
+	bcd0: bcd2ssd port map (BCD => BCD_in,
+	                        SSD => SSD_out );
+
+	sel <= sel_in;
+	
+	WITH sel SELECT
+	BCD_in <=	BCD_secU when "000",
+				BCD_secD when "001",
+				BCD_minU when "010",
+				BCD_minD when "011",
+				BCD_horU when "100",
+				BCD_horD when "101",
+				"0000" when others;
 				
-	SSD <=	SSD_secU when sel_in = "000" else
-				SSD_secD when sel_in = "001" else
-				SSD_minU when sel_in = "010" else
-				SSD_minD when sel_in = "011" else
-				SSD_horU when sel_in = "100" else
-				SSD_horD when sel_in = "101";
-		
+	SSD_secU <= SSD_out when sel = "000" else (others => '1');
+	SSD_secD <= SSD_out when sel = "001" else (others => '1');
+	SSD_minU <= SSD_out when sel = "010" else (others => '1');
+	SSD_minD <= SSD_out when sel = "011" else (others => '1');
+	SSD_horU <= SSD_out when sel = "100" else (others => '1');
+	SSD_horD <= SSD_out when sel = "101" else (others => '1');
+
 end arch;
 
 
