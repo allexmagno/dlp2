@@ -14,7 +14,8 @@ entity timer is
 end entity;
 
 architecture bcd_two_digits of timer is
-	signal sec_reg, sec_next : unsigned(7 downto 0);
+	signal sec_reg, sec_next: unsigned(7 downto 0);
+	signal src0, src1, src2 : integer;
 	signal min_reg, min_next : unsigned(7 downto 0);
 	signal hour_reg, hour_next : unsigned(7 downto 0);
 		
@@ -32,20 +33,26 @@ begin
 			 hour_reg <= hour_next;
        end if;
     end process;
+	 
+	 src0 <=	7 when (sec_reg(3 downto 0) = 9) else
+				1;
 
-	sec_next <= (others=>'0') when (sec_reg= x"59") else					
-				(sec_reg + 7) when (sec_reg(3 downto 0) = 9) else 
-				(sec_reg + 1);
+	src1 <=	7 when (min_reg(3 downto 0)= 9 AND sec_reg= x"59") else
+				1 when sec_reg= x"59" else
+				0;
+	
+	src2 <=	7 when ((hour_reg(3 downto 0)= 9) AND min_reg = x"59" AND sec_reg = x"59") else
+				1 when (min_reg = x"59" AND sec_reg = x"59") else
+				0;
+	 
+	sec_next <= (others=>'0') when (sec_reg= x"59") else
+				(sec_reg + src0);
 				
   	min_next <= (others=>'0') when (min_reg= x"59" AND sec_reg= x"59") else					
-  				(min_reg + 7) when (min_reg(3 downto 0)= 9 AND sec_reg= x"59") else 
-  				(min_reg + 1) when (sec_reg= x"59") else
-				 min_reg ; 
+  				(min_reg + src1); 
 			  
    hour_next<= (others=>'0') when (hour_reg= x"23" AND min_reg = x"59" AND sec_reg = x"59") else					
-				(hour_reg + 7) when ((hour_reg(3 downto 0)= 9) AND min_reg = x"59" AND sec_reg = x"59") else 
-				(hour_reg + 1) when (min_reg = x"59" AND sec_reg = x"59") else
-				 hour_reg;
+				(hour_reg + src2);
 					  
 	secU <= std_logic_vector(sec_reg(3 downto 0));
 	secT <= std_logic_vector(sec_reg(7 downto 4));
