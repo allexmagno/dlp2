@@ -1,0 +1,1676 @@
+TimeQuest Timing Analyzer report for top_timer_de2_115
+Sat Oct 12 22:19:59 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'clk'
+ 14. Slow 1200mV 85C Model Hold: 'clk'
+ 15. Slow 1200mV 85C Model Minimum Pulse Width: 'clk'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Slow 1200mV 85C Model Metastability Report
+ 21. Slow 1200mV 0C Model Fmax Summary
+ 22. Slow 1200mV 0C Model Setup Summary
+ 23. Slow 1200mV 0C Model Hold Summary
+ 24. Slow 1200mV 0C Model Recovery Summary
+ 25. Slow 1200mV 0C Model Removal Summary
+ 26. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 27. Slow 1200mV 0C Model Setup: 'clk'
+ 28. Slow 1200mV 0C Model Hold: 'clk'
+ 29. Slow 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Slow 1200mV 0C Model Metastability Report
+ 35. Fast 1200mV 0C Model Setup Summary
+ 36. Fast 1200mV 0C Model Hold Summary
+ 37. Fast 1200mV 0C Model Recovery Summary
+ 38. Fast 1200mV 0C Model Removal Summary
+ 39. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 40. Fast 1200mV 0C Model Setup: 'clk'
+ 41. Fast 1200mV 0C Model Hold: 'clk'
+ 42. Fast 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 43. Setup Times
+ 44. Hold Times
+ 45. Clock to Output Times
+ 46. Minimum Clock to Output Times
+ 47. Fast 1200mV 0C Model Metastability Report
+ 48. Multicorner Timing Analysis Summary
+ 49. Setup Times
+ 50. Hold Times
+ 51. Clock to Output Times
+ 52. Minimum Clock to Output Times
+ 53. Board Trace Model Assignments
+ 54. Input Transition Times
+ 55. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 56. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 57. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 58. Setup Transfers
+ 59. Hold Transfers
+ 60. Report TCCS
+ 61. Report RSKM
+ 62. Unconstrained Paths
+ 63. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; top_timer_de2_115                                                  ;
+; Device Family      ; Cyclone IV E                                                       ;
+; Device Name        ; EP4CE115F29C7                                                      ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Enabled                                                            ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ; < 0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; SDC1.sdc      ; OK     ; Sat Oct 12 22:19:52 2019 ;
++---------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                       ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; 377.5 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -1.649 ; -11.918            ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.402 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -20.990                          ;
++-------+--------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                             ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; -1.649 ; min_d_sleep_reg[3]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.081     ; 2.566      ;
+; -1.645 ; min_d_sleep_reg[0]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.080     ; 2.563      ;
+; -1.527 ; min_d_sleep_reg[1]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.080     ; 2.445      ;
+; -1.511 ; state_reg.wait_button1 ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.080     ; 2.429      ;
+; -1.511 ; state_reg.wait_button1 ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.080     ; 2.429      ;
+; -1.500 ; min_d_sleep_reg[2]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.081     ; 2.417      ;
+; -1.293 ; min_d_sleep_reg[3]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.081     ; 2.210      ;
+; -1.289 ; state_reg.wait_button1 ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.081     ; 2.206      ;
+; -1.289 ; state_reg.wait_button1 ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.081     ; 2.206      ;
+; -1.284 ; min_d_sleep_reg[0]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.080     ; 2.202      ;
+; -1.218 ; state_reg.load_time    ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.080     ; 2.136      ;
+; -1.218 ; state_reg.load_time    ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.080     ; 2.136      ;
+; -1.202 ; state_reg.sleep        ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.081     ; 2.119      ;
+; -1.164 ; min_d_sleep_reg[1]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.080     ; 2.082      ;
+; -1.144 ; min_d_sleep_reg[2]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.081     ; 2.061      ;
+; -1.140 ; state_reg.on_alarm     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.081     ; 2.057      ;
+; -1.051 ; min_d_sleep_reg[3]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.081     ; 1.968      ;
+; -1.008 ; state_reg.idle         ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.080     ; 1.926      ;
+; -1.008 ; state_reg.idle         ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.080     ; 1.926      ;
+; -0.996 ; state_reg.load_time    ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.913      ;
+; -0.996 ; state_reg.load_time    ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.913      ;
+; -0.993 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.910      ;
+; -0.937 ; min_d_sleep_reg[0]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.080     ; 1.855      ;
+; -0.902 ; min_d_sleep_reg[2]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.081     ; 1.819      ;
+; -0.890 ; min_d_sleep_reg[3]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.807      ;
+; -0.846 ; state_reg.sleep        ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.081     ; 1.763      ;
+; -0.803 ; min_d_sleep_reg[1]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.080     ; 1.721      ;
+; -0.784 ; state_reg.on_alarm     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.081     ; 1.701      ;
+; -0.776 ; state_reg.idle         ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.693      ;
+; -0.776 ; state_reg.idle         ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.693      ;
+; -0.776 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.080     ; 1.694      ;
+; -0.772 ; state_reg.on_alarm     ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.082     ; 1.688      ;
+; -0.745 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.662      ;
+; -0.720 ; state_reg.idle         ; state_reg.on_alarm     ; clk          ; clk         ; 1.000        ; -0.080     ; 1.638      ;
+; -0.693 ; state_reg.idle         ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.081     ; 1.610      ;
+; -0.619 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.080     ; 1.537      ;
+; -0.611 ; state_reg.on_alarm     ; state_reg.on_alarm     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.528      ;
+; -0.597 ; state_reg.alarm        ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.081     ; 1.514      ;
+; -0.572 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.080     ; 1.490      ;
+; -0.558 ; state_reg.wait_button3 ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.081     ; 1.475      ;
+; -0.454 ; state_reg.wait_button1 ; state_reg.inc_sleep    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.371      ;
+; -0.422 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.080     ; 1.340      ;
+; -0.383 ; state_reg.inc_sleep    ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.080     ; 1.301      ;
+; -0.331 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.081     ; 1.248      ;
+; -0.262 ; state_reg.idle         ; state_reg.load_time    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.179      ;
+; -0.241 ; state_reg.alarm        ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.081     ; 1.158      ;
+; -0.236 ; state_reg.wait_button2 ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.081     ; 1.153      ;
+; -0.206 ; state_reg.load_time    ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.081     ; 1.123      ;
+; -0.054 ; state_reg.alarm        ; state_reg.wait_button1 ; clk          ; clk         ; 1.000        ; -0.082     ; 0.970      ;
+; -0.035 ; state_reg.sleep        ; state_reg.wait_button3 ; clk          ; clk         ; 1.000        ; -0.082     ; 0.951      ;
+; -0.028 ; state_reg.inc_sleep    ; state_reg.wait_button2 ; clk          ; clk         ; 1.000        ; -0.081     ; 0.945      ;
+; 0.152  ; min_d_sleep_reg[1]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.081     ; 0.765      ;
+; 0.152  ; min_d_sleep_reg[0]     ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.081     ; 0.765      ;
+; 0.183  ; state_reg.sleep        ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.081     ; 0.734      ;
+; 0.183  ; state_reg.load_time    ; state_reg.load_time    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.734      ;
+; 0.183  ; state_reg.wait_button1 ; state_reg.wait_button1 ; clk          ; clk         ; 1.000        ; -0.081     ; 0.734      ;
+; 0.183  ; state_reg.wait_button3 ; state_reg.wait_button3 ; clk          ; clk         ; 1.000        ; -0.081     ; 0.734      ;
+; 0.183  ; state_reg.wait_button2 ; state_reg.wait_button2 ; clk          ; clk         ; 1.000        ; -0.081     ; 0.734      ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                             ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 0.402 ; state_reg.wait_button1 ; state_reg.wait_button1 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state_reg.wait_button2 ; state_reg.wait_button2 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state_reg.sleep        ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state_reg.wait_button3 ; state_reg.wait_button3 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state_reg.load_time    ; state_reg.load_time    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.407 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.674      ;
+; 0.449 ; state_reg.wait_button1 ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.716      ;
+; 0.597 ; state_reg.inc_sleep    ; state_reg.wait_button2 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.864      ;
+; 0.609 ; state_reg.sleep        ; state_reg.wait_button3 ; clk          ; clk         ; 0.000        ; 0.080      ; 0.875      ;
+; 0.630 ; state_reg.alarm        ; state_reg.wait_button1 ; clk          ; clk         ; 0.000        ; 0.080      ; 0.896      ;
+; 0.720 ; state_reg.alarm        ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.987      ;
+; 0.742 ; state_reg.load_time    ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.009      ;
+; 0.767 ; state_reg.wait_button2 ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.034      ;
+; 0.827 ; state_reg.idle         ; state_reg.load_time    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.094      ;
+; 0.832 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.099      ;
+; 0.867 ; state_reg.inc_sleep    ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.135      ;
+; 0.956 ; state_reg.wait_button1 ; state_reg.inc_sleep    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.223      ;
+; 0.959 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.227      ;
+; 1.035 ; state_reg.wait_button3 ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.302      ;
+; 1.068 ; state_reg.alarm        ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.335      ;
+; 1.068 ; state_reg.on_alarm     ; state_reg.on_alarm     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.335      ;
+; 1.094 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.362      ;
+; 1.124 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.392      ;
+; 1.155 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.422      ;
+; 1.188 ; state_reg.idle         ; state_reg.on_alarm     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.456      ;
+; 1.239 ; state_reg.idle         ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.506      ;
+; 1.250 ; state_reg.wait_button1 ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.517      ;
+; 1.259 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.527      ;
+; 1.282 ; state_reg.on_alarm     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.549      ;
+; 1.295 ; min_d_sleep_reg[1]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.563      ;
+; 1.310 ; min_d_sleep_reg[3]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.577      ;
+; 1.341 ; state_reg.on_alarm     ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.080      ; 1.607      ;
+; 1.360 ; min_d_sleep_reg[2]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.627      ;
+; 1.371 ; state_reg.wait_button1 ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.639      ;
+; 1.373 ; state_reg.sleep        ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.640      ;
+; 1.387 ; state_reg.wait_button1 ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.655      ;
+; 1.399 ; state_reg.idle         ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.666      ;
+; 1.399 ; state_reg.idle         ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.666      ;
+; 1.409 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.676      ;
+; 1.417 ; min_d_sleep_reg[0]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.685      ;
+; 1.475 ; min_d_sleep_reg[3]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.742      ;
+; 1.608 ; state_reg.load_time    ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.875      ;
+; 1.608 ; state_reg.load_time    ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.875      ;
+; 1.612 ; state_reg.idle         ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.880      ;
+; 1.612 ; state_reg.idle         ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.880      ;
+; 1.620 ; min_d_sleep_reg[1]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.888      ;
+; 1.628 ; min_d_sleep_reg[2]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.895      ;
+; 1.630 ; state_reg.on_alarm     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.897      ;
+; 1.721 ; state_reg.sleep        ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.988      ;
+; 1.742 ; min_d_sleep_reg[0]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.082      ; 2.010      ;
+; 1.743 ; min_d_sleep_reg[3]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.081      ; 2.010      ;
+; 1.831 ; state_reg.load_time    ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.082      ; 2.099      ;
+; 1.831 ; state_reg.load_time    ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.082      ; 2.099      ;
+; 1.962 ; min_d_sleep_reg[1]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.082      ; 2.230      ;
+; 1.976 ; min_d_sleep_reg[2]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.081      ; 2.243      ;
+; 2.084 ; min_d_sleep_reg[0]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.082      ; 2.352      ;
+; 2.091 ; min_d_sleep_reg[3]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.081      ; 2.358      ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'clk'                                                            ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                        ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; buzzer_buf_reg             ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.alarm            ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.idle             ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.load_time        ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.on_alarm         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.sleep            ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button1     ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button2     ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button3     ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; buzzer_buf_reg             ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.alarm            ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.idle             ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.load_time        ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.on_alarm         ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.sleep            ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button1     ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button2     ;
+; 0.257  ; 0.445        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button3     ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; buzzer_buf_reg             ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.alarm            ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.idle             ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.load_time        ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.on_alarm         ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.sleep            ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button1     ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button2     ;
+; 0.335  ; 0.555        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button3     ;
+; 0.394  ; 0.394        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|o                ;
+; 0.408  ; 0.408        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]  ;
+; 0.408  ; 0.408        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|outclk    ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer_buf_reg|clk         ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[0]|clk     ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[1]|clk     ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[2]|clk     ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[3]|clk     ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.alarm|clk        ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.idle|clk         ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.inc_sleep|clk    ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.load_time|clk    ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.on_alarm|clk     ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.sleep|clk        ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button1|clk ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button2|clk ;
+; 0.409  ; 0.409        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button3|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|i                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|i                ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; buzzer_buf_reg|clk         ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[0]|clk     ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[1]|clk     ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[2]|clk     ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[3]|clk     ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.alarm|clk        ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.idle|clk         ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.inc_sleep|clk    ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.load_time|clk    ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.on_alarm|clk     ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.sleep|clk        ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button1|clk ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button2|clk ;
+; 0.590  ; 0.590        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button3|clk ;
+; 0.592  ; 0.592        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]  ;
+; 0.592  ; 0.592        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|outclk    ;
+; 0.606  ; 0.606        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|o                ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; button          ; clk        ; 2.997 ; 3.341 ; Rise       ; clk             ;
+; enable          ; clk        ; 2.422 ; 2.836 ; Rise       ; clk             ;
+; hra_d_load[*]   ; clk        ; 5.656 ; 6.024 ; Rise       ; clk             ;
+;  hra_d_load[0]  ; clk        ; 5.214 ; 5.541 ; Rise       ; clk             ;
+;  hra_d_load[1]  ; clk        ; 5.027 ; 5.430 ; Rise       ; clk             ;
+;  hra_d_load[2]  ; clk        ; 5.656 ; 6.024 ; Rise       ; clk             ;
+;  hra_d_load[3]  ; clk        ; 5.043 ; 5.396 ; Rise       ; clk             ;
+; hra_d_timer[*]  ; clk        ; 5.568 ; 5.896 ; Rise       ; clk             ;
+;  hra_d_timer[0] ; clk        ; 5.391 ; 5.759 ; Rise       ; clk             ;
+;  hra_d_timer[1] ; clk        ; 4.776 ; 5.129 ; Rise       ; clk             ;
+;  hra_d_timer[2] ; clk        ; 5.568 ; 5.896 ; Rise       ; clk             ;
+;  hra_d_timer[3] ; clk        ; 5.257 ; 5.692 ; Rise       ; clk             ;
+; hra_u_load[*]   ; clk        ; 5.828 ; 6.176 ; Rise       ; clk             ;
+;  hra_u_load[0]  ; clk        ; 5.297 ; 5.649 ; Rise       ; clk             ;
+;  hra_u_load[1]  ; clk        ; 5.724 ; 6.051 ; Rise       ; clk             ;
+;  hra_u_load[2]  ; clk        ; 5.789 ; 6.175 ; Rise       ; clk             ;
+;  hra_u_load[3]  ; clk        ; 5.828 ; 6.176 ; Rise       ; clk             ;
+; hra_u_timer[*]  ; clk        ; 6.034 ; 6.363 ; Rise       ; clk             ;
+;  hra_u_timer[0] ; clk        ; 5.527 ; 5.955 ; Rise       ; clk             ;
+;  hra_u_timer[1] ; clk        ; 5.916 ; 6.274 ; Rise       ; clk             ;
+;  hra_u_timer[2] ; clk        ; 5.846 ; 6.206 ; Rise       ; clk             ;
+;  hra_u_timer[3] ; clk        ; 6.034 ; 6.363 ; Rise       ; clk             ;
+; load            ; clk        ; 2.654 ; 3.010 ; Rise       ; clk             ;
+; min_d_load[*]   ; clk        ; 3.891 ; 4.209 ; Rise       ; clk             ;
+;  min_d_load[0]  ; clk        ; 3.064 ; 3.439 ; Rise       ; clk             ;
+;  min_d_load[1]  ; clk        ; 3.398 ; 3.746 ; Rise       ; clk             ;
+;  min_d_load[2]  ; clk        ; 3.587 ; 3.967 ; Rise       ; clk             ;
+;  min_d_load[3]  ; clk        ; 3.891 ; 4.209 ; Rise       ; clk             ;
+; min_d_timer[*]  ; clk        ; 3.812 ; 4.100 ; Rise       ; clk             ;
+;  min_d_timer[0] ; clk        ; 3.046 ; 3.391 ; Rise       ; clk             ;
+;  min_d_timer[1] ; clk        ; 3.377 ; 3.735 ; Rise       ; clk             ;
+;  min_d_timer[2] ; clk        ; 3.788 ; 4.087 ; Rise       ; clk             ;
+;  min_d_timer[3] ; clk        ; 3.812 ; 4.100 ; Rise       ; clk             ;
+; min_u_load[*]   ; clk        ; 3.566 ; 3.939 ; Rise       ; clk             ;
+;  min_u_load[0]  ; clk        ; 3.424 ; 3.796 ; Rise       ; clk             ;
+;  min_u_load[1]  ; clk        ; 3.271 ; 3.613 ; Rise       ; clk             ;
+;  min_u_load[2]  ; clk        ; 3.444 ; 3.787 ; Rise       ; clk             ;
+;  min_u_load[3]  ; clk        ; 3.566 ; 3.939 ; Rise       ; clk             ;
+; min_u_timer[*]  ; clk        ; 3.774 ; 4.074 ; Rise       ; clk             ;
+;  min_u_timer[0] ; clk        ; 3.605 ; 3.919 ; Rise       ; clk             ;
+;  min_u_timer[1] ; clk        ; 3.640 ; 3.934 ; Rise       ; clk             ;
+;  min_u_timer[2] ; clk        ; 3.758 ; 4.052 ; Rise       ; clk             ;
+;  min_u_timer[3] ; clk        ; 3.774 ; 4.074 ; Rise       ; clk             ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; button          ; clk        ; -0.861 ; -1.202 ; Rise       ; clk             ;
+; enable          ; clk        ; -1.266 ; -1.607 ; Rise       ; clk             ;
+; hra_d_load[*]   ; clk        ; -3.650 ; -3.981 ; Rise       ; clk             ;
+;  hra_d_load[0]  ; clk        ; -3.882 ; -4.234 ; Rise       ; clk             ;
+;  hra_d_load[1]  ; clk        ; -3.744 ; -4.021 ; Rise       ; clk             ;
+;  hra_d_load[2]  ; clk        ; -4.228 ; -4.559 ; Rise       ; clk             ;
+;  hra_d_load[3]  ; clk        ; -3.650 ; -3.981 ; Rise       ; clk             ;
+; hra_d_timer[*]  ; clk        ; -3.465 ; -3.796 ; Rise       ; clk             ;
+;  hra_d_timer[0] ; clk        ; -4.045 ; -4.375 ; Rise       ; clk             ;
+;  hra_d_timer[1] ; clk        ; -3.465 ; -3.796 ; Rise       ; clk             ;
+;  hra_d_timer[2] ; clk        ; -4.153 ; -4.505 ; Rise       ; clk             ;
+;  hra_d_timer[3] ; clk        ; -3.941 ; -4.201 ; Rise       ; clk             ;
+; hra_u_load[*]   ; clk        ; -3.941 ; -4.271 ; Rise       ; clk             ;
+;  hra_u_load[0]  ; clk        ; -3.941 ; -4.271 ; Rise       ; clk             ;
+;  hra_u_load[1]  ; clk        ; -4.348 ; -4.700 ; Rise       ; clk             ;
+;  hra_u_load[2]  ; clk        ; -4.363 ; -4.726 ; Rise       ; clk             ;
+;  hra_u_load[3]  ; clk        ; -4.426 ; -4.753 ; Rise       ; clk             ;
+; hra_u_timer[*]  ; clk        ; -4.242 ; -4.512 ; Rise       ; clk             ;
+;  hra_u_timer[0] ; clk        ; -4.242 ; -4.512 ; Rise       ; clk             ;
+;  hra_u_timer[1] ; clk        ; -4.528 ; -4.841 ; Rise       ; clk             ;
+;  hra_u_timer[2] ; clk        ; -4.422 ; -4.754 ; Rise       ; clk             ;
+;  hra_u_timer[3] ; clk        ; -4.627 ; -4.979 ; Rise       ; clk             ;
+; load            ; clk        ; -1.032 ; -1.380 ; Rise       ; clk             ;
+; min_d_load[*]   ; clk        ; -0.782 ; -1.130 ; Rise       ; clk             ;
+;  min_d_load[0]  ; clk        ; -0.787 ; -1.156 ; Rise       ; clk             ;
+;  min_d_load[1]  ; clk        ; -0.962 ; -1.297 ; Rise       ; clk             ;
+;  min_d_load[2]  ; clk        ; -0.782 ; -1.130 ; Rise       ; clk             ;
+;  min_d_load[3]  ; clk        ; -0.978 ; -1.282 ; Rise       ; clk             ;
+; min_d_timer[*]  ; clk        ; -1.646 ; -1.974 ; Rise       ; clk             ;
+;  min_d_timer[0] ; clk        ; -1.646 ; -1.974 ; Rise       ; clk             ;
+;  min_d_timer[1] ; clk        ; -1.748 ; -2.101 ; Rise       ; clk             ;
+;  min_d_timer[2] ; clk        ; -1.682 ; -2.068 ; Rise       ; clk             ;
+;  min_d_timer[3] ; clk        ; -1.699 ; -2.090 ; Rise       ; clk             ;
+; min_u_load[*]   ; clk        ; -1.862 ; -2.197 ; Rise       ; clk             ;
+;  min_u_load[0]  ; clk        ; -2.009 ; -2.343 ; Rise       ; clk             ;
+;  min_u_load[1]  ; clk        ; -1.862 ; -2.197 ; Rise       ; clk             ;
+;  min_u_load[2]  ; clk        ; -2.017 ; -2.361 ; Rise       ; clk             ;
+;  min_u_load[3]  ; clk        ; -2.135 ; -2.464 ; Rise       ; clk             ;
+; min_u_timer[*]  ; clk        ; -2.090 ; -2.475 ; Rise       ; clk             ;
+;  min_u_timer[0] ; clk        ; -2.090 ; -2.475 ; Rise       ; clk             ;
+;  min_u_timer[1] ; clk        ; -2.120 ; -2.481 ; Rise       ; clk             ;
+;  min_u_timer[2] ; clk        ; -2.217 ; -2.598 ; Rise       ; clk             ;
+;  min_u_timer[3] ; clk        ; -2.235 ; -2.622 ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzzer    ; clk        ; 7.361 ; 7.299 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzzer    ; clk        ; 7.114 ; 7.053 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 409.17 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.444 ; -9.787            ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.354 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -20.990                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                              ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; -1.444 ; min_d_sleep_reg[0]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.072     ; 2.371      ;
+; -1.387 ; min_d_sleep_reg[3]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.072     ; 2.314      ;
+; -1.333 ; min_d_sleep_reg[1]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.072     ; 2.260      ;
+; -1.289 ; min_d_sleep_reg[2]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.072     ; 2.216      ;
+; -1.275 ; state_reg.wait_button1 ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 2.202      ;
+; -1.275 ; state_reg.wait_button1 ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 2.202      ;
+; -1.108 ; min_d_sleep_reg[0]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.072     ; 2.035      ;
+; -1.084 ; state_reg.wait_button1 ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.072     ; 2.011      ;
+; -1.084 ; state_reg.wait_button1 ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.072     ; 2.011      ;
+; -1.066 ; min_d_sleep_reg[3]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.993      ;
+; -1.006 ; state_reg.load_time    ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.933      ;
+; -1.006 ; state_reg.load_time    ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.933      ;
+; -0.997 ; min_d_sleep_reg[1]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.924      ;
+; -0.987 ; state_reg.sleep        ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.072     ; 1.914      ;
+; -0.953 ; min_d_sleep_reg[2]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.880      ;
+; -0.929 ; state_reg.on_alarm     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.072     ; 1.856      ;
+; -0.849 ; state_reg.idle         ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.776      ;
+; -0.849 ; state_reg.idle         ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.776      ;
+; -0.848 ; min_d_sleep_reg[3]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.072     ; 1.775      ;
+; -0.815 ; state_reg.load_time    ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.742      ;
+; -0.815 ; state_reg.load_time    ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.742      ;
+; -0.786 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.713      ;
+; -0.763 ; min_d_sleep_reg[0]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.072     ; 1.690      ;
+; -0.712 ; min_d_sleep_reg[2]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.072     ; 1.639      ;
+; -0.695 ; min_d_sleep_reg[3]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.622      ;
+; -0.658 ; state_reg.sleep        ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.585      ;
+; -0.652 ; min_d_sleep_reg[1]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.072     ; 1.579      ;
+; -0.628 ; state_reg.on_alarm     ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.555      ;
+; -0.620 ; state_reg.idle         ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.547      ;
+; -0.620 ; state_reg.idle         ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.547      ;
+; -0.608 ; state_reg.on_alarm     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.535      ;
+; -0.593 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.520      ;
+; -0.590 ; state_reg.idle         ; state_reg.on_alarm     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.517      ;
+; -0.575 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.502      ;
+; -0.527 ; state_reg.idle         ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.454      ;
+; -0.456 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.383      ;
+; -0.443 ; state_reg.on_alarm     ; state_reg.on_alarm     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.370      ;
+; -0.434 ; state_reg.alarm        ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.072     ; 1.361      ;
+; -0.410 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.337      ;
+; -0.407 ; state_reg.wait_button3 ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.334      ;
+; -0.310 ; state_reg.wait_button1 ; state_reg.inc_sleep    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.237      ;
+; -0.279 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.206      ;
+; -0.234 ; state_reg.inc_sleep    ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.072     ; 1.161      ;
+; -0.193 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.072     ; 1.120      ;
+; -0.141 ; state_reg.idle         ; state_reg.load_time    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.068      ;
+; -0.118 ; state_reg.wait_button2 ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.045      ;
+; -0.113 ; state_reg.alarm        ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.040      ;
+; -0.085 ; state_reg.load_time    ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.072     ; 1.012      ;
+; 0.054  ; state_reg.alarm        ; state_reg.wait_button1 ; clk          ; clk         ; 1.000        ; -0.072     ; 0.873      ;
+; 0.074  ; state_reg.sleep        ; state_reg.wait_button3 ; clk          ; clk         ; 1.000        ; -0.072     ; 0.853      ;
+; 0.084  ; state_reg.inc_sleep    ; state_reg.wait_button2 ; clk          ; clk         ; 1.000        ; -0.072     ; 0.843      ;
+; 0.244  ; min_d_sleep_reg[1]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.072     ; 0.683      ;
+; 0.244  ; min_d_sleep_reg[0]     ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.072     ; 0.683      ;
+; 0.268  ; state_reg.sleep        ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.072     ; 0.659      ;
+; 0.268  ; state_reg.load_time    ; state_reg.load_time    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.659      ;
+; 0.268  ; state_reg.wait_button1 ; state_reg.wait_button1 ; clk          ; clk         ; 1.000        ; -0.072     ; 0.659      ;
+; 0.268  ; state_reg.wait_button3 ; state_reg.wait_button3 ; clk          ; clk         ; 1.000        ; -0.072     ; 0.659      ;
+; 0.268  ; state_reg.wait_button2 ; state_reg.wait_button2 ; clk          ; clk         ; 1.000        ; -0.072     ; 0.659      ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                              ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 0.354 ; state_reg.wait_button1 ; state_reg.wait_button1 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state_reg.wait_button2 ; state_reg.wait_button2 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state_reg.sleep        ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state_reg.wait_button3 ; state_reg.wait_button3 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state_reg.load_time    ; state_reg.load_time    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.365 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.608      ;
+; 0.407 ; state_reg.wait_button1 ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.650      ;
+; 0.553 ; state_reg.inc_sleep    ; state_reg.wait_button2 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.796      ;
+; 0.562 ; state_reg.sleep        ; state_reg.wait_button3 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.805      ;
+; 0.577 ; state_reg.alarm        ; state_reg.wait_button1 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.820      ;
+; 0.658 ; state_reg.alarm        ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.901      ;
+; 0.680 ; state_reg.load_time    ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.923      ;
+; 0.703 ; state_reg.wait_button2 ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.946      ;
+; 0.769 ; state_reg.idle         ; state_reg.load_time    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.012      ;
+; 0.772 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.015      ;
+; 0.788 ; state_reg.inc_sleep    ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.031      ;
+; 0.879 ; state_reg.wait_button1 ; state_reg.inc_sleep    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.122      ;
+; 0.890 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.133      ;
+; 0.947 ; state_reg.wait_button3 ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.190      ;
+; 0.979 ; state_reg.on_alarm     ; state_reg.on_alarm     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.222      ;
+; 0.981 ; state_reg.alarm        ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.224      ;
+; 1.019 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.262      ;
+; 1.039 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.282      ;
+; 1.061 ; state_reg.idle         ; state_reg.on_alarm     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.304      ;
+; 1.061 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.304      ;
+; 1.132 ; state_reg.wait_button1 ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.375      ;
+; 1.140 ; state_reg.idle         ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.383      ;
+; 1.166 ; min_d_sleep_reg[1]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.409      ;
+; 1.169 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.412      ;
+; 1.184 ; state_reg.on_alarm     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.427      ;
+; 1.211 ; state_reg.on_alarm     ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.454      ;
+; 1.217 ; min_d_sleep_reg[3]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.460      ;
+; 1.225 ; state_reg.wait_button1 ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.468      ;
+; 1.245 ; min_d_sleep_reg[2]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.488      ;
+; 1.260 ; state_reg.wait_button1 ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.503      ;
+; 1.264 ; state_reg.sleep        ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.507      ;
+; 1.278 ; min_d_sleep_reg[0]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.521      ;
+; 1.286 ; state_reg.idle         ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.529      ;
+; 1.286 ; state_reg.idle         ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.529      ;
+; 1.304 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.547      ;
+; 1.348 ; min_d_sleep_reg[3]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.591      ;
+; 1.452 ; min_d_sleep_reg[1]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.695      ;
+; 1.469 ; state_reg.idle         ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.712      ;
+; 1.469 ; state_reg.idle         ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.712      ;
+; 1.475 ; min_d_sleep_reg[2]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.718      ;
+; 1.475 ; state_reg.load_time    ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.718      ;
+; 1.475 ; state_reg.load_time    ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.718      ;
+; 1.507 ; state_reg.on_alarm     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.750      ;
+; 1.564 ; min_d_sleep_reg[0]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.807      ;
+; 1.571 ; state_reg.sleep        ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.814      ;
+; 1.579 ; min_d_sleep_reg[3]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.822      ;
+; 1.695 ; state_reg.load_time    ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.938      ;
+; 1.695 ; state_reg.load_time    ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.938      ;
+; 1.759 ; min_d_sleep_reg[1]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.072      ; 2.002      ;
+; 1.782 ; min_d_sleep_reg[2]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.072      ; 2.025      ;
+; 1.871 ; min_d_sleep_reg[0]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.072      ; 2.114      ;
+; 1.886 ; min_d_sleep_reg[3]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.072      ; 2.129      ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'clk'                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                        ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; buzzer_buf_reg             ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.alarm            ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.idle             ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.load_time        ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.on_alarm         ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.sleep            ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button1     ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button2     ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button3     ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; buzzer_buf_reg             ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.alarm            ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.idle             ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.load_time        ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.on_alarm         ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.sleep            ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button1     ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button2     ;
+; 0.277  ; 0.463        ; 0.186          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button3     ;
+; 0.316  ; 0.534        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; 0.316  ; 0.534        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; 0.316  ; 0.534        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.idle             ;
+; 0.316  ; 0.534        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; 0.316  ; 0.534        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.load_time        ;
+; 0.316  ; 0.534        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button1     ;
+; 0.316  ; 0.534        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button2     ;
+; 0.316  ; 0.534        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button3     ;
+; 0.317  ; 0.535        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; buzzer_buf_reg             ;
+; 0.317  ; 0.535        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; 0.317  ; 0.535        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; 0.317  ; 0.535        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.alarm            ;
+; 0.317  ; 0.535        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.on_alarm         ;
+; 0.317  ; 0.535        ; 0.218          ; High Pulse Width ; clk   ; Rise       ; state_reg.sleep            ;
+; 0.416  ; 0.416        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|o                ;
+; 0.422  ; 0.422        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]  ;
+; 0.422  ; 0.422        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|outclk    ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer_buf_reg|clk         ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[0]|clk     ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[1]|clk     ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[2]|clk     ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[3]|clk     ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.alarm|clk        ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.idle|clk         ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.inc_sleep|clk    ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.load_time|clk    ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.on_alarm|clk     ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.sleep|clk        ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button1|clk ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button2|clk ;
+; 0.425  ; 0.425        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button3|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|i                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|i                ;
+; 0.574  ; 0.574        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[0]|clk     ;
+; 0.574  ; 0.574        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[1]|clk     ;
+; 0.574  ; 0.574        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.idle|clk         ;
+; 0.574  ; 0.574        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.inc_sleep|clk    ;
+; 0.574  ; 0.574        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.load_time|clk    ;
+; 0.574  ; 0.574        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button1|clk ;
+; 0.574  ; 0.574        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button2|clk ;
+; 0.574  ; 0.574        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button3|clk ;
+; 0.575  ; 0.575        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; buzzer_buf_reg|clk         ;
+; 0.575  ; 0.575        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[2]|clk     ;
+; 0.575  ; 0.575        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[3]|clk     ;
+; 0.575  ; 0.575        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.alarm|clk        ;
+; 0.575  ; 0.575        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.on_alarm|clk     ;
+; 0.575  ; 0.575        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.sleep|clk        ;
+; 0.578  ; 0.578        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]  ;
+; 0.578  ; 0.578        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|outclk    ;
+; 0.584  ; 0.584        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|o                ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; button          ; clk        ; 2.638 ; 2.911 ; Rise       ; clk             ;
+; enable          ; clk        ; 2.138 ; 2.409 ; Rise       ; clk             ;
+; hra_d_load[*]   ; clk        ; 5.175 ; 5.432 ; Rise       ; clk             ;
+;  hra_d_load[0]  ; clk        ; 4.743 ; 4.977 ; Rise       ; clk             ;
+;  hra_d_load[1]  ; clk        ; 4.536 ; 4.868 ; Rise       ; clk             ;
+;  hra_d_load[2]  ; clk        ; 5.175 ; 5.432 ; Rise       ; clk             ;
+;  hra_d_load[3]  ; clk        ; 4.604 ; 4.866 ; Rise       ; clk             ;
+; hra_d_timer[*]  ; clk        ; 5.093 ; 5.328 ; Rise       ; clk             ;
+;  hra_d_timer[0] ; clk        ; 4.909 ; 5.166 ; Rise       ; clk             ;
+;  hra_d_timer[1] ; clk        ; 4.336 ; 4.599 ; Rise       ; clk             ;
+;  hra_d_timer[2] ; clk        ; 5.093 ; 5.328 ; Rise       ; clk             ;
+;  hra_d_timer[3] ; clk        ; 4.798 ; 5.130 ; Rise       ; clk             ;
+; hra_u_load[*]   ; clk        ; 5.325 ; 5.573 ; Rise       ; clk             ;
+;  hra_u_load[0]  ; clk        ; 4.837 ; 5.098 ; Rise       ; clk             ;
+;  hra_u_load[1]  ; clk        ; 5.233 ; 5.466 ; Rise       ; clk             ;
+;  hra_u_load[2]  ; clk        ; 5.280 ; 5.569 ; Rise       ; clk             ;
+;  hra_u_load[3]  ; clk        ; 5.325 ; 5.573 ; Rise       ; clk             ;
+; hra_u_timer[*]  ; clk        ; 5.520 ; 5.756 ; Rise       ; clk             ;
+;  hra_u_timer[0] ; clk        ; 5.044 ; 5.374 ; Rise       ; clk             ;
+;  hra_u_timer[1] ; clk        ; 5.408 ; 5.658 ; Rise       ; clk             ;
+;  hra_u_timer[2] ; clk        ; 5.337 ; 5.599 ; Rise       ; clk             ;
+;  hra_u_timer[3] ; clk        ; 5.520 ; 5.756 ; Rise       ; clk             ;
+; load            ; clk        ; 2.359 ; 2.566 ; Rise       ; clk             ;
+; min_d_load[*]   ; clk        ; 3.463 ; 3.658 ; Rise       ; clk             ;
+;  min_d_load[0]  ; clk        ; 2.716 ; 2.956 ; Rise       ; clk             ;
+;  min_d_load[1]  ; clk        ; 2.983 ; 3.216 ; Rise       ; clk             ;
+;  min_d_load[2]  ; clk        ; 3.162 ; 3.412 ; Rise       ; clk             ;
+;  min_d_load[3]  ; clk        ; 3.463 ; 3.658 ; Rise       ; clk             ;
+; min_d_timer[*]  ; clk        ; 3.338 ; 3.594 ; Rise       ; clk             ;
+;  min_d_timer[0] ; clk        ; 2.733 ; 2.954 ; Rise       ; clk             ;
+;  min_d_timer[1] ; clk        ; 2.969 ; 3.207 ; Rise       ; clk             ;
+;  min_d_timer[2] ; clk        ; 3.316 ; 3.562 ; Rise       ; clk             ;
+;  min_d_timer[3] ; clk        ; 3.338 ; 3.594 ; Rise       ; clk             ;
+; min_u_load[*]   ; clk        ; 3.149 ; 3.394 ; Rise       ; clk             ;
+;  min_u_load[0]  ; clk        ; 3.035 ; 3.280 ; Rise       ; clk             ;
+;  min_u_load[1]  ; clk        ; 2.887 ; 3.143 ; Rise       ; clk             ;
+;  min_u_load[2]  ; clk        ; 3.031 ; 3.288 ; Rise       ; clk             ;
+;  min_u_load[3]  ; clk        ; 3.149 ; 3.394 ; Rise       ; clk             ;
+; min_u_timer[*]  ; clk        ; 3.312 ; 3.558 ; Rise       ; clk             ;
+;  min_u_timer[0] ; clk        ; 3.165 ; 3.433 ; Rise       ; clk             ;
+;  min_u_timer[1] ; clk        ; 3.190 ; 3.461 ; Rise       ; clk             ;
+;  min_u_timer[2] ; clk        ; 3.292 ; 3.558 ; Rise       ; clk             ;
+;  min_u_timer[3] ; clk        ; 3.312 ; 3.554 ; Rise       ; clk             ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; button          ; clk        ; -0.711 ; -0.949 ; Rise       ; clk             ;
+; enable          ; clk        ; -1.077 ; -1.311 ; Rise       ; clk             ;
+; hra_d_load[*]   ; clk        ; -3.196 ; -3.440 ; Rise       ; clk             ;
+;  hra_d_load[0]  ; clk        ; -3.418 ; -3.674 ; Rise       ; clk             ;
+;  hra_d_load[1]  ; clk        ; -3.304 ; -3.477 ; Rise       ; clk             ;
+;  hra_d_load[2]  ; clk        ; -3.731 ; -3.962 ; Rise       ; clk             ;
+;  hra_d_load[3]  ; clk        ; -3.196 ; -3.440 ; Rise       ; clk             ;
+; hra_d_timer[*]  ; clk        ; -3.029 ; -3.274 ; Rise       ; clk             ;
+;  hra_d_timer[0] ; clk        ; -3.567 ; -3.798 ; Rise       ; clk             ;
+;  hra_d_timer[1] ; clk        ; -3.029 ; -3.274 ; Rise       ; clk             ;
+;  hra_d_timer[2] ; clk        ; -3.664 ; -3.921 ; Rise       ; clk             ;
+;  hra_d_timer[3] ; clk        ; -3.464 ; -3.636 ; Rise       ; clk             ;
+; hra_u_load[*]   ; clk        ; -3.457 ; -3.700 ; Rise       ; clk             ;
+;  hra_u_load[0]  ; clk        ; -3.457 ; -3.700 ; Rise       ; clk             ;
+;  hra_u_load[1]  ; clk        ; -3.834 ; -4.089 ; Rise       ; clk             ;
+;  hra_u_load[2]  ; clk        ; -3.850 ; -4.114 ; Rise       ; clk             ;
+;  hra_u_load[3]  ; clk        ; -3.908 ; -4.139 ; Rise       ; clk             ;
+; hra_u_timer[*]  ; clk        ; -3.734 ; -3.916 ; Rise       ; clk             ;
+;  hra_u_timer[0] ; clk        ; -3.734 ; -3.916 ; Rise       ; clk             ;
+;  hra_u_timer[1] ; clk        ; -3.995 ; -4.211 ; Rise       ; clk             ;
+;  hra_u_timer[2] ; clk        ; -3.907 ; -4.138 ; Rise       ; clk             ;
+;  hra_u_timer[3] ; clk        ; -4.097 ; -4.355 ; Rise       ; clk             ;
+; load            ; clk        ; -0.866 ; -1.092 ; Rise       ; clk             ;
+; min_d_load[*]   ; clk        ; -0.635 ; -0.878 ; Rise       ; clk             ;
+;  min_d_load[0]  ; clk        ; -0.644 ; -0.898 ; Rise       ; clk             ;
+;  min_d_load[1]  ; clk        ; -0.803 ; -1.020 ; Rise       ; clk             ;
+;  min_d_load[2]  ; clk        ; -0.635 ; -0.878 ; Rise       ; clk             ;
+;  min_d_load[3]  ; clk        ; -0.843 ; -1.011 ; Rise       ; clk             ;
+; min_d_timer[*]  ; clk        ; -1.420 ; -1.634 ; Rise       ; clk             ;
+;  min_d_timer[0] ; clk        ; -1.420 ; -1.634 ; Rise       ; clk             ;
+;  min_d_timer[1] ; clk        ; -1.540 ; -1.739 ; Rise       ; clk             ;
+;  min_d_timer[2] ; clk        ; -1.456 ; -1.723 ; Rise       ; clk             ;
+;  min_d_timer[3] ; clk        ; -1.469 ; -1.753 ; Rise       ; clk             ;
+; min_u_load[*]   ; clk        ; -1.597 ; -1.839 ; Rise       ; clk             ;
+;  min_u_load[0]  ; clk        ; -1.739 ; -2.009 ; Rise       ; clk             ;
+;  min_u_load[1]  ; clk        ; -1.597 ; -1.839 ; Rise       ; clk             ;
+;  min_u_load[2]  ; clk        ; -1.744 ; -1.987 ; Rise       ; clk             ;
+;  min_u_load[3]  ; clk        ; -1.855 ; -2.125 ; Rise       ; clk             ;
+; min_u_timer[*]  ; clk        ; -1.850 ; -2.093 ; Rise       ; clk             ;
+;  min_u_timer[0] ; clk        ; -1.850 ; -2.093 ; Rise       ; clk             ;
+;  min_u_timer[1] ; clk        ; -1.869 ; -2.096 ; Rise       ; clk             ;
+;  min_u_timer[2] ; clk        ; -1.959 ; -2.197 ; Rise       ; clk             ;
+;  min_u_timer[3] ; clk        ; -1.981 ; -2.216 ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzzer    ; clk        ; 6.655 ; 6.554 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzzer    ; clk        ; 6.415 ; 6.318 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.295 ; -1.075            ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.181 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -17.862                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                              ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; -0.295 ; min_d_sleep_reg[0]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.040     ; 1.242      ;
+; -0.284 ; min_d_sleep_reg[3]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.042     ; 1.229      ;
+; -0.224 ; state_reg.wait_button1 ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.040     ; 1.171      ;
+; -0.224 ; state_reg.wait_button1 ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.040     ; 1.171      ;
+; -0.221 ; min_d_sleep_reg[1]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.040     ; 1.168      ;
+; -0.219 ; min_d_sleep_reg[2]     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.042     ; 1.164      ;
+; -0.120 ; min_d_sleep_reg[0]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.040     ; 1.067      ;
+; -0.109 ; min_d_sleep_reg[3]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.042     ; 1.054      ;
+; -0.106 ; state_reg.wait_button1 ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.041     ; 1.052      ;
+; -0.106 ; state_reg.wait_button1 ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.041     ; 1.052      ;
+; -0.086 ; state_reg.load_time    ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.040     ; 1.033      ;
+; -0.086 ; state_reg.load_time    ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.040     ; 1.033      ;
+; -0.077 ; state_reg.sleep        ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.042     ; 1.022      ;
+; -0.047 ; state_reg.on_alarm     ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.042     ; 0.992      ;
+; -0.046 ; min_d_sleep_reg[1]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.040     ; 0.993      ;
+; -0.044 ; min_d_sleep_reg[2]     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.042     ; 0.989      ;
+; 0.006  ; min_d_sleep_reg[3]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.042     ; 0.939      ;
+; 0.023  ; min_d_sleep_reg[2]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.042     ; 0.922      ;
+; 0.032  ; state_reg.load_time    ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.041     ; 0.914      ;
+; 0.032  ; state_reg.load_time    ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.041     ; 0.914      ;
+; 0.054  ; state_reg.idle         ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.040     ; 0.893      ;
+; 0.054  ; state_reg.idle         ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.040     ; 0.893      ;
+; 0.058  ; min_d_sleep_reg[0]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.040     ; 0.889      ;
+; 0.071  ; min_d_sleep_reg[2]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.042     ; 0.874      ;
+; 0.074  ; min_d_sleep_reg[3]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.042     ; 0.871      ;
+; 0.098  ; state_reg.sleep        ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.042     ; 0.847      ;
+; 0.127  ; state_reg.on_alarm     ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.043     ; 0.817      ;
+; 0.128  ; state_reg.on_alarm     ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.042     ; 0.817      ;
+; 0.130  ; min_d_sleep_reg[0]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.040     ; 0.817      ;
+; 0.132  ; min_d_sleep_reg[1]     ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.040     ; 0.815      ;
+; 0.151  ; state_reg.idle         ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.041     ; 0.795      ;
+; 0.151  ; state_reg.idle         ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.041     ; 0.795      ;
+; 0.154  ; min_d_sleep_reg[2]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.042     ; 0.791      ;
+; 0.184  ; state_reg.idle         ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.041     ; 0.762      ;
+; 0.198  ; state_reg.idle         ; state_reg.on_alarm     ; clk          ; clk         ; 1.000        ; -0.040     ; 0.749      ;
+; 0.211  ; min_d_sleep_reg[0]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.040     ; 0.736      ;
+; 0.211  ; state_reg.on_alarm     ; state_reg.on_alarm     ; clk          ; clk         ; 1.000        ; -0.042     ; 0.734      ;
+; 0.213  ; state_reg.alarm        ; state_reg.alarm        ; clk          ; clk         ; 1.000        ; -0.042     ; 0.732      ;
+; 0.229  ; min_d_sleep_reg[1]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 1.000        ; -0.040     ; 0.718      ;
+; 0.251  ; state_reg.wait_button3 ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.041     ; 0.695      ;
+; 0.293  ; state_reg.wait_button1 ; state_reg.inc_sleep    ; clk          ; clk         ; 1.000        ; -0.041     ; 0.653      ;
+; 0.310  ; min_d_sleep_reg[1]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 1.000        ; -0.040     ; 0.637      ;
+; 0.319  ; state_reg.inc_sleep    ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.040     ; 0.628      ;
+; 0.342  ; min_d_sleep_reg[0]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.041     ; 0.604      ;
+; 0.371  ; state_reg.idle         ; state_reg.load_time    ; clk          ; clk         ; 1.000        ; -0.041     ; 0.575      ;
+; 0.388  ; state_reg.alarm        ; buzzer_buf_reg         ; clk          ; clk         ; 1.000        ; -0.042     ; 0.557      ;
+; 0.404  ; state_reg.wait_button2 ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.041     ; 0.542      ;
+; 0.411  ; state_reg.load_time    ; state_reg.idle         ; clk          ; clk         ; 1.000        ; -0.041     ; 0.535      ;
+; 0.476  ; state_reg.alarm        ; state_reg.wait_button1 ; clk          ; clk         ; 1.000        ; -0.043     ; 0.468      ;
+; 0.484  ; state_reg.sleep        ; state_reg.wait_button3 ; clk          ; clk         ; 1.000        ; -0.043     ; 0.460      ;
+; 0.488  ; state_reg.inc_sleep    ; state_reg.wait_button2 ; clk          ; clk         ; 1.000        ; -0.041     ; 0.458      ;
+; 0.587  ; min_d_sleep_reg[1]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 1.000        ; -0.041     ; 0.359      ;
+; 0.587  ; min_d_sleep_reg[0]     ; min_d_sleep_reg[0]     ; clk          ; clk         ; 1.000        ; -0.041     ; 0.359      ;
+; 0.595  ; state_reg.sleep        ; state_reg.sleep        ; clk          ; clk         ; 1.000        ; -0.042     ; 0.350      ;
+; 0.596  ; state_reg.load_time    ; state_reg.load_time    ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
+; 0.596  ; state_reg.wait_button1 ; state_reg.wait_button1 ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
+; 0.596  ; state_reg.wait_button3 ; state_reg.wait_button3 ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
+; 0.596  ; state_reg.wait_button2 ; state_reg.wait_button2 ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
++--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                              ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 0.181 ; state_reg.sleep        ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.182 ; state_reg.wait_button1 ; state_reg.wait_button1 ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state_reg.wait_button2 ; state_reg.wait_button2 ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state_reg.wait_button3 ; state_reg.wait_button3 ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state_reg.load_time    ; state_reg.load_time    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.189 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.314      ;
+; 0.204 ; state_reg.wait_button1 ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.329      ;
+; 0.261 ; state_reg.inc_sleep    ; state_reg.wait_button2 ; clk          ; clk         ; 0.000        ; 0.041      ; 0.386      ;
+; 0.267 ; state_reg.sleep        ; state_reg.wait_button3 ; clk          ; clk         ; 0.000        ; 0.040      ; 0.391      ;
+; 0.273 ; state_reg.alarm        ; state_reg.wait_button1 ; clk          ; clk         ; 0.000        ; 0.040      ; 0.397      ;
+; 0.333 ; state_reg.alarm        ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.042      ; 0.459      ;
+; 0.340 ; state_reg.load_time    ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.041      ; 0.465      ;
+; 0.347 ; state_reg.wait_button2 ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.041      ; 0.472      ;
+; 0.373 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.498      ;
+; 0.373 ; state_reg.idle         ; state_reg.load_time    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.498      ;
+; 0.381 ; state_reg.inc_sleep    ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.043      ; 0.508      ;
+; 0.427 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.554      ;
+; 0.431 ; state_reg.wait_button1 ; state_reg.inc_sleep    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.556      ;
+; 0.475 ; state_reg.wait_button3 ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.041      ; 0.600      ;
+; 0.485 ; min_d_sleep_reg[1]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.612      ;
+; 0.487 ; state_reg.on_alarm     ; state_reg.on_alarm     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.613      ;
+; 0.488 ; state_reg.alarm        ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.042      ; 0.614      ;
+; 0.504 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.631      ;
+; 0.524 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.650      ;
+; 0.557 ; state_reg.wait_button1 ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.682      ;
+; 0.562 ; min_d_sleep_reg[0]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.689      ;
+; 0.564 ; state_reg.idle         ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.041      ; 0.689      ;
+; 0.575 ; state_reg.on_alarm     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.042      ; 0.701      ;
+; 0.582 ; min_d_sleep_reg[1]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.043      ; 0.709      ;
+; 0.586 ; state_reg.idle         ; state_reg.on_alarm     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.713      ;
+; 0.589 ; min_d_sleep_reg[3]     ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.715      ;
+; 0.596 ; state_reg.on_alarm     ; state_reg.idle         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.720      ;
+; 0.614 ; state_reg.sleep        ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.042      ; 0.740      ;
+; 0.619 ; state_reg.wait_button1 ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.746      ;
+; 0.620 ; min_d_sleep_reg[2]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.042      ; 0.746      ;
+; 0.631 ; state_reg.wait_button1 ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.758      ;
+; 0.635 ; min_d_sleep_reg[2]     ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.761      ;
+; 0.641 ; min_d_sleep_reg[0]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.043      ; 0.768      ;
+; 0.662 ; state_reg.idle         ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.787      ;
+; 0.662 ; state_reg.idle         ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.787      ;
+; 0.674 ; min_d_sleep_reg[3]     ; state_reg.sleep        ; clk          ; clk         ; 0.000        ; 0.042      ; 0.800      ;
+; 0.727 ; min_d_sleep_reg[2]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.042      ; 0.853      ;
+; 0.730 ; state_reg.on_alarm     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.042      ; 0.856      ;
+; 0.733 ; min_d_sleep_reg[1]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.043      ; 0.860      ;
+; 0.747 ; state_reg.load_time    ; min_d_sleep_reg[0]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.872      ;
+; 0.747 ; state_reg.load_time    ; min_d_sleep_reg[1]     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.872      ;
+; 0.769 ; state_reg.sleep        ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.042      ; 0.895      ;
+; 0.774 ; state_reg.idle         ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.901      ;
+; 0.774 ; state_reg.idle         ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.901      ;
+; 0.781 ; min_d_sleep_reg[3]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.042      ; 0.907      ;
+; 0.792 ; min_d_sleep_reg[0]     ; buzzer_buf_reg         ; clk          ; clk         ; 0.000        ; 0.043      ; 0.919      ;
+; 0.839 ; state_reg.load_time    ; min_d_sleep_reg[2]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.966      ;
+; 0.839 ; state_reg.load_time    ; min_d_sleep_reg[3]     ; clk          ; clk         ; 0.000        ; 0.043      ; 0.966      ;
+; 0.882 ; min_d_sleep_reg[2]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.042      ; 1.008      ;
+; 0.888 ; min_d_sleep_reg[1]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.043      ; 1.015      ;
+; 0.936 ; min_d_sleep_reg[3]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.042      ; 1.062      ;
+; 0.947 ; min_d_sleep_reg[0]     ; state_reg.alarm        ; clk          ; clk         ; 0.000        ; 0.043      ; 1.074      ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'clk'                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; buzzer_buf_reg             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.alarm            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.idle             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.load_time        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.on_alarm         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.sleep            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button2     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; state_reg.wait_button3     ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.idle             ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.load_time        ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button1     ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button2     ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button3     ;
+; -0.061 ; 0.123        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; buzzer_buf_reg             ;
+; -0.061 ; 0.123        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; -0.061 ; 0.123        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; -0.061 ; 0.123        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.alarm            ;
+; -0.061 ; 0.123        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.on_alarm         ;
+; -0.061 ; 0.123        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.sleep            ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer_buf_reg|clk         ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[0]|clk     ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[1]|clk     ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[2]|clk     ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; min_d_sleep_reg[3]|clk     ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.alarm|clk        ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.idle|clk         ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.inc_sleep|clk    ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.load_time|clk    ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.on_alarm|clk     ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.sleep|clk        ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button1|clk ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button2|clk ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state_reg.wait_button3|clk ;
+; 0.120  ; 0.120        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|o                ;
+; 0.133  ; 0.133        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]  ;
+; 0.133  ; 0.133        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|i                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|i                ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; buzzer_buf_reg             ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[0]         ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[1]         ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[2]         ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[3]         ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.alarm            ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.idle             ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.inc_sleep        ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.load_time        ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.on_alarm         ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.sleep            ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button1     ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button2     ;
+; 0.660  ; 0.876        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button3     ;
+; 0.866  ; 0.866        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]  ;
+; 0.866  ; 0.866        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|outclk    ;
+; 0.880  ; 0.880        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|o                ;
+; 0.881  ; 0.881        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; buzzer_buf_reg|clk         ;
+; 0.881  ; 0.881        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[2]|clk     ;
+; 0.881  ; 0.881        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[3]|clk     ;
+; 0.881  ; 0.881        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.alarm|clk        ;
+; 0.881  ; 0.881        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.on_alarm|clk     ;
+; 0.881  ; 0.881        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.sleep|clk        ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[0]|clk     ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; min_d_sleep_reg[1]|clk     ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.idle|clk         ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.inc_sleep|clk    ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.load_time|clk    ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button1|clk ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button2|clk ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state_reg.wait_button3|clk ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; button          ; clk        ; 1.381 ; 1.925 ; Rise       ; clk             ;
+; enable          ; clk        ; 1.090 ; 1.736 ; Rise       ; clk             ;
+; hra_d_load[*]   ; clk        ; 2.862 ; 3.417 ; Rise       ; clk             ;
+;  hra_d_load[0]  ; clk        ; 2.626 ; 3.197 ; Rise       ; clk             ;
+;  hra_d_load[1]  ; clk        ; 2.562 ; 3.082 ; Rise       ; clk             ;
+;  hra_d_load[2]  ; clk        ; 2.862 ; 3.417 ; Rise       ; clk             ;
+;  hra_d_load[3]  ; clk        ; 2.532 ; 3.072 ; Rise       ; clk             ;
+; hra_d_timer[*]  ; clk        ; 2.811 ; 3.386 ; Rise       ; clk             ;
+;  hra_d_timer[0] ; clk        ; 2.739 ; 3.294 ; Rise       ; clk             ;
+;  hra_d_timer[1] ; clk        ; 2.410 ; 2.949 ; Rise       ; clk             ;
+;  hra_d_timer[2] ; clk        ; 2.811 ; 3.386 ; Rise       ; clk             ;
+;  hra_d_timer[3] ; clk        ; 2.677 ; 3.197 ; Rise       ; clk             ;
+; hra_u_load[*]   ; clk        ; 2.945 ; 3.506 ; Rise       ; clk             ;
+;  hra_u_load[0]  ; clk        ; 2.686 ; 3.225 ; Rise       ; clk             ;
+;  hra_u_load[1]  ; clk        ; 2.892 ; 3.461 ; Rise       ; clk             ;
+;  hra_u_load[2]  ; clk        ; 2.945 ; 3.506 ; Rise       ; clk             ;
+;  hra_u_load[3]  ; clk        ; 2.942 ; 3.501 ; Rise       ; clk             ;
+; hra_u_timer[*]  ; clk        ; 3.078 ; 3.650 ; Rise       ; clk             ;
+;  hra_u_timer[0] ; clk        ; 2.843 ; 3.366 ; Rise       ; clk             ;
+;  hra_u_timer[1] ; clk        ; 2.997 ; 3.547 ; Rise       ; clk             ;
+;  hra_u_timer[2] ; clk        ; 2.972 ; 3.532 ; Rise       ; clk             ;
+;  hra_u_timer[3] ; clk        ; 3.078 ; 3.650 ; Rise       ; clk             ;
+; load            ; clk        ; 1.203 ; 1.824 ; Rise       ; clk             ;
+; min_d_load[*]   ; clk        ; 1.870 ; 2.451 ; Rise       ; clk             ;
+;  min_d_load[0]  ; clk        ; 1.468 ; 2.046 ; Rise       ; clk             ;
+;  min_d_load[1]  ; clk        ; 1.594 ; 2.180 ; Rise       ; clk             ;
+;  min_d_load[2]  ; clk        ; 1.733 ; 2.307 ; Rise       ; clk             ;
+;  min_d_load[3]  ; clk        ; 1.870 ; 2.451 ; Rise       ; clk             ;
+; min_d_timer[*]  ; clk        ; 1.830 ; 2.375 ; Rise       ; clk             ;
+;  min_d_timer[0] ; clk        ; 1.437 ; 2.001 ; Rise       ; clk             ;
+;  min_d_timer[1] ; clk        ; 1.586 ; 2.173 ; Rise       ; clk             ;
+;  min_d_timer[2] ; clk        ; 1.823 ; 2.368 ; Rise       ; clk             ;
+;  min_d_timer[3] ; clk        ; 1.830 ; 2.375 ; Rise       ; clk             ;
+; min_u_load[*]   ; clk        ; 1.734 ; 2.298 ; Rise       ; clk             ;
+;  min_u_load[0]  ; clk        ; 1.660 ; 2.224 ; Rise       ; clk             ;
+;  min_u_load[1]  ; clk        ; 1.556 ; 2.115 ; Rise       ; clk             ;
+;  min_u_load[2]  ; clk        ; 1.661 ; 2.221 ; Rise       ; clk             ;
+;  min_u_load[3]  ; clk        ; 1.734 ; 2.298 ; Rise       ; clk             ;
+; min_u_timer[*]  ; clk        ; 1.820 ; 2.358 ; Rise       ; clk             ;
+;  min_u_timer[0] ; clk        ; 1.741 ; 2.287 ; Rise       ; clk             ;
+;  min_u_timer[1] ; clk        ; 1.749 ; 2.287 ; Rise       ; clk             ;
+;  min_u_timer[2] ; clk        ; 1.820 ; 2.355 ; Rise       ; clk             ;
+;  min_u_timer[3] ; clk        ; 1.811 ; 2.358 ; Rise       ; clk             ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; button          ; clk        ; -0.350 ; -0.913 ; Rise       ; clk             ;
+; enable          ; clk        ; -0.560 ; -1.116 ; Rise       ; clk             ;
+; hra_d_load[*]   ; clk        ; -1.715 ; -2.269 ; Rise       ; clk             ;
+;  hra_d_load[0]  ; clk        ; -1.823 ; -2.368 ; Rise       ; clk             ;
+;  hra_d_load[1]  ; clk        ; -1.715 ; -2.294 ; Rise       ; clk             ;
+;  hra_d_load[2]  ; clk        ; -2.008 ; -2.600 ; Rise       ; clk             ;
+;  hra_d_load[3]  ; clk        ; -1.727 ; -2.269 ; Rise       ; clk             ;
+; hra_d_timer[*]  ; clk        ; -1.611 ; -2.153 ; Rise       ; clk             ;
+;  hra_d_timer[0] ; clk        ; -1.893 ; -2.484 ; Rise       ; clk             ;
+;  hra_d_timer[1] ; clk        ; -1.611 ; -2.153 ; Rise       ; clk             ;
+;  hra_d_timer[2] ; clk        ; -1.999 ; -2.549 ; Rise       ; clk             ;
+;  hra_d_timer[3] ; clk        ; -1.823 ; -2.402 ; Rise       ; clk             ;
+; hra_u_load[*]   ; clk        ; -1.846 ; -2.387 ; Rise       ; clk             ;
+;  hra_u_load[0]  ; clk        ; -1.846 ; -2.387 ; Rise       ; clk             ;
+;  hra_u_load[1]  ; clk        ; -2.046 ; -2.591 ; Rise       ; clk             ;
+;  hra_u_load[2]  ; clk        ; -2.052 ; -2.611 ; Rise       ; clk             ;
+;  hra_u_load[3]  ; clk        ; -2.084 ; -2.645 ; Rise       ; clk             ;
+; hra_u_timer[*]  ; clk        ; -1.953 ; -2.539 ; Rise       ; clk             ;
+;  hra_u_timer[0] ; clk        ; -1.953 ; -2.539 ; Rise       ; clk             ;
+;  hra_u_timer[1] ; clk        ; -2.108 ; -2.703 ; Rise       ; clk             ;
+;  hra_u_timer[2] ; clk        ; -2.079 ; -2.631 ; Rise       ; clk             ;
+;  hra_u_timer[3] ; clk        ; -2.223 ; -2.770 ; Rise       ; clk             ;
+; load            ; clk        ; -0.444 ; -1.021 ; Rise       ; clk             ;
+; min_d_load[*]   ; clk        ; -0.339 ; -0.902 ; Rise       ; clk             ;
+;  min_d_load[0]  ; clk        ; -0.346 ; -0.924 ; Rise       ; clk             ;
+;  min_d_load[1]  ; clk        ; -0.399 ; -0.967 ; Rise       ; clk             ;
+;  min_d_load[2]  ; clk        ; -0.339 ; -0.902 ; Rise       ; clk             ;
+;  min_d_load[3]  ; clk        ; -0.420 ; -0.998 ; Rise       ; clk             ;
+; min_d_timer[*]  ; clk        ; -0.698 ; -1.261 ; Rise       ; clk             ;
+;  min_d_timer[0] ; clk        ; -0.698 ; -1.261 ; Rise       ; clk             ;
+;  min_d_timer[1] ; clk        ; -0.747 ; -1.355 ; Rise       ; clk             ;
+;  min_d_timer[2] ; clk        ; -0.754 ; -1.346 ; Rise       ; clk             ;
+;  min_d_timer[3] ; clk        ; -0.749 ; -1.341 ; Rise       ; clk             ;
+; min_u_load[*]   ; clk        ; -0.794 ; -1.353 ; Rise       ; clk             ;
+;  min_u_load[0]  ; clk        ; -0.900 ; -1.436 ; Rise       ; clk             ;
+;  min_u_load[1]  ; clk        ; -0.794 ; -1.353 ; Rise       ; clk             ;
+;  min_u_load[2]  ; clk        ; -0.876 ; -1.435 ; Rise       ; clk             ;
+;  min_u_load[3]  ; clk        ; -0.950 ; -1.487 ; Rise       ; clk             ;
+; min_u_timer[*]  ; clk        ; -0.937 ; -1.526 ; Rise       ; clk             ;
+;  min_u_timer[0] ; clk        ; -0.937 ; -1.526 ; Rise       ; clk             ;
+;  min_u_timer[1] ; clk        ; -0.937 ; -1.535 ; Rise       ; clk             ;
+;  min_u_timer[2] ; clk        ; -0.985 ; -1.581 ; Rise       ; clk             ;
+;  min_u_timer[3] ; clk        ; -0.984 ; -1.573 ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzzer    ; clk        ; 3.894 ; 3.972 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzzer    ; clk        ; 3.766 ; 3.841 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.649  ; 0.181 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -1.649  ; 0.181 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -11.918 ; 0.0   ; 0.0      ; 0.0     ; -20.99              ;
+;  clk             ; -11.918 ; 0.000 ; N/A      ; N/A     ; -20.990             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; button          ; clk        ; 2.997 ; 3.341 ; Rise       ; clk             ;
+; enable          ; clk        ; 2.422 ; 2.836 ; Rise       ; clk             ;
+; hra_d_load[*]   ; clk        ; 5.656 ; 6.024 ; Rise       ; clk             ;
+;  hra_d_load[0]  ; clk        ; 5.214 ; 5.541 ; Rise       ; clk             ;
+;  hra_d_load[1]  ; clk        ; 5.027 ; 5.430 ; Rise       ; clk             ;
+;  hra_d_load[2]  ; clk        ; 5.656 ; 6.024 ; Rise       ; clk             ;
+;  hra_d_load[3]  ; clk        ; 5.043 ; 5.396 ; Rise       ; clk             ;
+; hra_d_timer[*]  ; clk        ; 5.568 ; 5.896 ; Rise       ; clk             ;
+;  hra_d_timer[0] ; clk        ; 5.391 ; 5.759 ; Rise       ; clk             ;
+;  hra_d_timer[1] ; clk        ; 4.776 ; 5.129 ; Rise       ; clk             ;
+;  hra_d_timer[2] ; clk        ; 5.568 ; 5.896 ; Rise       ; clk             ;
+;  hra_d_timer[3] ; clk        ; 5.257 ; 5.692 ; Rise       ; clk             ;
+; hra_u_load[*]   ; clk        ; 5.828 ; 6.176 ; Rise       ; clk             ;
+;  hra_u_load[0]  ; clk        ; 5.297 ; 5.649 ; Rise       ; clk             ;
+;  hra_u_load[1]  ; clk        ; 5.724 ; 6.051 ; Rise       ; clk             ;
+;  hra_u_load[2]  ; clk        ; 5.789 ; 6.175 ; Rise       ; clk             ;
+;  hra_u_load[3]  ; clk        ; 5.828 ; 6.176 ; Rise       ; clk             ;
+; hra_u_timer[*]  ; clk        ; 6.034 ; 6.363 ; Rise       ; clk             ;
+;  hra_u_timer[0] ; clk        ; 5.527 ; 5.955 ; Rise       ; clk             ;
+;  hra_u_timer[1] ; clk        ; 5.916 ; 6.274 ; Rise       ; clk             ;
+;  hra_u_timer[2] ; clk        ; 5.846 ; 6.206 ; Rise       ; clk             ;
+;  hra_u_timer[3] ; clk        ; 6.034 ; 6.363 ; Rise       ; clk             ;
+; load            ; clk        ; 2.654 ; 3.010 ; Rise       ; clk             ;
+; min_d_load[*]   ; clk        ; 3.891 ; 4.209 ; Rise       ; clk             ;
+;  min_d_load[0]  ; clk        ; 3.064 ; 3.439 ; Rise       ; clk             ;
+;  min_d_load[1]  ; clk        ; 3.398 ; 3.746 ; Rise       ; clk             ;
+;  min_d_load[2]  ; clk        ; 3.587 ; 3.967 ; Rise       ; clk             ;
+;  min_d_load[3]  ; clk        ; 3.891 ; 4.209 ; Rise       ; clk             ;
+; min_d_timer[*]  ; clk        ; 3.812 ; 4.100 ; Rise       ; clk             ;
+;  min_d_timer[0] ; clk        ; 3.046 ; 3.391 ; Rise       ; clk             ;
+;  min_d_timer[1] ; clk        ; 3.377 ; 3.735 ; Rise       ; clk             ;
+;  min_d_timer[2] ; clk        ; 3.788 ; 4.087 ; Rise       ; clk             ;
+;  min_d_timer[3] ; clk        ; 3.812 ; 4.100 ; Rise       ; clk             ;
+; min_u_load[*]   ; clk        ; 3.566 ; 3.939 ; Rise       ; clk             ;
+;  min_u_load[0]  ; clk        ; 3.424 ; 3.796 ; Rise       ; clk             ;
+;  min_u_load[1]  ; clk        ; 3.271 ; 3.613 ; Rise       ; clk             ;
+;  min_u_load[2]  ; clk        ; 3.444 ; 3.787 ; Rise       ; clk             ;
+;  min_u_load[3]  ; clk        ; 3.566 ; 3.939 ; Rise       ; clk             ;
+; min_u_timer[*]  ; clk        ; 3.774 ; 4.074 ; Rise       ; clk             ;
+;  min_u_timer[0] ; clk        ; 3.605 ; 3.919 ; Rise       ; clk             ;
+;  min_u_timer[1] ; clk        ; 3.640 ; 3.934 ; Rise       ; clk             ;
+;  min_u_timer[2] ; clk        ; 3.758 ; 4.052 ; Rise       ; clk             ;
+;  min_u_timer[3] ; clk        ; 3.774 ; 4.074 ; Rise       ; clk             ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; button          ; clk        ; -0.350 ; -0.913 ; Rise       ; clk             ;
+; enable          ; clk        ; -0.560 ; -1.116 ; Rise       ; clk             ;
+; hra_d_load[*]   ; clk        ; -1.715 ; -2.269 ; Rise       ; clk             ;
+;  hra_d_load[0]  ; clk        ; -1.823 ; -2.368 ; Rise       ; clk             ;
+;  hra_d_load[1]  ; clk        ; -1.715 ; -2.294 ; Rise       ; clk             ;
+;  hra_d_load[2]  ; clk        ; -2.008 ; -2.600 ; Rise       ; clk             ;
+;  hra_d_load[3]  ; clk        ; -1.727 ; -2.269 ; Rise       ; clk             ;
+; hra_d_timer[*]  ; clk        ; -1.611 ; -2.153 ; Rise       ; clk             ;
+;  hra_d_timer[0] ; clk        ; -1.893 ; -2.484 ; Rise       ; clk             ;
+;  hra_d_timer[1] ; clk        ; -1.611 ; -2.153 ; Rise       ; clk             ;
+;  hra_d_timer[2] ; clk        ; -1.999 ; -2.549 ; Rise       ; clk             ;
+;  hra_d_timer[3] ; clk        ; -1.823 ; -2.402 ; Rise       ; clk             ;
+; hra_u_load[*]   ; clk        ; -1.846 ; -2.387 ; Rise       ; clk             ;
+;  hra_u_load[0]  ; clk        ; -1.846 ; -2.387 ; Rise       ; clk             ;
+;  hra_u_load[1]  ; clk        ; -2.046 ; -2.591 ; Rise       ; clk             ;
+;  hra_u_load[2]  ; clk        ; -2.052 ; -2.611 ; Rise       ; clk             ;
+;  hra_u_load[3]  ; clk        ; -2.084 ; -2.645 ; Rise       ; clk             ;
+; hra_u_timer[*]  ; clk        ; -1.953 ; -2.539 ; Rise       ; clk             ;
+;  hra_u_timer[0] ; clk        ; -1.953 ; -2.539 ; Rise       ; clk             ;
+;  hra_u_timer[1] ; clk        ; -2.108 ; -2.703 ; Rise       ; clk             ;
+;  hra_u_timer[2] ; clk        ; -2.079 ; -2.631 ; Rise       ; clk             ;
+;  hra_u_timer[3] ; clk        ; -2.223 ; -2.770 ; Rise       ; clk             ;
+; load            ; clk        ; -0.444 ; -1.021 ; Rise       ; clk             ;
+; min_d_load[*]   ; clk        ; -0.339 ; -0.878 ; Rise       ; clk             ;
+;  min_d_load[0]  ; clk        ; -0.346 ; -0.898 ; Rise       ; clk             ;
+;  min_d_load[1]  ; clk        ; -0.399 ; -0.967 ; Rise       ; clk             ;
+;  min_d_load[2]  ; clk        ; -0.339 ; -0.878 ; Rise       ; clk             ;
+;  min_d_load[3]  ; clk        ; -0.420 ; -0.998 ; Rise       ; clk             ;
+; min_d_timer[*]  ; clk        ; -0.698 ; -1.261 ; Rise       ; clk             ;
+;  min_d_timer[0] ; clk        ; -0.698 ; -1.261 ; Rise       ; clk             ;
+;  min_d_timer[1] ; clk        ; -0.747 ; -1.355 ; Rise       ; clk             ;
+;  min_d_timer[2] ; clk        ; -0.754 ; -1.346 ; Rise       ; clk             ;
+;  min_d_timer[3] ; clk        ; -0.749 ; -1.341 ; Rise       ; clk             ;
+; min_u_load[*]   ; clk        ; -0.794 ; -1.353 ; Rise       ; clk             ;
+;  min_u_load[0]  ; clk        ; -0.900 ; -1.436 ; Rise       ; clk             ;
+;  min_u_load[1]  ; clk        ; -0.794 ; -1.353 ; Rise       ; clk             ;
+;  min_u_load[2]  ; clk        ; -0.876 ; -1.435 ; Rise       ; clk             ;
+;  min_u_load[3]  ; clk        ; -0.950 ; -1.487 ; Rise       ; clk             ;
+; min_u_timer[*]  ; clk        ; -0.937 ; -1.526 ; Rise       ; clk             ;
+;  min_u_timer[0] ; clk        ; -0.937 ; -1.526 ; Rise       ; clk             ;
+;  min_u_timer[1] ; clk        ; -0.937 ; -1.535 ; Rise       ; clk             ;
+;  min_u_timer[2] ; clk        ; -0.985 ; -1.581 ; Rise       ; clk             ;
+;  min_u_timer[3] ; clk        ; -0.984 ; -1.573 ; Rise       ; clk             ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzzer    ; clk        ; 7.361 ; 7.299 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzzer    ; clk        ; 3.766 ; 3.841 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; buzzer        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; hra_d_timer[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_d_timer[1]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_d_load[1]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_d_load[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_d_timer[2]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_d_timer[3]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_d_load[3]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_d_load[2]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_u_timer[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_u_timer[1]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_u_load[1]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_u_load[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_u_timer[2]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_u_timer[3]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_u_load[3]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; hra_u_load[2]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_d_timer[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_d_timer[1]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_d_timer[2]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_d_timer[3]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; button                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; enable                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_d_load[1]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_d_load[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_d_load[3]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_d_load[2]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_u_timer[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_u_timer[1]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_u_load[1]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_u_load[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_u_timer[2]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_u_timer[3]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_u_load[3]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; min_u_load[2]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; load                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; buzzer        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; buzzer        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; buzzer        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 62       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 62       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 36    ; 36   ;
+; Unconstrained Input Port Paths  ; 157   ; 157  ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Sat Oct 12 22:19:49 2019
+Info: Command: quartus_sta bcd_timer_2019_2 -c top_timer_de2_115
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'SDC1.sdc'
+Warning (332174): Ignored filter at SDC1.sdc(1): CLOCK_50 could not be matched with a port
+Warning (332049): Ignored create_clock at SDC1.sdc(1): Argument <targets> is an empty collection
+    Info (332050): create_clock -name CLK50MHz -period 50MHz [get_ports {CLOCK_50}]  
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.649
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.649       -11.918 clk 
+Info (332146): Worst-case hold slack is 0.402
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.402         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -20.990 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.444
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.444        -9.787 clk 
+Info (332146): Worst-case hold slack is 0.354
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.354         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -20.990 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.295
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.295        -1.075 clk 
+Info (332146): Worst-case hold slack is 0.181
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.181         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -17.862 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 508 megabytes
+    Info: Processing ended: Sat Oct 12 22:19:59 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:05
+
+

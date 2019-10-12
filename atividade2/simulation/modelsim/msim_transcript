@@ -1,0 +1,130 @@
+# do top_timer_de2_115_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/atividade2/machine.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity machine
+# -- Compiling architecture state of machine
+# 
+# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package util
+# -- Compiling entity timer_tb
+# -- Compiling architecture bench of timer_tb
+# ** Warning: [4] /home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht(100): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  timer_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps timer_tb 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 Linux 4.19.0-6-amd64
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading modelsim_lib.util(body)
+# Loading work.timer_tb(bench)
+# ** Warning: (vsim-3473) Component instance "uut : timer" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /timer_tb File: /home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: (vsim-3561) No objects found matching 'uut'.
+# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
+# 
+# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001000' onto '/timer_tb/uut/sec_reg' at time 10000 ps.
+#    Time: 10 ns  Iteration: 0  Instance: /timer_tb
+# ** Error: (vsim-3561) No objects found matching 'uut'.
+# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
+# 
+# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001001' onto '/timer_tb/uut/min_reg' at time 10000 ps.
+#    Time: 10 ns  Iteration: 0  Instance: /timer_tb
+# ** Error: (vsim-3561) No objects found matching 'uut'.
+# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
+# 
+# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011000' onto '/timer_tb/uut/sec_reg' at time 170000 ps.
+#    Time: 170 ns  Iteration: 0  Instance: /timer_tb
+# ** Error: (vsim-3561) No objects found matching 'uut'.
+# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
+# 
+# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001000' onto '/timer_tb/uut/min_reg' at time 170000 ps.
+#    Time: 170 ns  Iteration: 0  Instance: /timer_tb
+# ** Error: (vsim-3561) No objects found matching 'uut'.
+# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
+# 
+# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011000' onto '/timer_tb/uut/sec_reg' at time 230000 ps.
+#    Time: 230 ns  Iteration: 0  Instance: /timer_tb
+# ** Error: (vsim-3561) No objects found matching 'uut'.
+# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
+# 
+# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/min_reg' at time 230000 ps.
+#    Time: 230 ns  Iteration: 0  Instance: /timer_tb
+# ** Error: (vsim-3561) No objects found matching 'uut'.
+# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
+# 
+# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/sec_reg' at time 290000 ps.
+#    Time: 290 ns  Iteration: 0  Instance: /timer_tb
+# ** Error: (vsim-3561) No objects found matching 'uut'.
+# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
+# 
+# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/min_reg' at time 290000 ps.
+#    Time: 290 ns  Iteration: 0  Instance: /timer_tb
+vsim work.machine(state)
+# vsim work.machine(state) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.machine(state)
+vsim work.machine
+# vsim work.machine 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.machine(state)
+add wave sim:/machine/*
+force -freeze sim:/machine/clk 1 0, 0 {50000000000 ps} -r 100ms
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/192/dlp2/dlp2/atividade2/simulation/modelsim/machine_wave.do
+do tb_machine.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity machine
+# -- Compiling architecture state of machine
+# vsim work.machine 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.machine(state)
+force -freeze sim:/machine/rst 1 0
+force -freeze sim:/machine/load 1 0

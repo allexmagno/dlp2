@@ -1,0 +1,212 @@
+LIBRARY IEEE;
+USE IEEE.STD_logic_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY machine IS
+	PORT 
+	(
+    	clk	: IN STD_LOGIC;		
+		rst	: IN STD_LOGIC;		
+		button: IN STD_LOGIC;		
+		load	: IN STD_LOGIC;
+		--en		: IN STD_LOGIC;
+		enable: IN STD_LOGIC;		
+		hra_d_timer	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);		
+		hra_u_timer : IN STD_LOGIC_VECTOR (3 downto 0);
+		min_d_timer	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		min_u_timer	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		hra_d_load : IN STD_LOGIC_VECTOR (3 DOWNTO 0);		
+		hra_u_load : IN STD_LOGIC_VECTOR (3 downto 0);
+		min_d_load : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		min_u_load : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		buzzer: OUT STD_LOGIC		
+		   
+	);
+	END machine;
+	
+	ARCHITECTURE state OF machine IS
+		TYPE state IS (idle, on_alarm, sleep, alarm, load_time, inc_sleep, wait_button1, wait_button2, wait_button3);
+		SIGNAL state_reg, state_next: state;
+		SIGNAL dispara, dispara_sleep: STD_LOGIC;
+		SIGNAL buzzer_next, buzzer_buf_reg: STD_LOGIC;
+		signal sel_inc : std_logic_vector(1 downto 0);
+		signal hra_d_timerr	: STD_LOGIC_VECTOR (3 DOWNTO 0);		
+		signal hra_u_timerr  : STD_LOGIC_VECTOR (3 downto 0);
+		signal min_d_timerr	: STD_LOGIC_VECTOR (3 DOWNTO 0);
+		signal min_u_timerr	: STD_LOGIC_VECTOR (3 DOWNTO 0);
+		signal hra_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);		
+		signal hra_u_loadd : STD_LOGIC_VECTOR (3 downto 0);
+		signal min_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);
+		signal min_u_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);
+		signal min_d_sleep_next, min_d_sleep_reg : std_logic_vector (3 downto 0);
+		--signal min_u_sleep : std_logic_vector (3 downto 0);
+		
+	BEGIN	
+	
+	hra_d_timerr <= hra_d_timer;
+	hra_u_timerr <= hra_u_timer;
+	min_d_timerr <= min_d_timer;
+	min_u_timerr <= min_u_timer;
+	hra_d_loadd <= hra_d_load;
+	hra_u_loadd <= hra_u_load;
+	min_d_loadd <= min_d_load;
+	min_u_loadd <= min_u_load;
+	--min_d_sleep <= min_d_load;
+	--min_u_sleep <= std_logic_vector(unsigned(min_u_loadd)+ 0);
+	--sel_inc <= '0'
+							
+	PROCESS (hra_d_timerr, hra_d_loadd, min_d_timerr, min_d_loadd, hra_u_timerr, hra_u_loadd, min_u_timerr, min_u_loadd, min_d_sleep_reg)
+	BEGIN
+		IF( hra_d_timerr = hra_d_loadd and hra_u_timerr = hra_u_loadd) THEN
+			if (min_d_timerr = min_d_loadd and min_u_timerr = min_u_loadd) then
+				dispara <= '1';
+			ELSE
+				dispara <= '0';
+			END IF;
+			if (min_d_sleep_reg = min_d_timerr) then
+				dispara_sleep <= '1';
+			ELSE
+				dispara_sleep <= '0';
+			END IF;
+		ELSE
+			dispara <= '0';
+			dispara_sleep <= '0';
+		END IF;
+	END PROCESS;
+	
+	-- state register
+	PROCESS (clk, rst)
+	BEGIN
+		IF (rst = '1') THEN
+			state_reg <= idle;
+		ELSIF (clk'EVENT AND clk = '1') THEN
+			state_reg <= state_next;
+		END IF;
+	END PROCESS;
+	
+	
+	-- output buffer
+	process (clk, rst)
+	begin
+	if (rst = '1') then
+		buzzer_buf_reg <= '0';
+		min_d_sleep_reg <= "0000";
+	elsif (clk'event and clk='1') then
+		buzzer_buf_reg <= buzzer_next;
+		min_d_sleep_reg <= min_d_sleep_next;
+	end if;
+	end process;
+	
+	PROCESS(state_reg, load, enable, button, dispara, dispara_sleep)
+	BEGIN
+		CASE state_reg IS			
+			WHEN idle =>
+				--buzzer <= '0';
+				IF(load = '1') THEN 
+					state_next <= load_time;			
+				ELSIF (enable = '1' and load = '0') THEN 
+					state_next <= on_alarm;
+				ELSE
+					state_next <= idle;
+				END IF;
+				
+			WHEN load_time =>				
+				--dispara <= '1';
+				--buzzer <= '0';				
+				IF (load = '1') THEN 
+					state_next <= load_time;			
+				ELSE
+					state_next <= idle;				
+				END IF;
+			
+			WHEN on_alarm =>
+				--buzzer <= '0';		
+				IF ( enable ='0') THEN 
+					state_next <= idle;
+				ELSIF (dispara = '1')THEN
+					state_next <= alarm;
+				ELSE
+					state_next <= on_alarm;		
+				END IF;
+				
+			WHEN alarm =>
+				--buzzer <= '1';
+				IF( button = '1') THEN 
+					state_next <= wait_button1;
+				ELSE
+					state_next <= alarm;
+				END IF;
+				 
+			WHEN wait_button1 =>
+				IF (button = '0') THEN
+					state_next <= inc_sleep;
+				ELSE
+					state_next <= wait_button1;
+				END IF;
+				
+			WHEN inc_sleep =>
+				IF (button = '1') THEN
+					state_next <= wait_button2;
+				ELSE
+					state_next <= sleep;
+				END IF;
+				
+			when wait_button2 =>
+				if(button = '0') then
+					state_next <= idle;
+				else
+					state_next <= wait_button2;
+				end if;
+					
+			WHEN sleep =>
+				IF (button = '1') THEN -- ver uma logica para o dispara
+					state_next <= wait_button3;
+				ELSIF (dispara_sleep = '1') THEN
+					state_next <= alarm;
+				ELSE
+					state_next <= sleep;
+				END IF;
+			
+			when wait_button3 =>
+				if(button = '0') then
+					state_next <= idle;
+				else
+					state_next <= wait_button3;
+				end if;
+				
+		END CASE;					
+	
+	END PROCESS;
+	
+  -- look-ahead output logic
+  process(state_next)
+  begin
+		buzzer_next <= '0';
+		sel_inc <= "00";
+		--dispara_sleep <= '0';
+		
+		case state_next is
+			when idle =>
+			when on_alarm =>
+			when inc_sleep =>
+				sel_inc <= "10"; -- Seleciona o incremento do sleep
+			when sleep => 
+			when wait_button1 =>
+			when wait_button2 =>
+			when wait_button3 =>
+			when alarm =>
+				buzzer_next <= '1'; -- ativa o buzzer
+			when load_time =>
+				sel_inc <= "01"; -- Seleciona o sleep definido no load
+		end case;
+  end process;
+  
+  buzzer <= buzzer_buf_reg;
+--  min_d_sleep_next <=	std_logic_vector(unsigned(min_d_sleep_reg) + 5) when sel_inc = "10" else
+--								min_d_loadd when sel_inc = "01" else
+--								min_d_sleep_reg;
+	with sel_inc select
+   min_d_sleep_next <=	std_logic_vector(unsigned(min_d_sleep_reg) + 5) when "10",
+								min_d_loadd when "01",
+								min_d_sleep_reg when others;
+END ARCHITECTURE;

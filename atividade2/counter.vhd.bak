@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity counter is
+	port 
+	(
+    	clk, reset, en : in std_logic;
+		sel : out std_logic_vector(2 downto 0)
+	);
+
+end entity;
+
+architecture counter_0_to_5 of counter is
+	signal sel_reg, sel_next : unsigned(2 downto 0);
+	
+	begin
+
+    process(clk,reset,en)
+    begin
+       if reset='1' then
+          sel_reg <= (others=>'0');
+       elsif (clk'event and clk='1' and en = '1') then
+          sel_reg <= sel_next;
+       end if;
+    end process;
+	 
+	 sel_next <= (others=>'0') when (sel_reg = 5) else
+					(sel_reg + 1);
+	
+	 sel <= std_logic_vector(sel_reg);
+	 
+end architecture;

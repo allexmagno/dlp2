@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_timer_de2_115
-Sat Oct 12 21:55:57 2019
+Sat Oct 12 22:18:41 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -43,7 +43,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 12 21:55:57 2019            ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 12 22:18:40 2019            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_timer_de2_115                                ;
 ; Top-level Entity Name              ; machine                                          ;
@@ -271,7 +271,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Oct 12 21:55:49 2019
+    Info: Processing started: Sat Oct 12 22:18:32 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcd_timer_2019_2 -c top_timer_de2_115
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file top_timer_de2_115.vhd
@@ -304,8 +304,8 @@ Info (21057): Implemented 76 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 38 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 426 megabytes
-    Info: Processing ended: Sat Oct 12 21:55:58 2019
+    Info: Peak virtual memory: 418 megabytes
+    Info: Processing ended: Sat Oct 12 22:18:41 2019
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:04
 

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/allex.m/192/dlp2/dlp2/atividade2/simulation/modelsim
+Emachine
+Z1 w1570915937
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 d/home/allex.m/192/dlp2/dlp2/atividade2/simulation/modelsim
+Z6 8/home/allex.m/192/dlp2/dlp2/atividade2/machine.vhd
+Z7 F/home/allex.m/192/dlp2/dlp2/atividade2/machine.vhd
+l0
+L5
+VLeIb=??DzfG[;?;^eW8E53
+!s100 1QI^8cM;Z2EgeP]haE5m<3
+Z8 OV;C;10.1d;51
+31
+!i10b 1
+Z9 !s108 1570918307.894848
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/atividade2/machine.vhd|
+Z11 !s107 /home/allex.m/192/dlp2/dlp2/atividade2/machine.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Astate
+R2
+R3
+R4
+Z14 DEx4 work 7 machine 0 22 LeIb=??DzfG[;?;^eW8E53
+l35
+L19
+Z15 VX7iOFkD@l;M_Mkb^OKFjN0
+Z16 !s100 mc_9Y0iJmaZLn0miI_2152
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Etimer_tb
+Z17 w1569617797
+Z18 DPx12 modelsim_lib 4 util 0 22 Ci0SSDmVf2K[lFkJZoo=62
+R2
+R3
+R4
+R5
+Z19 8/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht
+Z20 F/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht
+l0
+L7
+V0]F?`2N[f9GjDCS2?7N_@2
+R8
+31
+Z21 !s108 1570917379.957464
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht|
+Z23 !s107 /home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht|
+R12
+R13
+!s100 OZ0XG8RQ8dQYgDH`_i4eZ3
+!i10b 1
+Abench
+R18
+R2
+R3
+R4
+DEx4 work 8 timer_tb 0 22 0]F?`2N[f9GjDCS2?7N_@2
+l32
+L10
+V[:WaN:znf0Fo_OEL1n@k:3
+R8
+31
+R21
+R22
+R23
+R12
+R13
+!s100 gK=:7PL4a4`eh`Qoa?Wk21
+!i10b 1
