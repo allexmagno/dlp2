@@ -21,7 +21,7 @@ architecture bcd_two_digits of timer is
 		
 begin
 
-    process(clk,reset)
+    process(clk, reset, en)
     begin
        if reset='1' then
           sec_reg <= (others=>'0');

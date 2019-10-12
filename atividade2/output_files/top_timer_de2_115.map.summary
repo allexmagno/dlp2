@@ -1,14 +1,14 @@
-Analysis & Elaboration Status : Successful - Fri Oct  4 20:34:52 2019
+Analysis & Synthesis Status : Successful - Sat Oct 12 21:55:57 2019
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : top_timer_de2_115
-Top-level Entity Name : sel_disp
+Top-level Entity Name : machine
 Family : Cyclone IV E
-Total logic elements : N/A until Partition Merge
-    Total combinational functions : N/A until Partition Merge
-    Dedicated logic registers : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total memory bits : N/A until Partition Merge
-Embedded Multiplier 9-bit elements : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
+Total logic elements : 36
+    Total combinational functions : 35
+    Dedicated logic registers : 14
+Total registers : 14
+Total pins : 38
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
