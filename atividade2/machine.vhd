@@ -11,7 +11,9 @@ ENTITY machine IS
 		min_d_timer, min_u_timer	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
 		hra_d_load, hra_u_load	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);		
 		min_d_load, min_u_load	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-		buzzer: OUT STD_LOGIC		
+		buzzer: OUT STD_LOGIC;
+		min_u_out	: out STD_LOGIC_VECTOR (3 DOWNTO 0);
+		idle_s, load_s, on_alarm_s, alarm_s, sleep_s : out std_logic
 		   
 	);
 	END machine;
@@ -30,7 +32,7 @@ ENTITY machine IS
 		signal hra_u_loadd : STD_LOGIC_VECTOR (3 downto 0);
 		signal min_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);
 		signal min_u_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);
-		signal min_d_sleep_next, min_d_sleep_reg : std_logic_vector (3 downto 0);
+		signal min_u_sleep_next, min_u_sleep_reg : std_logic_vector (3 downto 0);
 		
 	BEGIN	
 	
@@ -45,7 +47,7 @@ ENTITY machine IS
 							
 	
 	-- Comparacao para disparar o alarme
-	PROCESS (hra_d_timerr, hra_d_loadd, min_d_timerr, min_d_loadd, hra_u_timerr, hra_u_loadd, min_u_timerr, min_u_loadd, min_d_sleep_reg)
+	PROCESS (hra_d_timerr, hra_d_loadd, min_d_timerr, min_d_loadd, hra_u_timerr, hra_u_loadd, min_u_timerr, min_u_loadd, min_u_sleep_reg)
 	BEGIN
 		IF( hra_d_timerr = hra_d_loadd and hra_u_timerr = hra_u_loadd) THEN
 			if (min_d_timerr = min_d_loadd and min_u_timerr = min_u_loadd) then
@@ -53,7 +55,7 @@ ENTITY machine IS
 			ELSE
 				dispara <= '0';
 			END IF;
-			if (min_d_sleep_reg = min_d_timerr) then
+			if (min_u_sleep_reg = min_u_timerr) then
 				dispara_sleep <= '1';
 			ELSE
 				dispara_sleep <= '0';
@@ -80,10 +82,10 @@ ENTITY machine IS
 	begin
 	if (rst = '1') then
 		buzzer_buf_reg <= '0';
-		min_d_sleep_reg <= "0000";
+		min_u_sleep_reg <= "0000";
 	elsif (clk'event and clk='1') then
 		buzzer_buf_reg <= buzzer_next;
-		min_d_sleep_reg <= min_d_sleep_next;
+		min_u_sleep_reg <= min_u_sleep_next;
 	end if;
 	end process;
 	
@@ -117,35 +119,35 @@ ENTITY machine IS
 				END IF;
 				
 			WHEN alarm => -- Dispara alarme
-				IF( button = '1') THEN 
+				IF( button = '0') THEN 
 					state_next <= wait_button1;
 				ELSE
 					state_next <= alarm;
 				END IF;
 				 
 			WHEN wait_button1 => -- espera o botao ser liberado
-				IF (button = '0') THEN
+				IF (button = '1') THEN
 					state_next <= inc_sleep;
 				ELSE
 					state_next <= wait_button1;
 				END IF;
 				
 			WHEN inc_sleep => -- Incremeta 10 min de soneca
-				IF (button = '1') THEN
+				IF (button = '0') THEN
 					state_next <= wait_button2;
 				ELSE
 					state_next <= sleep;
 				END IF;
 				
 			when wait_button2 => -- espera o botao ser liberado
-				if(button = '0') then
+				if(button = '1') then
 					state_next <= idle;
 				else
 					state_next <= wait_button2;
 				end if;
 					
 			WHEN sleep =>
-				IF (button = '1') THEN -- Tempo de soneca
+				IF (button = '0') THEN -- Tempo de soneca
 					state_next <= wait_button3;
 				ELSIF (dispara_sleep = '1') THEN
 					state_next <= alarm;
@@ -154,7 +156,7 @@ ENTITY machine IS
 				END IF;
 			
 			when wait_button3 => -- espera o botao ser liberado
-				if(button = '0') then
+				if(button = '1') then
 					state_next <= idle;
 				else
 					state_next <= wait_button3;
@@ -170,18 +172,29 @@ ENTITY machine IS
 		buzzer_next <= '0';
 		sel_inc <= "00";
 		
+		idle_s <= '0';
+		on_alarm_s <= '0';
+		sleep_s <= '0';
+		alarm_s <= '0';
+		load_s <= '0';
+		
 		case state_next is
 			when idle =>
+				idle_s <= '1';
 			when on_alarm =>
+				on_alarm_s <= '1';
 			when inc_sleep =>
 				sel_inc <= "10"; -- Seleciona o incremento do sleep
 			when sleep => 
+				sleep_s <= '1';
 			when wait_button1 =>
 			when wait_button2 =>
 			when wait_button3 =>
 			when alarm =>
+				alarm_s <= '1';
 				buzzer_next <= '1'; -- ativa o buzzer
 			when load_time =>
+			   load_s <= '1';
 				sel_inc <= "01"; -- Seleciona o sleep definido no load
 		end case;
   end process;
@@ -191,7 +204,9 @@ ENTITY machine IS
 --								min_d_loadd when sel_inc = "01" else
 --								min_d_sleep_reg;
 	with sel_inc select
-   min_d_sleep_next <=	std_logic_vector(unsigned(min_d_sleep_reg) + 5) when "10",
-								min_d_loadd when "01",
-								min_d_sleep_reg when others;
+   min_u_sleep_next <=	std_logic_vector(unsigned(min_u_sleep_reg) + 5) when "10",
+								min_u_loadd when "01",
+								min_u_sleep_reg when others;
+								
+	min_u_out <= min_u_sleep_next;
 END ARCHITECTURE;

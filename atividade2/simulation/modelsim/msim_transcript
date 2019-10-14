@@ -9,7 +9,50 @@
 # ** Warning: Copied /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/atividade2/machine.vhd}
+# vlog -vlog01compat -work work +incdir+/home/aluno/dlp2/atividade2/db {/home/aluno/dlp2/atividade2/db/pll_50mhz_10khz_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pll_50mhz_10khz_altpll
+# 
+# Top level modules:
+# 	pll_50mhz_10khz_altpll
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/top_timer_de2_115.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_timer_de2_115
+# -- Compiling architecture top_a3_2019_2 of top_timer_de2_115
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/bcd2ssd.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bcd2ssd
+# -- Compiling architecture arch of bcd2ssd
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/timer.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture bcd_two_digits of timer
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/pll_50mhz_10khz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pll_50mhz_10khz
+# -- Compiling architecture SYN of pll_50mhz_10khz
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/sel_disp.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity sel_disp
+# -- Compiling architecture arch of sel_disp
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/machine.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -17,8 +60,16 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity machine
 # -- Compiling architecture state of machine
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/counter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture counter_0_to_5 of counter
 # 
-# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht}
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/timer_tb.vht}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -27,11 +78,11 @@
 # -- Loading package util
 # -- Compiling entity timer_tb
 # -- Compiling architecture bench of timer_tb
-# ** Warning: [4] /home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht(100): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] /home/aluno/dlp2/atividade2/timer_tb.vht(100): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  timer_tb
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps timer_tb 
-# //  ModelSim ALTERA 10.1d Nov  2 2012 Linux 4.19.0-6-amd64
+# //  ModelSim ALTERA 10.1d Nov  2 2012 Linux 4.9.0-11-amd64
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
 # //  All Rights Reserved.
@@ -46,85 +97,350 @@
 # Loading ieee.numeric_std(body)
 # Loading modelsim_lib.util(body)
 # Loading work.timer_tb(bench)
-# ** Warning: (vsim-3473) Component instance "uut : timer" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /timer_tb File: /home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001000' onto '/timer_tb/uut/sec_reg' at time 10000 ps.
-#    Time: 10 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001001' onto '/timer_tb/uut/min_reg' at time 10000 ps.
-#    Time: 10 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011000' onto '/timer_tb/uut/sec_reg' at time 170000 ps.
-#    Time: 170 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001000' onto '/timer_tb/uut/min_reg' at time 170000 ps.
-#    Time: 170 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011000' onto '/timer_tb/uut/sec_reg' at time 230000 ps.
-#    Time: 230 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/min_reg' at time 230000 ps.
-#    Time: 230 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/sec_reg' at time 290000 ps.
-#    Time: 290 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/min_reg' at time 290000 ps.
-#    Time: 290 ns  Iteration: 0  Instance: /timer_tb
-vsim work.machine(state)
-# vsim work.machine(state) 
+# Loading work.timer(bcd_two_digits)
+# ** Failure: (vsim-3817) Port "en" of entity "timer" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /timer_tb/uut File: /home/aluno/dlp2/atividade2/timer.vhd Line: 8
+# Fatal error in file /home/aluno/dlp2/atividade2/timer.vhd
+#  while elaborating region: /timer_tb/uut
+# Fatal error in file /home/aluno/dlp2/atividade2/timer_tb.vht
+#  while elaborating region: /timer_tb
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./top_timer_de2_115_run_msim_rtl_vhdl.do PAUSED at line 19
+vsim work.top_timer_de2_115(top_a3_2019_2)
+# vsim work.top_timer_de2_115(top_a3_2019_2) 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
+# Loading work.top_timer_de2_115(top_a3_2019_2)
+# Loading work.pll_50mhz_10khz(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# Loading work.timer(bcd_two_digits)
+# Loading work.counter(counter_0_to_5)
+# Loading work.sel_disp(arch)
+# Loading work.bcd2ssd(arch)
 # Loading work.machine(state)
-vsim work.machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-add wave sim:/machine/*
-force -freeze sim:/machine/clk 1 0, 0 {50000000000 ps} -r 100ms
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/192/dlp2/dlp2/atividade2/simulation/modelsim/machine_wave.do
-do tb_machine.do
+add wave sim:/top_timer_de2_115/*
+force -freeze sim:/top_timer_de2_115/CLOCK_50 1 0, 0 {10000 ps} -r 20ns
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/aluno/dlp2/atividade2/simulation/modelsim/top_wave.do
+do tb_top.do
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/top_timer_de2_115.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-force -freeze sim:/machine/rst 1 0
-force -freeze sim:/machine/load 1 0
+# -- Compiling entity top_timer_de2_115
+# -- Compiling architecture top_a3_2019_2 of top_timer_de2_115
+# 
+# do top_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /top_timer_de2_115/CLOCK_50
+# add wave -noupdate /top_timer_de2_115/KEY
+# add wave -noupdate /top_timer_de2_115/button
+# add wave -noupdate /top_timer_de2_115/load
+# add wave -noupdate /top_timer_de2_115/enable
+# add wave -noupdate /top_timer_de2_115/buzzer
+# add wave -noupdate /top_timer_de2_115/HEX0
+# add wave -noupdate /top_timer_de2_115/HEX1
+# add wave -noupdate /top_timer_de2_115/HEX2
+# add wave -noupdate /top_timer_de2_115/HEX3
+# add wave -noupdate /top_timer_de2_115/HEX4
+# add wave -noupdate /top_timer_de2_115/HEX5
+# add wave -noupdate /top_timer_de2_115/secU
+# add wave -noupdate /top_timer_de2_115/secT
+# add wave -noupdate /top_timer_de2_115/minU
+# add wave -noupdate /top_timer_de2_115/minT
+# add wave -noupdate /top_timer_de2_115/hourU
+# add wave -noupdate /top_timer_de2_115/hourT
+# add wave -noupdate /top_timer_de2_115/r_reg
+# add wave -noupdate /top_timer_de2_115/r_next
+# add wave -noupdate /top_timer_de2_115/reg_360
+# add wave -noupdate /top_timer_de2_115/next_360
+# add wave -noupdate /top_timer_de2_115/reset
+# add wave -noupdate /top_timer_de2_115/CLOCK_1Hz
+# add wave -noupdate /top_timer_de2_115/CLOCK_10KHZ
+# add wave -noupdate /top_timer_de2_115/en
+# add wave -noupdate /top_timer_de2_115/en_360
+# add wave -noupdate /top_timer_de2_115/sel_t
+# add wave -noupdate /top_timer_de2_115/hra_d_loadd
+# add wave -noupdate /top_timer_de2_115/hra_u_loadd
+# add wave -noupdate /top_timer_de2_115/min_d_loadd
+# add wave -noupdate /top_timer_de2_115/min_u_loadd
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {1196 ps}
+# force -freeze sim:/top_timer_de2_115/CLOCK_50 1 0, 0 {10000 ps} -r 20ns
+force -freeze sim:/top_timer_de2_115/KEY 1 0
+do tb_top.do
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/top_timer_de2_115.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_timer_de2_115
+# -- Compiling architecture top_a3_2019_2 of top_timer_de2_115
+# 
+# do top_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /top_timer_de2_115/CLOCK_50
+# add wave -noupdate /top_timer_de2_115/KEY
+# add wave -noupdate /top_timer_de2_115/button
+# add wave -noupdate /top_timer_de2_115/load
+# add wave -noupdate /top_timer_de2_115/enable
+# add wave -noupdate /top_timer_de2_115/buzzer
+# add wave -noupdate /top_timer_de2_115/HEX0
+# add wave -noupdate /top_timer_de2_115/HEX1
+# add wave -noupdate /top_timer_de2_115/HEX2
+# add wave -noupdate /top_timer_de2_115/HEX3
+# add wave -noupdate /top_timer_de2_115/HEX4
+# add wave -noupdate /top_timer_de2_115/HEX5
+# add wave -noupdate /top_timer_de2_115/secU
+# add wave -noupdate /top_timer_de2_115/secT
+# add wave -noupdate /top_timer_de2_115/minU
+# add wave -noupdate /top_timer_de2_115/minT
+# add wave -noupdate /top_timer_de2_115/hourU
+# add wave -noupdate /top_timer_de2_115/hourT
+# add wave -noupdate /top_timer_de2_115/r_reg
+# add wave -noupdate /top_timer_de2_115/r_next
+# add wave -noupdate /top_timer_de2_115/reg_360
+# add wave -noupdate /top_timer_de2_115/next_360
+# add wave -noupdate /top_timer_de2_115/reset
+# add wave -noupdate /top_timer_de2_115/CLOCK_1Hz
+# add wave -noupdate /top_timer_de2_115/CLOCK_10KHZ
+# add wave -noupdate /top_timer_de2_115/en
+# add wave -noupdate /top_timer_de2_115/en_360
+# add wave -noupdate /top_timer_de2_115/sel_t
+# add wave -noupdate /top_timer_de2_115/hra_d_loadd
+# add wave -noupdate /top_timer_de2_115/hra_u_loadd
+# add wave -noupdate /top_timer_de2_115/min_d_loadd
+# add wave -noupdate /top_timer_de2_115/min_u_loadd
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {1196 ps}
+# force -freeze sim:/top_timer_de2_115/CLOCK_50 1 0, 0 {10000 ps} -r 20ns
+# force -freeze sim:/top_timer_de2_115/KEY 1 0, 0 40ns
+# force -freeze sim:/top_timer_de2_115/load 1 0, 0 50ns
+# force -freeze sim:/top_timer_de2_115/enable 1 0, 0 60ns
+# run 10ms
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/counter0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Error: (vsim-86) Arg Value -2147483648 is out of NATURAL range 0 to 2147483647.
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Error: (vsim-86) Arg Value -2147483648 is out of NATURAL range 0 to 2147483647.
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Error: (vsim-86) Arg Value -2147483648 is out of NATURAL range 0 to 2147483647.
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_timer_de2_115
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /top_timer_de2_115/t0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /top_timer_de2_115/t0
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 60 ns  Iteration: 3  Instance: /top_timer_de2_115/pll0/altpll_component/CYCLONEIII_ALTPLL/M5
+force -freeze sim:/top_timer_de2_115/CLOCK_10KHZ 1 0, 0 {10000 ps} -r 20ns
+do tb_top.do
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/top_timer_de2_115.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_timer_de2_115
+# -- Compiling architecture top_a3_2019_2 of top_timer_de2_115
+# 
+# do top_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /top_timer_de2_115/CLOCK_50
+# add wave -noupdate /top_timer_de2_115/KEY
+# add wave -noupdate /top_timer_de2_115/button
+# add wave -noupdate /top_timer_de2_115/load
+# add wave -noupdate /top_timer_de2_115/enable
+# add wave -noupdate /top_timer_de2_115/buzzer
+# add wave -noupdate /top_timer_de2_115/HEX0
+# add wave -noupdate /top_timer_de2_115/HEX1
+# add wave -noupdate /top_timer_de2_115/HEX2
+# add wave -noupdate /top_timer_de2_115/HEX3
+# add wave -noupdate /top_timer_de2_115/HEX4
+# add wave -noupdate /top_timer_de2_115/HEX5
+# add wave -noupdate /top_timer_de2_115/secU
+# add wave -noupdate /top_timer_de2_115/secT
+# add wave -noupdate /top_timer_de2_115/minU
+# add wave -noupdate /top_timer_de2_115/minT
+# add wave -noupdate /top_timer_de2_115/hourU
+# add wave -noupdate /top_timer_de2_115/hourT
+# add wave -noupdate /top_timer_de2_115/r_reg
+# add wave -noupdate /top_timer_de2_115/r_next
+# add wave -noupdate /top_timer_de2_115/reg_360
+# add wave -noupdate /top_timer_de2_115/next_360
+# add wave -noupdate /top_timer_de2_115/reset
+# add wave -noupdate /top_timer_de2_115/CLOCK_1Hz
+# add wave -noupdate /top_timer_de2_115/CLOCK_10KHZ
+# add wave -noupdate /top_timer_de2_115/en
+# add wave -noupdate /top_timer_de2_115/en_360
+# add wave -noupdate /top_timer_de2_115/sel_t
+# add wave -noupdate /top_timer_de2_115/hra_d_loadd
+# add wave -noupdate /top_timer_de2_115/hra_u_loadd
+# add wave -noupdate /top_timer_de2_115/min_d_loadd
+# add wave -noupdate /top_timer_de2_115/min_u_loadd
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {1196 ps}
+# force -freeze sim:/top_timer_de2_115/CLOCK_10KHZ 1 0, 0 {10000 ps} -r 20ns
+# force -freeze sim:/top_timer_de2_115/KEY 1 0, 0 40ns
+# force -freeze sim:/top_timer_de2_115/load 1 0, 0 50ns
+# force -freeze sim:/top_timer_de2_115/enable 1 0, 0 60ns
+# run 10ms
+force -freeze sim:/top_timer_de2_115/reset 0 0
+do tb_top.do
+# vcom -93 -work work {/home/aluno/dlp2/atividade2/top_timer_de2_115.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_timer_de2_115
+# -- Compiling architecture top_a3_2019_2 of top_timer_de2_115
+# 
+# do top_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /top_timer_de2_115/CLOCK_50
+# add wave -noupdate /top_timer_de2_115/KEY
+# add wave -noupdate /top_timer_de2_115/button
+# add wave -noupdate /top_timer_de2_115/load
+# add wave -noupdate /top_timer_de2_115/enable
+# add wave -noupdate /top_timer_de2_115/buzzer
+# add wave -noupdate /top_timer_de2_115/HEX0
+# add wave -noupdate /top_timer_de2_115/HEX1
+# add wave -noupdate /top_timer_de2_115/HEX2
+# add wave -noupdate /top_timer_de2_115/HEX3
+# add wave -noupdate /top_timer_de2_115/HEX4
+# add wave -noupdate /top_timer_de2_115/HEX5
+# add wave -noupdate /top_timer_de2_115/secU
+# add wave -noupdate /top_timer_de2_115/secT
+# add wave -noupdate /top_timer_de2_115/minU
+# add wave -noupdate /top_timer_de2_115/minT
+# add wave -noupdate /top_timer_de2_115/hourU
+# add wave -noupdate /top_timer_de2_115/hourT
+# add wave -noupdate /top_timer_de2_115/r_reg
+# add wave -noupdate /top_timer_de2_115/r_next
+# add wave -noupdate /top_timer_de2_115/reg_360
+# add wave -noupdate /top_timer_de2_115/next_360
+# add wave -noupdate /top_timer_de2_115/reset
+# add wave -noupdate /top_timer_de2_115/CLOCK_1Hz
+# add wave -noupdate /top_timer_de2_115/CLOCK_10KHZ
+# add wave -noupdate /top_timer_de2_115/en
+# add wave -noupdate /top_timer_de2_115/en_360
+# add wave -noupdate /top_timer_de2_115/sel_t
+# add wave -noupdate /top_timer_de2_115/hra_d_loadd
+# add wave -noupdate /top_timer_de2_115/hra_u_loadd
+# add wave -noupdate /top_timer_de2_115/min_d_loadd
+# add wave -noupdate /top_timer_de2_115/min_u_loadd
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {1196 ps}
+# force -freeze sim:/top_timer_de2_115/CLOCK_10KHZ 1 0, 0 {10000 ps} -r 20ns
+# force -freeze sim:/top_timer_de2_115/KEY 1 0, 0 40ns
+# force -freeze sim:/top_timer_de2_115/reset 0 40ns
+# force -freeze sim:/top_timer_de2_115/load 1 0, 0 50ns
+# force -freeze sim:/top_timer_de2_115/enable 1 0, 0 60ns
+# run 10ms

@@ -1,5 +1,5 @@
 Flow report for top_timer_de2_115
-Sat Oct 12 22:20:06 2019
+Mon Oct 14 12:49:43 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Sat Oct 12 22:20:06 2019            ;
+; Flow Status                        ; Successful - Mon Oct 14 12:49:43 2019            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_timer_de2_115                                ;
-; Top-level Entity Name              ; machine                                          ;
+; Top-level Entity Name              ; top_timer_de2_115                                ;
 ; Family                             ; Cyclone IV E                                     ;
 ; Device                             ; EP4CE115F29C7                                    ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 37 / 114,480 ( < 1 % )                           ;
-;     Total combinational functions  ; 35 / 114,480 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 14 / 114,480 ( < 1 % )                           ;
-; Total registers                    ; 14                                               ;
-; Total pins                         ; 38 / 529 ( 7 % )                                 ;
+; Total logic elements               ; 197 / 114,480 ( < 1 % )                          ;
+;     Total combinational functions  ; 197 / 114,480 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 69 / 114,480 ( < 1 % )                           ;
+; Total registers                    ; 69                                               ;
+; Total pins                         ; 67 / 529 ( 13 % )                                ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                            ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                   ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -64,41 +64,40 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/12/2019 22:18:33 ;
+; Start date & time ; 10/14/2019 12:48:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_timer_de2_115   ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                ;
-+--------------------------------------+---------------------------------------+-------------------+-------------+----------------+
-; Assignment Name                      ; Value                                 ; Default Value     ; Entity Name ; Section Id     ;
-+--------------------------------------+---------------------------------------+-------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 11373243925049.157091871319487        ; --                ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --                ; --          ; timer_tb       ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; timer_tb                              ; --                ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --                ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>            ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --                ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; timer_tb.vht                          ; --                ; --          ; timer_tb       ;
-; EDA_TEST_BENCH_MODULE_NAME           ; timer_tb                              ; --                ; --          ; timer_tb       ;
-; EDA_TEST_BENCH_NAME                  ; timer_tb                              ; --                ; --          ; eda_simulation ;
-; IP_TOOL_NAME                         ; ALTPLL                                ; --                ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.0                                  ; --                ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --                ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --                ; --          ; --             ;
-; MISC_FILE                            ; pll_50mhz_10khz.cmp                   ; --                ; --          ; --             ;
-; MISC_FILE                            ; pll_50mhz_10khz.ppf                   ; --                ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --                ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --                ; machine     ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --                ; machine     ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --                ; machine     ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --                ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --                ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --                ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; machine                               ; top_timer_de2_115 ; --          ; --             ;
-+--------------------------------------+---------------------------------------+-------------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 0.157106813226080                     ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; timer_tb       ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; timer_tb                              ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; timer_tb.vht                          ; --            ; --          ; timer_tb       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; timer_tb                              ; --            ; --          ; timer_tb       ;
+; EDA_TEST_BENCH_NAME                  ; timer_tb                              ; --            ; --          ; eda_simulation ;
+; IP_TOOL_NAME                         ; ALTPLL                                ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; pll_50mhz_10khz.cmp                   ; --            ; --          ; --             ;
+; MISC_FILE                            ; pll_50mhz_10khz.ppf                   ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -106,26 +105,26 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 418 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:41     ; 4.4                     ; 994 MB              ; 00:01:16                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 345 MB              ; 00:00:12                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 508 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 314 MB              ; 00:00:02                           ;
-; Total                     ; 00:01:12     ; --                      ; --                  ; 00:01:39                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 404 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:24     ; 1.7                     ; 744 MB              ; 00:00:33                           ;
+; Assembler                 ; 00:00:08     ; 1.0                     ; 346 MB              ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 441 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 314 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:51                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                    ;
-+---------------------------+-------------------------+----------------+------------+----------------+
-; Module Name               ; Machine Hostname        ; OS Name        ; OS Version ; Processor type ;
-+---------------------------+-------------------------+----------------+------------+----------------+
-; Analysis & Synthesis      ; quartus-69b945f5b-8stpj ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; Fitter                    ; quartus-69b945f5b-8stpj ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; Assembler                 ; quartus-69b945f5b-8stpj ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; TimeQuest Timing Analyzer ; quartus-69b945f5b-8stpj ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; EDA Netlist Writer        ; quartus-69b945f5b-8stpj ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-+---------------------------+-------------------------+----------------+------------+----------------+
++-----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                     ;
++---------------------------+------------------------+------------------+------------+----------------+
+; Module Name               ; Machine Hostname       ; OS Name          ; OS Version ; Processor type ;
++---------------------------+------------------------+------------------+------------+----------------+
+; Analysis & Synthesis      ; sj-lin-monitoria-38094 ; Debian GNU/Linux ; 9          ; x86_64         ;
+; Fitter                    ; sj-lin-monitoria-38094 ; Debian GNU/Linux ; 9          ; x86_64         ;
+; Assembler                 ; sj-lin-monitoria-38094 ; Debian GNU/Linux ; 9          ; x86_64         ;
+; TimeQuest Timing Analyzer ; sj-lin-monitoria-38094 ; Debian GNU/Linux ; 9          ; x86_64         ;
+; EDA Netlist Writer        ; sj-lin-monitoria-38094 ; Debian GNU/Linux ; 9          ; x86_64         ;
++---------------------------+------------------------+------------------+------------+----------------+
 
 
 ------------

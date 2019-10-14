@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY machine
+set_global_assignment -name TOP_LEVEL_ENTITY top_timer_de2_115
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:48:54  SEPTEMBER 19, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -115,4 +115,28 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_R24 -to button
+set_location_assignment PIN_H15 -to buzzer
+set_location_assignment PIN_Y23 -to enable
+set_location_assignment PIN_Y24 -to load
+set_location_assignment PIN_AC17 -to HEX6[6]
+set_location_assignment PIN_AA15 -to HEX6[5]
+set_location_assignment PIN_AB15 -to HEX6[4]
+set_location_assignment PIN_AB17 -to HEX6[3]
+set_location_assignment PIN_AA16 -to HEX6[2]
+set_location_assignment PIN_AB16 -to HEX6[1]
+set_location_assignment PIN_AA17 -to HEX6[0]
+set_location_assignment PIN_AA14 -to HEX7[6]
+set_location_assignment PIN_AG18 -to HEX7[5]
+set_location_assignment PIN_AF17 -to HEX7[4]
+set_location_assignment PIN_AH17 -to HEX7[3]
+set_location_assignment PIN_AG17 -to HEX7[2]
+set_location_assignment PIN_AE17 -to HEX7[1]
+set_location_assignment PIN_AD17 -to HEX7[0]
+set_location_assignment PIN_G21 -to load_s
+set_location_assignment PIN_G22 -to idle_s
+set_location_assignment PIN_G20 -to on_alarm_s
+set_location_assignment PIN_H21 -to alarm_s
+set_location_assignment PIN_E24 -to sleep_s
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
