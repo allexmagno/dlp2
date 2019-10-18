@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 d/home/aluno/dlp2/atividade2/simulation/modelsim
 Emachine
-Z1 w1571429138
+Z1 w1571433928
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -18,7 +18,7 @@ VLeIb=??DzfG[;?;^eW8E53
 Z8 OV;C;10.1d;51
 31
 !i10b 1
-Z9 !s108 1571430491.156128
+Z9 !s108 1571434168.530925
 Z10 !s90 -reportprogress|300|-93|-work|work|../../machine.vhd|
 Z11 !s107 ../../machine.vhd|
 Z12 o-93 -work work -O0
@@ -27,11 +27,11 @@ Astate
 R2
 R3
 R4
-DEx4 work 7 machine 0 22 LeIb=??DzfG[;?;^eW8E53
+Z14 DEx4 work 7 machine 0 22 LeIb=??DzfG[;?;^eW8E53
 l34
 L18
-VR:ibSQc8WmP[9YCfcnN5K2
-!s100 H[eRJg0;`6LZl;O4O?d6B0
+Z15 VG05;T06bin7<3N7EXh>?K3
+Z16 !s100 FmT]?WBSY?GGoZkkWLeXC3
 R8
 31
 !i10b 1
@@ -41,28 +41,28 @@ R11
 R12
 R13
 Etimer_tb
-Z14 w1571424861
-Z15 DPx12 modelsim_lib 4 util 0 22 Ci0SSDmVf2K[lFkJZoo=62
+Z17 w1571424861
+Z18 DPx12 modelsim_lib 4 util 0 22 Ci0SSDmVf2K[lFkJZoo=62
 R2
 R3
 R4
 R5
-Z16 8/home/aluno/dlp2/atividade2/timer_tb.vht
-Z17 F/home/aluno/dlp2/atividade2/timer_tb.vht
+Z19 8/home/aluno/dlp2/atividade2/timer_tb.vht
+Z20 F/home/aluno/dlp2/atividade2/timer_tb.vht
 l0
 L7
 V0]F?`2N[f9GjDCS2?7N_@2
 R8
 31
-Z18 !s108 1571426013.384713
-Z19 !s90 -reportprogress|300|-93|-work|work|/home/aluno/dlp2/atividade2/timer_tb.vht|
-Z20 !s107 /home/aluno/dlp2/atividade2/timer_tb.vht|
+Z21 !s108 1571426013.384713
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/aluno/dlp2/atividade2/timer_tb.vht|
+Z23 !s107 /home/aluno/dlp2/atividade2/timer_tb.vht|
 R12
 R13
 !s100 OZ0XG8RQ8dQYgDH`_i4eZ3
 !i10b 1
 Abench
-R15
+R18
 R2
 R3
 R4
@@ -72,9 +72,9 @@ L10
 V[:WaN:znf0Fo_OEL1n@k:3
 R8
 31
-R18
-R19
-R20
+R21
+R22
+R23
 R12
 R13
 !s100 gK=:7PL4a4`eh`Qoa?Wk21

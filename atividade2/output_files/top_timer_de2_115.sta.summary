@@ -3,11 +3,11 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK50MHz'
-Slack : 12.002
+Slack : 12.711
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'pll0|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 99992.840
+Slack : 99993.359
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLK50MHz'
@@ -15,7 +15,7 @@ Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'pll0|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.403
+Slack : 0.404
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK50MHz'
@@ -23,15 +23,15 @@ Slack : 9.759
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll0|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 49999.706
+Slack : 49999.709
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLK50MHz'
-Slack : 12.575
+Slack : 13.262
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'pll0|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 99993.423
+Slack : 99993.885
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK50MHz'
@@ -43,31 +43,31 @@ Slack : 0.356
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK50MHz'
-Slack : 9.777
+Slack : 9.778
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll0|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 49999.711
+Slack : 49999.710
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLK50MHz'
-Slack : 15.847
+Slack : 16.305
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'pll0|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 99996.470
+Slack : 99996.586
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLK50MHz'
-Slack : 0.183
+Slack : 0.182
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'pll0|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.183
+Slack : 0.184
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK50MHz'
-Slack : 9.440
+Slack : 9.439
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll0|altpll_component|auto_generated|pll1|clk[0]'

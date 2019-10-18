@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY top_timer_de2_115
+set_global_assignment -name TOP_LEVEL_ENTITY machine
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:48:54  SEPTEMBER 19, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -115,11 +115,6 @@ set_location_assignment PIN_R24 -to button
 set_location_assignment PIN_H15 -to buzzer
 set_location_assignment PIN_Y23 -to enable
 set_location_assignment PIN_Y24 -to load
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_location_assignment PIN_AA22 -to hra_d_load[3]
 set_location_assignment PIN_AA23 -to hra_d_load[2]
 set_location_assignment PIN_AA24 -to hra_d_load[1]
@@ -136,4 +131,9 @@ set_location_assignment PIN_AD27 -to min_u_load[3]
 set_location_assignment PIN_AC27 -to min_u_load[2]
 set_location_assignment PIN_AC28 -to min_u_load[1]
 set_location_assignment PIN_AB28 -to min_u_load[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

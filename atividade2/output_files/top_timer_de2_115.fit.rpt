@@ -1,5 +1,5 @@
 Fitter report for top_timer_de2_115
-Fri Oct 18 17:27:45 2019
+Fri Oct 18 17:57:55 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -70,15 +70,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                        ;
 +------------------------------------+--------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Oct 18 17:27:45 2019            ;
+; Fitter Status                      ; Successful - Fri Oct 18 17:57:55 2019            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_timer_de2_115                                ;
 ; Top-level Entity Name              ; top_timer_de2_115                                ;
 ; Family                             ; Cyclone IV E                                     ;
 ; Device                             ; EP4CE115F29C7                                    ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 194 / 114,480 ( < 1 % )                          ;
-;     Total combinational functions  ; 193 / 114,480 ( < 1 % )                          ;
+; Total logic elements               ; 210 / 114,480 ( < 1 % )                          ;
+;     Total combinational functions  ; 209 / 114,480 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 69 / 114,480 ( < 1 % )                           ;
 ; Total registers                    ; 69                                               ;
 ; Total pins                         ; 64 / 529 ( 12 % )                                ;
@@ -157,12 +157,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.57        ;
+; Average used               ; 1.63        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  19.0%      ;
+;     Processors 2-4         ;  20.9%      ;
 +----------------------------+-------------+
 
 
@@ -223,8 +223,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 404 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 404 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 420 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 420 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -247,7 +247,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 392     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 408     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 12      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -263,19 +263,19 @@ The pin-out file can be found in /home/aluno/dlp2/atividade2/output_files/top_ti
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 194 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 125                     ;
+; Total logic elements                        ; 210 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 141                     ;
 ;     -- Register only                        ; 1                       ;
 ;     -- Combinational with a register        ; 68                      ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 110                     ;
-;     -- 3 input functions                    ; 30                      ;
-;     -- <=2 input functions                  ; 53                      ;
+;     -- 4 input functions                    ; 120                     ;
+;     -- 3 input functions                    ; 34                      ;
+;     -- <=2 input functions                  ; 55                      ;
 ;     -- Register only                        ; 1                       ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 146                     ;
+;     -- normal mode                          ; 162                     ;
 ;     -- arithmetic mode                      ; 47                      ;
 ;                                             ;                         ;
 ; Total registers*                            ; 69 / 117,053 ( < 1 % )  ;
@@ -300,11 +300,11 @@ The pin-out file can be found in /home/aluno/dlp2/atividade2/output_files/top_ti
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%            ;
-; Peak interconnect usage (total/H/V)         ; 2% / 2% / 3%            ;
+; Peak interconnect usage (total/H/V)         ; 3% / 2% / 4%            ;
 ; Maximum fan-out                             ; 69                      ;
 ; Highest non-global fan-out                  ; 69                      ;
-; Total fan-out                               ; 985                     ;
-; Average fan-out                             ; 2.44                    ;
+; Total fan-out                               ; 1041                    ;
+; Average fan-out                             ; 2.48                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -317,19 +317,19 @@ The pin-out file can be found in /home/aluno/dlp2/atividade2/output_files/top_ti
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 194 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 125                    ; 0                              ;
+; Total logic elements                        ; 210 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 141                    ; 0                              ;
 ;     -- Register only                        ; 1                      ; 0                              ;
 ;     -- Combinational with a register        ; 68                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 110                    ; 0                              ;
-;     -- 3 input functions                    ; 30                     ; 0                              ;
-;     -- <=2 input functions                  ; 53                     ; 0                              ;
+;     -- 4 input functions                    ; 120                    ; 0                              ;
+;     -- 3 input functions                    ; 34                     ; 0                              ;
+;     -- <=2 input functions                  ; 55                     ; 0                              ;
 ;     -- Register only                        ; 1                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 146                    ; 0                              ;
+;     -- normal mode                          ; 162                    ; 0                              ;
 ;     -- arithmetic mode                      ; 47                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Total registers                             ; 69                     ; 0                              ;
@@ -352,8 +352,8 @@ The pin-out file can be found in /home/aluno/dlp2/atividade2/output_files/top_ti
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 978                    ; 63                             ;
-;     -- Registered Connections               ; 418                    ; 0                              ;
+;     -- Total Connections                    ; 1034                   ; 63                             ;
+;     -- Registered Connections               ; 444                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 56                             ;
@@ -387,7 +387,7 @@ The pin-out file can be found in /home/aluno/dlp2/atividade2/output_files/top_ti
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; CLOCK_50      ; Y2    ; 2        ; 0            ; 36           ; 14           ; 15                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; KEY[0]        ; M23   ; 6        ; 115          ; 40           ; 7            ; 69                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; button        ; R24   ; 5        ; 115          ; 35           ; 21           ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; button        ; R24   ; 5        ; 115          ; 35           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; enable        ; Y23   ; 5        ; 115          ; 14           ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; hra_d_load[0] ; AB23  ; 5        ; 115          ; 7            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; hra_d_load[1] ; AA24  ; 5        ; 115          ; 9            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
@@ -397,7 +397,7 @@ The pin-out file can be found in /home/aluno/dlp2/atividade2/output_files/top_ti
 ; hra_u_load[1] ; AB25  ; 5        ; 115          ; 16           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; hra_u_load[2] ; AC24  ; 5        ; 115          ; 4            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; hra_u_load[3] ; AB24  ; 5        ; 115          ; 5            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; load          ; Y24   ; 5        ; 115          ; 13           ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; load          ; Y24   ; 5        ; 115          ; 13           ; 0            ; 10                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; min_d_load[0] ; AB27  ; 5        ; 115          ; 18           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; min_d_load[1] ; AC26  ; 5        ; 115          ; 11           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; min_d_load[2] ; AD26  ; 5        ; 115          ; 10           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
@@ -1342,15 +1342,15 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                   ; Library Name ;
 +--------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------+--------------+
-; |top_timer_de2_115                               ; 194 (49)    ; 69 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 64   ; 0            ; 125 (21)     ; 1 (0)             ; 68 (28)          ; |top_timer_de2_115                                                                                    ; work         ;
+; |top_timer_de2_115                               ; 210 (49)    ; 69 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 64   ; 0            ; 141 (21)     ; 1 (0)             ; 68 (28)          ; |top_timer_de2_115                                                                                    ; work         ;
 ;    |counter:counter0|                            ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |top_timer_de2_115|counter:counter0                                                                   ; work         ;
-;    |machine:fsm|                                 ; 35 (35)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 1 (1)             ; 16 (16)          ; |top_timer_de2_115|machine:fsm                                                                        ; work         ;
+;    |machine:fsm|                                 ; 52 (52)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 38 (38)      ; 1 (1)             ; 13 (13)          ; |top_timer_de2_115|machine:fsm                                                                        ; work         ;
 ;    |pll_50mhz_10khz:pll0|                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_timer_de2_115|pll_50mhz_10khz:pll0                                                               ; work         ;
 ;       |altpll:altpll_component|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_timer_de2_115|pll_50mhz_10khz:pll0|altpll:altpll_component                                       ; work         ;
 ;          |pll_50mhz_10khz_altpll:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_timer_de2_115|pll_50mhz_10khz:pll0|altpll:altpll_component|pll_50mhz_10khz_altpll:auto_generated ; work         ;
 ;    |sel_disp:display|                            ; 65 (58)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 65 (58)      ; 0 (0)             ; 0 (0)            ; |top_timer_de2_115|sel_disp:display                                                                   ; work         ;
 ;       |bcd2ssd:bcd0|                             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |top_timer_de2_115|sel_disp:display|bcd2ssd:bcd0                                                      ; work         ;
-;    |timer:t0|                                    ; 45 (45)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 24 (24)          ; |top_timer_de2_115|timer:t0                                                                           ; work         ;
+;    |timer:t0|                                    ; 41 (41)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 24 (24)          ; |top_timer_de2_115|timer:t0                                                                           ; work         ;
 +--------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1403,27 +1403,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX5[4]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; HEX5[5]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; HEX5[6]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; button        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; load          ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; hra_d_load[1] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; hra_d_load[0] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; hra_d_load[3] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; hra_d_load[2] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; hra_d_load[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; hra_u_load[1] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; hra_u_load[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; hra_u_load[0] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; hra_u_load[3] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; hra_u_load[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; button        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; enable        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; min_d_load[1] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; min_d_load[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; min_d_load[2] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; min_d_load[3] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; min_d_load[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; min_u_load[1] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; min_u_load[0] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; min_d_load[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; min_u_load[1] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; min_u_load[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; min_u_load[3] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; min_u_load[2] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; enable        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; CLOCK_50      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; KEY[0]        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; load          ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1432,58 +1432,66 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                       ; Pad To Core Index ; Setting ;
 +-------------------------------------------+-------------------+---------+
+; button                                    ;                   ;         ;
+;      - machine:fsm|Selector3~0            ; 1                 ; 6       ;
+;      - machine:fsm|Selector3~1            ; 1                 ; 6       ;
+;      - machine:fsm|Selector0~1            ; 1                 ; 6       ;
+;      - machine:fsm|state_next.inc_sleep~0 ; 1                 ; 6       ;
+;      - machine:fsm|Selector2~1            ; 1                 ; 6       ;
+;      - machine:fsm|Selector5~0            ; 1                 ; 6       ;
+;      - machine:fsm|Selector6~0            ; 1                 ; 6       ;
+;      - machine:fsm|Selector4~0            ; 1                 ; 6       ;
+; load                                      ;                   ;         ;
+;      - machine:fsm|state_next.load_time~0 ; 0                 ; 6       ;
+;      - machine:fsm|Equal1~2               ; 0                 ; 6       ;
+;      - machine:fsm|Equal1~4               ; 0                 ; 6       ;
+;      - machine:fsm|Equal3~1               ; 0                 ; 6       ;
+;      - machine:fsm|Equal3~3               ; 0                 ; 6       ;
+;      - machine:fsm|Selector0~0            ; 0                 ; 6       ;
+;      - machine:fsm|Selector0~2            ; 0                 ; 6       ;
+;      - machine:fsm|min_u_loadd[1]~0       ; 0                 ; 6       ;
+;      - machine:fsm|Selector1~2            ; 0                 ; 6       ;
+;      - machine:fsm|min_u_sleep_reg[1]~4   ; 0                 ; 6       ;
 ; hra_d_load[1]                             ;                   ;         ;
 ;      - machine:fsm|process_0~0            ; 1                 ; 6       ;
 ; hra_d_load[0]                             ;                   ;         ;
 ;      - machine:fsm|process_0~0            ; 1                 ; 6       ;
 ; hra_d_load[3]                             ;                   ;         ;
-;      - machine:fsm|process_0~1            ; 0                 ; 6       ;
+;      - machine:fsm|process_0~2            ; 0                 ; 6       ;
 ; hra_d_load[2]                             ;                   ;         ;
-;      - machine:fsm|process_0~1            ; 1                 ; 6       ;
+;      - machine:fsm|Equal0~2               ; 0                 ; 6       ;
 ; hra_u_load[1]                             ;                   ;         ;
-;      - machine:fsm|process_0~2            ; 0                 ; 6       ;
+;      - machine:fsm|process_0~3            ; 0                 ; 6       ;
 ; hra_u_load[0]                             ;                   ;         ;
-;      - machine:fsm|process_0~2            ; 0                 ; 6       ;
+;      - machine:fsm|Equal1~2               ; 1                 ; 6       ;
 ; hra_u_load[3]                             ;                   ;         ;
-;      - machine:fsm|process_0~3            ; 0                 ; 6       ;
+;      - machine:fsm|process_0~4            ; 0                 ; 6       ;
 ; hra_u_load[2]                             ;                   ;         ;
-;      - machine:fsm|process_0~3            ; 0                 ; 6       ;
-; button                                    ;                   ;         ;
-;      - machine:fsm|Selector3~0            ; 1                 ; 6       ;
-;      - machine:fsm|Selector2~1            ; 1                 ; 6       ;
-;      - machine:fsm|state_next.inc_sleep~0 ; 1                 ; 6       ;
-;      - machine:fsm|Mux3~0                 ; 1                 ; 6       ;
-;      - machine:fsm|Selector4~0            ; 1                 ; 6       ;
-;      - machine:fsm|Selector0~1            ; 1                 ; 6       ;
-;      - machine:fsm|Selector5~0            ; 1                 ; 6       ;
-;      - machine:fsm|Selector6~0            ; 1                 ; 6       ;
-;      - machine:fsm|Mux0~2                 ; 1                 ; 6       ;
-;      - machine:fsm|Mux1~2                 ; 1                 ; 6       ;
-;      - machine:fsm|Selector3~7            ; 1                 ; 6       ;
-; min_d_load[1]                             ;                   ;         ;
-;      - machine:fsm|Selector3~1            ; 1                 ; 6       ;
-; min_d_load[0]                             ;                   ;         ;
-;      - machine:fsm|Selector3~1            ; 0                 ; 6       ;
-; min_d_load[3]                             ;                   ;         ;
-;      - machine:fsm|Selector3~2            ; 0                 ; 6       ;
-; min_d_load[2]                             ;                   ;         ;
-;      - machine:fsm|Selector3~2            ; 0                 ; 6       ;
-; min_u_load[1]                             ;                   ;         ;
-;      - machine:fsm|Selector3~3            ; 0                 ; 6       ;
-;      - machine:fsm|Mux2~0                 ; 0                 ; 6       ;
-; min_u_load[0]                             ;                   ;         ;
-;      - machine:fsm|Selector3~3            ; 1                 ; 6       ;
-;      - machine:fsm|Mux3~0                 ; 1                 ; 6       ;
-; min_u_load[3]                             ;                   ;         ;
-;      - machine:fsm|Selector3~4            ; 1                 ; 6       ;
-;      - machine:fsm|Mux0~2                 ; 1                 ; 6       ;
-; min_u_load[2]                             ;                   ;         ;
-;      - machine:fsm|Selector3~4            ; 1                 ; 6       ;
-;      - machine:fsm|Mux1~2                 ; 1                 ; 6       ;
+;      - machine:fsm|Equal1~4               ; 0                 ; 6       ;
 ; enable                                    ;                   ;         ;
-;      - machine:fsm|Selector1~1            ; 1                 ; 6       ;
-;      - machine:fsm|Selector0~0            ; 1                 ; 6       ;
-;      - machine:fsm|Selector3~6            ; 1                 ; 6       ;
+;      - machine:fsm|Selector3~2            ; 0                 ; 6       ;
+;      - machine:fsm|Selector0~0            ; 0                 ; 6       ;
+;      - machine:fsm|Selector1~2            ; 0                 ; 6       ;
+; min_d_load[1]                             ;                   ;         ;
+;      - machine:fsm|Selector3~3            ; 1                 ; 6       ;
+; min_d_load[2]                             ;                   ;         ;
+;      - machine:fsm|Selector3~3            ; 1                 ; 6       ;
+; min_d_load[3]                             ;                   ;         ;
+;      - machine:fsm|Selector3~4            ; 0                 ; 6       ;
+; min_d_load[0]                             ;                   ;         ;
+;      - machine:fsm|Selector3~4            ; 0                 ; 6       ;
+; min_u_load[1]                             ;                   ;         ;
+;      - machine:fsm|Selector3~7            ; 1                 ; 6       ;
+;      - machine:fsm|min_u_loadd[1]~0       ; 1                 ; 6       ;
+; min_u_load[0]                             ;                   ;         ;
+;      - machine:fsm|Equal3~1               ; 0                 ; 6       ;
+;      - machine:fsm|Mux3~0                 ; 0                 ; 6       ;
+; min_u_load[3]                             ;                   ;         ;
+;      - machine:fsm|Selector3~8            ; 1                 ; 6       ;
+;      - machine:fsm|Mux0~0                 ; 1                 ; 6       ;
+; min_u_load[2]                             ;                   ;         ;
+;      - machine:fsm|Equal3~3               ; 1                 ; 6       ;
+;      - machine:fsm|Mux1~0                 ; 1                 ; 6       ;
 ; CLOCK_50                                  ;                   ;         ;
 ; KEY[0]                                    ;                   ;         ;
 ;      - timer:t0|hour_reg[0]               ; 1                 ; 6       ;
@@ -1518,9 +1526,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - machine:fsm|min_u_sleep_reg[2]     ; 1                 ; 6       ;
 ;      - machine:fsm|min_u_sleep_reg[3]     ; 1                 ; 6       ;
 ;      - machine:fsm|buzzer_buf_reg         ; 1                 ; 6       ;
+;      - machine:fsm|state_reg.idle         ; 1                 ; 6       ;
 ;      - machine:fsm|state_reg.on_alarm     ; 1                 ; 6       ;
 ;      - machine:fsm|state_reg.sleep        ; 1                 ; 6       ;
 ;      - machine:fsm|state_reg.alarm        ; 1                 ; 6       ;
+;      - machine:fsm|state_reg.load_time    ; 1                 ; 6       ;
 ;      - reg_360[13]                        ; 1                 ; 6       ;
 ;      - reg_360[12]                        ; 1                 ; 6       ;
 ;      - reg_360[11]                        ; 1                 ; 6       ;
@@ -1549,18 +1559,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - r_reg[2]                           ; 1                 ; 6       ;
 ;      - r_reg[1]                           ; 1                 ; 6       ;
 ;      - r_reg[0]                           ; 1                 ; 6       ;
-;      - machine:fsm|state_reg.inc_sleep    ; 1                 ; 6       ;
-;      - machine:fsm|state_reg.wait_button1 ; 1                 ; 6       ;
-;      - machine:fsm|state_reg.load_time    ; 1                 ; 6       ;
-;      - machine:fsm|state_reg.idle         ; 1                 ; 6       ;
 ;      - machine:fsm|state_reg.wait_button2 ; 1                 ; 6       ;
 ;      - machine:fsm|state_reg.wait_button3 ; 1                 ; 6       ;
-; load                                      ;                   ;         ;
-;      - machine:fsm|min_u_sleep_reg[3]~0   ; 1                 ; 6       ;
-;      - machine:fsm|Selector1~1            ; 1                 ; 6       ;
-;      - machine:fsm|state_next.load_time~0 ; 1                 ; 6       ;
-;      - machine:fsm|Selector0~0            ; 1                 ; 6       ;
-;      - machine:fsm|Selector0~2            ; 1                 ; 6       ;
+;      - machine:fsm|state_reg.wait_button1 ; 1                 ; 6       ;
+;      - machine:fsm|state_reg.inc_sleep    ; 1                 ; 6       ;
 +-------------------------------------------+-------------------+---------+
 
 
@@ -1571,10 +1573,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                                                                            ; PIN_Y2              ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; CLOCK_50                                                                                            ; PIN_Y2              ; 14      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; Equal1~2                                                                                            ; LCCOMB_X110_Y13_N30 ; 24      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Equal3~0                                                                                            ; LCCOMB_X113_Y15_N26 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Equal1~2                                                                                            ; LCCOMB_X113_Y13_N0  ; 24      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Equal3~0                                                                                            ; LCCOMB_X111_Y13_N14 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; KEY[0]                                                                                              ; PIN_M23             ; 69      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; machine:fsm|min_u_sleep_reg[3]~0                                                                    ; LCCOMB_X114_Y13_N8  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; machine:fsm|min_u_sleep_reg[1]~4                                                                    ; LCCOMB_X114_Y14_N22 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; pll_50mhz_10khz:pll0|altpll:altpll_component|pll_50mhz_10khz_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1               ; 55      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 +-----------------------------------------------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -1599,13 +1601,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; counter:counter0|sel_reg[0]                                                                        ; 54      ;
 ; counter:counter0|sel_reg[2]                                                                        ; 48      ;
 ; Equal1~2                                                                                           ; 24      ;
-; button~input                                                                                       ; 11      ;
-; timer:t0|Equal0~0                                                                                  ; 7       ;
+; machine:fsm|state_next.load_time~0                                                                 ; 12      ;
+; load~input                                                                                         ; 10      ;
+; machine:fsm|state_reg.idle                                                                         ; 9       ;
+; button~input                                                                                       ; 8       ;
+; machine:fsm|state_reg.load_time                                                                    ; 8       ;
 ; sel_disp:display|Mux0~3                                                                            ; 7       ;
 ; sel_disp:display|Mux1~3                                                                            ; 7       ;
 ; sel_disp:display|Mux2~3                                                                            ; 7       ;
 ; sel_disp:display|Mux3~3                                                                            ; 7       ;
+; timer:t0|hour_reg[0]                                                                               ; 7       ;
+; machine:fsm|state_next.inc_sleep~0                                                                 ; 6       ;
+; timer:t0|min_next~0                                                                                ; 6       ;
 ; Equal0~1                                                                                           ; 6       ;
+; timer:t0|Equal0~0                                                                                  ; 6       ;
 ; reg_360[4]                                                                                         ; 6       ;
 ; reg_360[1]                                                                                         ; 6       ;
 ; sel_disp:display|bcd2ssd:bcd0|Mux0~0                                                               ; 6       ;
@@ -1615,36 +1624,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sel_disp:display|bcd2ssd:bcd0|Mux4~0                                                               ; 6       ;
 ; sel_disp:display|bcd2ssd:bcd0|Mux5~0                                                               ; 6       ;
 ; sel_disp:display|bcd2ssd:bcd0|Mux6~0                                                               ; 6       ;
-; load~input                                                                                         ; 5       ;
+; timer:t0|min_reg[3]                                                                                ; 6       ;
+; timer:t0|hour_reg[2]                                                                               ; 6       ;
+; timer:t0|min_reg[6]                                                                                ; 6       ;
+; timer:t0|min_reg[2]                                                                                ; 6       ;
+; timer:t0|hour_reg[1]                                                                               ; 6       ;
+; timer:t0|hour_reg[5]                                                                               ; 6       ;
+; timer:t0|min_reg[1]                                                                                ; 6       ;
+; timer:t0|min_reg[4]                                                                                ; 6       ;
+; timer:t0|min_reg[0]                                                                                ; 6       ;
 ; Equal0~3                                                                                           ; 5       ;
 ; Equal0~2                                                                                           ; 5       ;
-; machine:fsm|state_reg.wait_button1                                                                 ; 5       ;
-; timer:t0|min_next~1                                                                                ; 5       ;
-; timer:t0|Equal3~0                                                                                  ; 5       ;
 ; Equal2~3                                                                                           ; 5       ;
 ; machine:fsm|min_u_sleep_reg[0]                                                                     ; 5       ;
 ; timer:t0|hour_reg[3]                                                                               ; 5       ;
-; timer:t0|min_reg[3]                                                                                ; 5       ;
-; timer:t0|min_reg[2]                                                                                ; 5       ;
-; timer:t0|hour_reg[1]                                                                               ; 5       ;
-; timer:t0|min_reg[1]                                                                                ; 5       ;
-; timer:t0|min_reg[0]                                                                                ; 5       ;
-; machine:fsm|min_u_sleep_reg[3]~0                                                                   ; 4       ;
-; machine:fsm|state_reg.idle                                                                         ; 4       ;
+; timer:t0|min_reg[7]                                                                                ; 5       ;
+; timer:t0|min_reg[5]                                                                                ; 5       ;
+; timer:t0|hour_reg[4]                                                                               ; 5       ;
+; machine:fsm|min_u_sleep_reg[1]~4                                                                   ; 4       ;
+; timer:t0|Equal3~0                                                                                  ; 4       ;
 ; machine:fsm|min_u_sleep_reg[1]                                                                     ; 4       ;
 ; timer:t0|hour_reg[7]                                                                               ; 4       ;
-; timer:t0|min_reg[7]                                                                                ; 4       ;
-; timer:t0|hour_reg[2]                                                                               ; 4       ;
 ; timer:t0|hour_reg[6]                                                                               ; 4       ;
-; timer:t0|min_reg[6]                                                                                ; 4       ;
-; timer:t0|hour_reg[5]                                                                               ; 4       ;
-; timer:t0|min_reg[5]                                                                                ; 4       ;
-; timer:t0|hour_reg[0]                                                                               ; 4       ;
-; timer:t0|hour_reg[4]                                                                               ; 4       ;
-; timer:t0|min_reg[4]                                                                                ; 4       ;
 ; enable~input                                                                                       ; 3       ;
-; machine:fsm|state_reg.load_time                                                                    ; 3       ;
-; machine:fsm|state_next.inc_sleep~0                                                                 ; 3       ;
 ; r_reg[0]                                                                                           ; 3       ;
 ; r_reg[1]                                                                                           ; 3       ;
 ; r_reg[2]                                                                                           ; 3       ;
@@ -1654,9 +1656,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; r_reg[12]                                                                                          ; 3       ;
 ; Equal3~0                                                                                           ; 3       ;
 ; machine:fsm|state_reg.on_alarm                                                                     ; 3       ;
-; machine:fsm|min_u_sleep_reg[2]                                                                     ; 3       ;
 ; machine:fsm|state_reg.sleep                                                                        ; 3       ;
-; machine:fsm|process_0~4                                                                            ; 3       ;
+; machine:fsm|min_u_sleep_reg[2]                                                                     ; 3       ;
 ; timer:t0|sec_reg[3]                                                                                ; 3       ;
 ; timer:t0|sec_reg[7]                                                                                ; 3       ;
 ; timer:t0|sec_reg[2]                                                                                ; 3       ;
@@ -1669,14 +1670,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; min_u_load[3]~input                                                                                ; 2       ;
 ; min_u_load[0]~input                                                                                ; 2       ;
 ; min_u_load[1]~input                                                                                ; 2       ;
-; machine:fsm|Selector3~7                                                                            ; 2       ;
+; machine:fsm|process_0~7                                                                            ; 2       ;
+; machine:fsm|state_reg.inc_sleep                                                                    ; 2       ;
+; machine:fsm|state_reg.wait_button1                                                                 ; 2       ;
 ; machine:fsm|state_reg.wait_button3                                                                 ; 2       ;
 ; machine:fsm|state_reg.wait_button2                                                                 ; 2       ;
-; machine:fsm|state_reg.inc_sleep                                                                    ; 2       ;
-; timer:t0|hour_next~3                                                                               ; 2       ;
+; timer:t0|hour_next~5                                                                               ; 2       ;
+; timer:t0|hour_next~4                                                                               ; 2       ;
 ; timer:t0|src2[1]                                                                                   ; 2       ;
-; timer:t0|hour_next~0                                                                               ; 2       ;
-; timer:t0|src1[1]~1                                                                                 ; 2       ;
+; timer:t0|Equal4~0                                                                                  ; 2       ;
+; timer:t0|src1[1]                                                                                   ; 2       ;
 ; timer:t0|src1[1]~0                                                                                 ; 2       ;
 ; r_reg[4]                                                                                           ; 2       ;
 ; r_reg[5]                                                                                           ; 2       ;
@@ -1697,15 +1700,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reg_360[11]                                                                                        ; 2       ;
 ; reg_360[12]                                                                                        ; 2       ;
 ; reg_360[13]                                                                                        ; 2       ;
-; machine:fsm|state_reg.alarm                                                                        ; 2       ;
-; machine:fsm|Selector3~5                                                                            ; 2       ;
+; machine:fsm|Selector3~10                                                                           ; 2       ;
 ; machine:fsm|Equal4~1                                                                               ; 2       ;
 ; machine:fsm|min_u_sleep_reg[3]                                                                     ; 2       ;
 ; machine:fsm|Equal4~0                                                                               ; 2       ;
+; machine:fsm|state_reg.alarm                                                                        ; 2       ;
 ; CLOCK_50~input                                                                                     ; 1       ;
-; min_d_load[2]~input                                                                                ; 1       ;
-; min_d_load[3]~input                                                                                ; 1       ;
 ; min_d_load[0]~input                                                                                ; 1       ;
+; min_d_load[3]~input                                                                                ; 1       ;
+; min_d_load[2]~input                                                                                ; 1       ;
 ; min_d_load[1]~input                                                                                ; 1       ;
 ; hra_u_load[2]~input                                                                                ; 1       ;
 ; hra_u_load[3]~input                                                                                ; 1       ;
@@ -1716,18 +1719,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hra_d_load[0]~input                                                                                ; 1       ;
 ; hra_d_load[1]~input                                                                                ; 1       ;
 ; counter:counter0|sel_reg[0]~0                                                                      ; 1       ;
-; machine:fsm|Selector3~6                                                                            ; 1       ;
-; machine:fsm|Mux1~2                                                                                 ; 1       ;
-; machine:fsm|Mux0~2                                                                                 ; 1       ;
+; timer:t0|hour_next[2]~7                                                                            ; 1       ;
 ; timer:t0|sec_next[6]~5                                                                             ; 1       ;
+; timer:t0|hour_next[5]~6                                                                            ; 1       ;
 ; timer:t0|sec_next[5]~4                                                                             ; 1       ;
+; machine:fsm|Selector4~0                                                                            ; 1       ;
 ; machine:fsm|Selector6~0                                                                            ; 1       ;
 ; machine:fsm|Selector5~0                                                                            ; 1       ;
-; machine:fsm|Selector0~2                                                                            ; 1       ;
-; machine:fsm|Selector0~1                                                                            ; 1       ;
-; machine:fsm|Selector0~0                                                                            ; 1       ;
-; machine:fsm|state_next.load_time~0                                                                 ; 1       ;
-; machine:fsm|Selector4~0                                                                            ; 1       ;
 ; r_next[10]~4                                                                                       ; 1       ;
 ; r_next[13]~3                                                                                       ; 1       ;
 ; r_next[4]~2                                                                                        ; 1       ;
@@ -1737,21 +1735,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; next_360[0]~2                                                                                      ; 1       ;
 ; next_360[2]~1                                                                                      ; 1       ;
 ; next_360[3]~0                                                                                      ; 1       ;
+; machine:fsm|Selector1~2                                                                            ; 1       ;
 ; machine:fsm|Selector1~1                                                                            ; 1       ;
 ; machine:fsm|Selector1~0                                                                            ; 1       ;
+; machine:fsm|Selector2~1                                                                            ; 1       ;
+; machine:fsm|Selector2~0                                                                            ; 1       ;
+; machine:fsm|process_0~6                                                                            ; 1       ;
+; machine:fsm|Mux1~0                                                                                 ; 1       ;
 ; machine:fsm|Add0~1                                                                                 ; 1       ;
+; machine:fsm|Mux0~0                                                                                 ; 1       ;
 ; machine:fsm|Add0~0                                                                                 ; 1       ;
 ; machine:fsm|Mux3~0                                                                                 ; 1       ;
 ; machine:fsm|Mux2~0                                                                                 ; 1       ;
-; machine:fsm|Selector2~1                                                                            ; 1       ;
-; machine:fsm|Selector2~0                                                                            ; 1       ;
-; timer:t0|hour_next[2]~5                                                                            ; 1       ;
-; timer:t0|min_next[6]~3                                                                             ; 1       ;
-; timer:t0|hour_next[5]~4                                                                            ; 1       ;
-; timer:t0|hour_next~2                                                                               ; 1       ;
-; timer:t0|hour_next~1                                                                               ; 1       ;
-; timer:t0|min_next[5]~2                                                                             ; 1       ;
-; timer:t0|min_next~0                                                                                ; 1       ;
+; machine:fsm|min_u_loadd[1]~0                                                                       ; 1       ;
+; machine:fsm|Selector0~2                                                                            ; 1       ;
+; machine:fsm|Selector0~1                                                                            ; 1       ;
+; machine:fsm|Selector0~0                                                                            ; 1       ;
+; timer:t0|min_next[6]~2                                                                             ; 1       ;
+; timer:t0|min_next[5]~1                                                                             ; 1       ;
+; timer:t0|src2[1]~0                                                                                 ; 1       ;
 ; Equal1~1                                                                                           ; 1       ;
 ; Equal1~0                                                                                           ; 1       ;
 ; Equal0~0                                                                                           ; 1       ;
@@ -1761,15 +1763,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Equal2~1                                                                                           ; 1       ;
 ; Equal2~0                                                                                           ; 1       ;
 ; counter:counter0|sel_next[1]~0                                                                     ; 1       ;
+; machine:fsm|Selector3~9                                                                            ; 1       ;
+; machine:fsm|Selector3~8                                                                            ; 1       ;
+; machine:fsm|Equal3~4                                                                               ; 1       ;
+; machine:fsm|Equal3~3                                                                               ; 1       ;
+; machine:fsm|Selector3~7                                                                            ; 1       ;
+; machine:fsm|Equal3~2                                                                               ; 1       ;
+; machine:fsm|Equal3~1                                                                               ; 1       ;
+; machine:fsm|Selector3~6                                                                            ; 1       ;
+; machine:fsm|Selector3~5                                                                            ; 1       ;
 ; machine:fsm|Selector3~4                                                                            ; 1       ;
 ; machine:fsm|Selector3~3                                                                            ; 1       ;
 ; machine:fsm|Selector3~2                                                                            ; 1       ;
 ; machine:fsm|Selector3~1                                                                            ; 1       ;
-; machine:fsm|Selector3~0                                                                            ; 1       ;
+; machine:fsm|process_0~5                                                                            ; 1       ;
+; machine:fsm|process_0~4                                                                            ; 1       ;
+; machine:fsm|Equal1~5                                                                               ; 1       ;
+; machine:fsm|Equal1~4                                                                               ; 1       ;
 ; machine:fsm|process_0~3                                                                            ; 1       ;
+; machine:fsm|Equal1~3                                                                               ; 1       ;
+; machine:fsm|Equal1~2                                                                               ; 1       ;
 ; machine:fsm|process_0~2                                                                            ; 1       ;
+; machine:fsm|Equal0~2                                                                               ; 1       ;
 ; machine:fsm|process_0~1                                                                            ; 1       ;
 ; machine:fsm|process_0~0                                                                            ; 1       ;
+; machine:fsm|Selector3~0                                                                            ; 1       ;
 ; sel_disp:display|SSD_horD[6]~6                                                                     ; 1       ;
 ; sel_disp:display|SSD_horD[5]~5                                                                     ; 1       ;
 ; sel_disp:display|SSD_horD[4]~4                                                                     ; 1       ;
@@ -1933,21 +1951,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-------------------------+
 ; Other Routing Resource Type ; Usage                   ;
 +-----------------------------+-------------------------+
-; Block interconnects         ; 229 / 342,891 ( < 1 % ) ;
-; C16 interconnects           ; 36 / 10,120 ( < 1 % )   ;
-; C4 interconnects            ; 270 / 209,544 ( < 1 % ) ;
-; Direct links                ; 57 / 342,891 ( < 1 % )  ;
+; Block interconnects         ; 239 / 342,891 ( < 1 % ) ;
+; C16 interconnects           ; 41 / 10,120 ( < 1 % )   ;
+; C4 interconnects            ; 252 / 209,544 ( < 1 % ) ;
+; Direct links                ; 58 / 342,891 ( < 1 % )  ;
 ; Global clocks               ; 2 / 20 ( 10 % )         ;
-; Local interconnects         ; 88 / 119,088 ( < 1 % )  ;
-; R24 interconnects           ; 23 / 9,963 ( < 1 % )    ;
-; R4 interconnects            ; 185 / 289,782 ( < 1 % ) ;
+; Local interconnects         ; 97 / 119,088 ( < 1 % )  ;
+; R24 interconnects           ; 30 / 9,963 ( < 1 % )    ;
+; R4 interconnects            ; 197 / 289,782 ( < 1 % ) ;
 +-----------------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.86) ; Number of LABs  (Total = 14) ;
+; Number of Logic Elements  (Average = 15.00) ; Number of LABs  (Total = 14) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 0                            ;
 ; 2                                           ; 0                            ;
@@ -1955,27 +1973,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 0                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 1                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 1                            ;
+; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 2                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 3                            ;
-; 15                                          ; 1                            ;
-; 16                                          ; 6                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 9                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.57) ; Number of LABs  (Total = 14) ;
+; LAB-wide Signals  (Average = 1.71) ; Number of LABs  (Total = 14) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 9                            ;
-; 1 Clock                            ; 8                            ;
-; 1 Clock enable                     ; 4                            ;
+; 1 Async. clear                     ; 10                           ;
+; 1 Clock                            ; 9                            ;
+; 1 Clock enable                     ; 3                            ;
+; 2 Clock enables                    ; 1                            ;
 ; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
@@ -1983,7 +2002,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 18.79) ; Number of LABs  (Total = 14) ;
+; Number of Signals Sourced  (Average = 19.93) ; Number of LABs  (Total = 14) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
@@ -1992,25 +2011,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
+; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 1                            ;
+; 16                                           ; 2                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 1                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 1                            ;
 ; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 3                            ;
-; 25                                           ; 1                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 3                            ;
 ; 26                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -2018,57 +2037,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.64) ; Number of LABs  (Total = 14) ;
+; Number of Signals Sourced Out  (Average = 9.86) ; Number of LABs  (Total = 14) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 0                            ;
 ; 2                                               ; 0                            ;
-; 3                                               ; 0                            ;
+; 3                                               ; 1                            ;
 ; 4                                               ; 0                            ;
 ; 5                                               ; 0                            ;
-; 6                                               ; 4                            ;
+; 6                                               ; 1                            ;
 ; 7                                               ; 1                            ;
-; 8                                               ; 2                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 1                            ;
+; 8                                               ; 3                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 3                            ;
+; 12                                              ; 2                            ;
 ; 13                                              ; 0                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 1                            ;
-; 16                                              ; 1                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.07) ; Number of LABs  (Total = 14) ;
+; Number of Distinct Inputs  (Average = 11.86) ; Number of LABs  (Total = 14) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 4                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 2                            ;
+; 6                                            ; 3                            ;
 ; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 1                            ;
 ; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 1                            ;
 ; 18                                           ; 1                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
-; 23                                           ; 1                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2176,6 +2201,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX5[4]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX5[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX5[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; button             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; load               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; hra_d_load[1]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; hra_d_load[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; hra_d_load[3]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2184,19 +2211,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hra_u_load[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; hra_u_load[3]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; hra_u_load[2]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; button             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; enable             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; min_d_load[1]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; min_d_load[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; min_d_load[3]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; min_d_load[2]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; min_d_load[3]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; min_d_load[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; min_u_load[1]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; min_u_load[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; min_u_load[3]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; min_u_load[2]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; enable             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; load               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -2237,16 +2262,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                                            ;
-+---------------------------------------------------------------+----------------------+-------------------+
-; Source Clock(s)                                               ; Destination Clock(s) ; Delay Added in ns ;
-+---------------------------------------------------------------+----------------------+-------------------+
-; pll0|altpll_component|auto_generated|pll1|clk[0]              ; CLK50MHz             ; 15.3              ;
-; pll0|altpll_component|auto_generated|pll1|clk[0],I/O          ; CLK50MHz             ; 12.6              ;
-; CLK50MHz,pll0|altpll_component|auto_generated|pll1|clk[0],I/O ; CLK50MHz             ; 8.0               ;
-; CLK50MHz,pll0|altpll_component|auto_generated|pll1|clk[0]     ; CLK50MHz             ; 2.9               ;
-+---------------------------------------------------------------+----------------------+-------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                                                                 ;
++---------------------------------------------------------------+-----------------------------------------------------------+-------------------+
+; Source Clock(s)                                               ; Destination Clock(s)                                      ; Delay Added in ns ;
++---------------------------------------------------------------+-----------------------------------------------------------+-------------------+
+; pll0|altpll_component|auto_generated|pll1|clk[0]              ; CLK50MHz                                                  ; 26.4              ;
+; CLK50MHz,pll0|altpll_component|auto_generated|pll1|clk[0],I/O ; CLK50MHz                                                  ; 17.5              ;
+; pll0|altpll_component|auto_generated|pll1|clk[0]              ; CLK50MHz,pll0|altpll_component|auto_generated|pll1|clk[0] ; 4.5               ;
+; CLK50MHz,pll0|altpll_component|auto_generated|pll1|clk[0]     ; CLK50MHz                                                  ; 4.0               ;
+; pll0|altpll_component|auto_generated|pll1|clk[0],I/O          ; CLK50MHz                                                  ; 2.4               ;
++---------------------------------------------------------------+-----------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
 
@@ -2256,52 +2282,53 @@ This will disable optimization of problematic paths and expose them for further 
 +---------------------------------+--------------------------------+-------------------+
 ; Source Register                 ; Destination Register           ; Delay Added in ns ;
 +---------------------------------+--------------------------------+-------------------+
-; timer:t0|min_reg[3]             ; machine:fsm|buzzer_buf_reg     ; 5.366             ;
-; timer:t0|min_reg[2]             ; machine:fsm|buzzer_buf_reg     ; 5.346             ;
-; timer:t0|hour_reg[7]            ; machine:fsm|state_reg.sleep    ; 5.286             ;
-; timer:t0|hour_reg[5]            ; machine:fsm|state_reg.sleep    ; 5.285             ;
-; timer:t0|hour_reg[4]            ; machine:fsm|state_reg.sleep    ; 5.282             ;
-; min_u_load[3]                   ; machine:fsm|buzzer_buf_reg     ; 5.181             ;
-; min_u_load[2]                   ; machine:fsm|buzzer_buf_reg     ; 5.181             ;
-; timer:t0|hour_reg[1]            ; machine:fsm|state_reg.sleep    ; 5.176             ;
-; timer:t0|hour_reg[0]            ; machine:fsm|state_reg.sleep    ; 5.174             ;
-; timer:t0|hour_reg[3]            ; machine:fsm|state_reg.sleep    ; 5.162             ;
-; timer:t0|hour_reg[2]            ; machine:fsm|state_reg.sleep    ; 5.161             ;
-; timer:t0|hour_reg[6]            ; machine:fsm|state_reg.sleep    ; 5.138             ;
-; min_d_load[3]                   ; machine:fsm|buzzer_buf_reg     ; 5.028             ;
-; min_d_load[2]                   ; machine:fsm|buzzer_buf_reg     ; 5.028             ;
-; timer:t0|min_reg[6]             ; machine:fsm|buzzer_buf_reg     ; 5.028             ;
-; timer:t0|min_reg[7]             ; machine:fsm|buzzer_buf_reg     ; 5.028             ;
-; timer:t0|min_reg[5]             ; machine:fsm|buzzer_buf_reg     ; 5.000             ;
-; timer:t0|min_reg[4]             ; machine:fsm|buzzer_buf_reg     ; 4.988             ;
-; machine:fsm|min_u_sleep_reg[3]  ; machine:fsm|buzzer_buf_reg     ; 4.920             ;
-; machine:fsm|min_u_sleep_reg[2]  ; machine:fsm|buzzer_buf_reg     ; 4.920             ;
-; timer:t0|min_reg[1]             ; machine:fsm|buzzer_buf_reg     ; 4.850             ;
-; timer:t0|min_reg[0]             ; machine:fsm|buzzer_buf_reg     ; 4.700             ;
-; min_d_load[1]                   ; machine:fsm|buzzer_buf_reg     ; 4.326             ;
-; min_d_load[0]                   ; machine:fsm|buzzer_buf_reg     ; 4.326             ;
-; min_u_load[1]                   ; machine:fsm|buzzer_buf_reg     ; 4.238             ;
-; min_u_load[0]                   ; machine:fsm|buzzer_buf_reg     ; 4.238             ;
-; hra_d_load[1]                   ; machine:fsm|state_reg.sleep    ; 3.928             ;
-; hra_d_load[0]                   ; machine:fsm|state_reg.sleep    ; 3.928             ;
-; hra_d_load[3]                   ; machine:fsm|state_reg.sleep    ; 3.915             ;
-; hra_d_load[2]                   ; machine:fsm|state_reg.sleep    ; 3.915             ;
-; hra_u_load[1]                   ; machine:fsm|state_reg.sleep    ; 3.874             ;
-; hra_u_load[0]                   ; machine:fsm|state_reg.sleep    ; 3.874             ;
-; hra_u_load[3]                   ; machine:fsm|state_reg.sleep    ; 3.867             ;
-; hra_u_load[2]                   ; machine:fsm|state_reg.sleep    ; 3.867             ;
-; machine:fsm|min_u_sleep_reg[1]  ; machine:fsm|buzzer_buf_reg     ; 3.765             ;
-; machine:fsm|min_u_sleep_reg[0]  ; machine:fsm|buzzer_buf_reg     ; 3.765             ;
-; machine:fsm|state_reg.sleep     ; machine:fsm|buzzer_buf_reg     ; 3.521             ;
-; button                          ; machine:fsm|buzzer_buf_reg     ; 3.521             ;
-; machine:fsm|state_reg.on_alarm  ; machine:fsm|buzzer_buf_reg     ; 2.207             ;
-; enable                          ; machine:fsm|buzzer_buf_reg     ; 2.207             ;
-; machine:fsm|state_reg.inc_sleep ; machine:fsm|state_reg.sleep    ; 1.580             ;
-; load                            ; machine:fsm|state_reg.on_alarm ; 1.402             ;
-; machine:fsm|state_reg.idle      ; machine:fsm|state_reg.on_alarm ; 1.402             ;
-; machine:fsm|state_reg.alarm     ; machine:fsm|buzzer_buf_reg     ; 0.552             ;
+; timer:t0|min_reg[3]             ; machine:fsm|buzzer_buf_reg     ; 4.772             ;
+; timer:t0|min_reg[5]             ; machine:fsm|buzzer_buf_reg     ; 4.751             ;
+; timer:t0|min_reg[1]             ; machine:fsm|buzzer_buf_reg     ; 4.738             ;
+; timer:t0|min_reg[0]             ; machine:fsm|buzzer_buf_reg     ; 4.736             ;
+; timer:t0|min_reg[2]             ; machine:fsm|buzzer_buf_reg     ; 4.624             ;
+; timer:t0|hour_reg[7]            ; machine:fsm|buzzer_buf_reg     ; 4.559             ;
+; timer:t0|hour_reg[1]            ; machine:fsm|buzzer_buf_reg     ; 4.483             ;
+; timer:t0|min_reg[7]             ; machine:fsm|buzzer_buf_reg     ; 4.396             ;
+; timer:t0|hour_reg[3]            ; machine:fsm|buzzer_buf_reg     ; 4.395             ;
+; timer:t0|hour_reg[5]            ; machine:fsm|buzzer_buf_reg     ; 4.222             ;
+; timer:t0|min_reg[4]             ; machine:fsm|buzzer_buf_reg     ; 4.190             ;
+; timer:t0|hour_reg[4]            ; machine:fsm|buzzer_buf_reg     ; 4.162             ;
+; timer:t0|min_reg[6]             ; machine:fsm|buzzer_buf_reg     ; 4.073             ;
+; timer:t0|hour_reg[6]            ; machine:fsm|buzzer_buf_reg     ; 4.070             ;
+; min_d_load[1]                   ; machine:fsm|buzzer_buf_reg     ; 3.756             ;
+; min_d_load[2]                   ; machine:fsm|buzzer_buf_reg     ; 3.756             ;
+; min_d_load[3]                   ; machine:fsm|buzzer_buf_reg     ; 3.630             ;
+; min_d_load[0]                   ; machine:fsm|buzzer_buf_reg     ; 3.630             ;
+; machine:fsm|state_reg.load_time ; machine:fsm|buzzer_buf_reg     ; 3.379             ;
+; machine:fsm|state_reg.idle      ; machine:fsm|buzzer_buf_reg     ; 3.379             ;
+; min_u_load[2]                   ; machine:fsm|buzzer_buf_reg     ; 3.379             ;
+; load                            ; machine:fsm|buzzer_buf_reg     ; 3.379             ;
+; min_u_load[0]                   ; machine:fsm|buzzer_buf_reg     ; 3.378             ;
+; hra_d_load[1]                   ; machine:fsm|buzzer_buf_reg     ; 3.362             ;
+; hra_d_load[0]                   ; machine:fsm|buzzer_buf_reg     ; 3.362             ;
+; machine:fsm|min_u_sleep_reg[0]  ; machine:fsm|buzzer_buf_reg     ; 3.325             ;
+; machine:fsm|min_u_sleep_reg[1]  ; machine:fsm|buzzer_buf_reg     ; 3.325             ;
+; machine:fsm|min_u_sleep_reg[3]  ; machine:fsm|buzzer_buf_reg     ; 3.281             ;
+; machine:fsm|min_u_sleep_reg[2]  ; machine:fsm|buzzer_buf_reg     ; 3.281             ;
+; min_u_load[3]                   ; machine:fsm|buzzer_buf_reg     ; 3.272             ;
+; timer:t0|hour_reg[0]            ; machine:fsm|buzzer_buf_reg     ; 3.240             ;
+; machine:fsm|state_reg.on_alarm  ; machine:fsm|state_reg.on_alarm ; 3.233             ;
+; timer:t0|hour_reg[2]            ; machine:fsm|state_reg.on_alarm ; 3.233             ;
+; min_u_load[1]                   ; machine:fsm|buzzer_buf_reg     ; 3.179             ;
+; hra_d_load[2]                   ; machine:fsm|buzzer_buf_reg     ; 3.134             ;
+; machine:fsm|state_reg.sleep     ; machine:fsm|state_reg.sleep    ; 3.000             ;
+; hra_u_load[1]                   ; machine:fsm|buzzer_buf_reg     ; 2.983             ;
+; hra_u_load[0]                   ; machine:fsm|buzzer_buf_reg     ; 2.983             ;
+; hra_u_load[3]                   ; machine:fsm|buzzer_buf_reg     ; 2.917             ;
+; hra_u_load[2]                   ; machine:fsm|buzzer_buf_reg     ; 2.917             ;
+; hra_d_load[3]                   ; machine:fsm|buzzer_buf_reg     ; 2.763             ;
+; button                          ; machine:fsm|buzzer_buf_reg     ; 2.403             ;
+; enable                          ; machine:fsm|state_reg.on_alarm ; 2.106             ;
+; machine:fsm|state_reg.inc_sleep ; machine:fsm|state_reg.sleep    ; 1.900             ;
+; machine:fsm|state_reg.alarm     ; machine:fsm|buzzer_buf_reg     ; 0.505             ;
 +---------------------------------+--------------------------------+-------------------+
-Note: This table only shows the top 44 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 45 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2358,23 +2385,23 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X104_Y12 to location X115_Y23
+    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X104_Y12 to location X115_Y23
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.76 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.78 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:05
 Info (144001): Generated suppressed messages file /home/aluno/dlp2/atividade2/output_files/top_timer_de2_115.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 744 megabytes
-    Info: Processing ended: Fri Oct 18 17:27:46 2019
-    Info: Elapsed time: 00:00:44
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Peak virtual memory: 758 megabytes
+    Info: Processing ended: Fri Oct 18 17:57:56 2019
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:01:06
 
 
 +----------------------------+

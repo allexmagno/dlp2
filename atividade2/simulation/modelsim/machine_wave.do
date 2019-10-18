@@ -20,8 +20,6 @@ add wave -noupdate -group ativar_buzzer /machine/dispara
 add wave -noupdate -group ativar_buzzer /machine/dispara_sleep
 add wave -noupdate -group look_ahead_buffer /machine/buzzer_next
 add wave -noupdate -group look_ahead_buffer /machine/buzzer_buf_reg
-add wave -noupdate -group look_ahead_buffer /machine/min_u_sleep_next
-add wave -noupdate -group look_ahead_buffer /machine/min_u_sleep_reg
 add wave -noupdate /machine/buzzer
 add wave -noupdate -group sinais /machine/sel_inc
 add wave -noupdate -group sinais /machine/hra_d_timerr

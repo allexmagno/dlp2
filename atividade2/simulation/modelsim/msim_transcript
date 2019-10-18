@@ -409,3 +409,68 @@ do tb_machine.do
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading work.machine(state)
+do tb_machine.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity machine
+# -- Compiling architecture state of machine
+# vsim work.machine 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.machine(state)
+# ** Error: (vish-4014) No objects found matching '/machine/min_u_sleep_next'.
+# Executing ONERROR command at macro ./machine_wave.do line 23
+# ** Error: (vish-4014) No objects found matching '/machine/min_u_sleep_reg'.
+# Executing ONERROR command at macro ./machine_wave.do line 24
+do tb_machine.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity machine
+# -- Compiling architecture state of machine
+# vsim work.machine 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.machine(state)
+# ** Error: (vish-4014) No objects found matching '/machine/min_u_sleep_next'.
+# Executing ONERROR command at macro ./machine_wave.do line 23
+# ** Error: (vish-4014) No objects found matching '/machine/min_u_sleep_reg'.
+# Executing ONERROR command at macro ./machine_wave.do line 24
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/aluno/dlp2/atividade2/simulation/modelsim/machine_wave.do
+do tb_machine.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity machine
+# -- Compiling architecture state of machine
+# vsim work.machine 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.machine(state)
+do tb_machine.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity machine
+# -- Compiling architecture state of machine
+# vsim work.machine 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.machine(state)
