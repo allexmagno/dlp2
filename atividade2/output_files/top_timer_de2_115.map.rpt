@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_timer_de2_115
-Mon Oct 14 12:48:55 2019
+Fri Oct 18 17:26:57 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -19,10 +19,8 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: pll_50mhz_10khz:pll0|altpll:altpll_component
  13. altpll Parameter Settings by Entity Instance
- 14. Port Connectivity Checks: "bcd2ssd:bin1"
- 15. Port Connectivity Checks: "machine:fsm"
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -48,16 +46,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 14 12:48:55 2019            ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 18 17:26:57 2019            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_timer_de2_115                                ;
 ; Top-level Entity Name              ; top_timer_de2_115                                ;
 ; Family                             ; Cyclone IV E                                     ;
-; Total logic elements               ; 198                                              ;
-;     Total combinational functions  ; 197                                              ;
+; Total logic elements               ; 194                                              ;
+;     Total combinational functions  ; 193                                              ;
 ;     Dedicated logic registers      ; 69                                               ;
 ; Total registers                    ; 69                                               ;
-; Total pins                         ; 67                                               ;
+; Total pins                         ; 64                                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -161,11 +159,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -195,31 +194,31 @@ applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 198          ;
+; Estimated Total logic elements              ; 194          ;
 ;                                             ;              ;
-; Total combinational functions               ; 197          ;
+; Total combinational functions               ; 193          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 104          ;
-;     -- 3 input functions                    ; 38           ;
-;     -- <=2 input functions                  ; 55           ;
+;     -- 4 input functions                    ; 110          ;
+;     -- 3 input functions                    ; 30           ;
+;     -- <=2 input functions                  ; 53           ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 150          ;
+;     -- normal mode                          ; 146          ;
 ;     -- arithmetic mode                      ; 47           ;
 ;                                             ;              ;
 ; Total registers                             ; 69           ;
 ;     -- Dedicated logic registers            ; 69           ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
-; I/O pins                                    ; 67           ;
+; I/O pins                                    ; 64           ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ; Total PLLs                                  ; 1            ;
 ;     -- PLLs                                 ; 1            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 69           ;
-; Total fan-out                               ; 991          ;
-; Average fan-out                             ; 2.47         ;
+; Total fan-out                               ; 977          ;
+; Average fan-out                             ; 2.50         ;
 +---------------------------------------------+--------------+
 
 
@@ -228,16 +227,15 @@ applicable agreement for further details.
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Library Name ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
-; |top_timer_de2_115                               ; 197 (49)          ; 69 (28)      ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |top_timer_de2_115                                                                                    ; work         ;
-;    |bcd2ssd:bin2|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|bcd2ssd:bin2                                                                       ; work         ;
+; |top_timer_de2_115                               ; 193 (49)          ; 69 (28)      ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |top_timer_de2_115                                                                                    ; work         ;
 ;    |counter:counter0|                            ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|counter:counter0                                                                   ; work         ;
-;    |machine:fsm|                                 ; 28 (28)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|machine:fsm                                                                        ; work         ;
+;    |machine:fsm|                                 ; 34 (34)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|machine:fsm                                                                        ; work         ;
 ;    |pll_50mhz_10khz:pll0|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|pll_50mhz_10khz:pll0                                                               ; work         ;
 ;       |altpll:altpll_component|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|pll_50mhz_10khz:pll0|altpll:altpll_component                                       ; work         ;
 ;          |pll_50mhz_10khz_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|pll_50mhz_10khz:pll0|altpll:altpll_component|pll_50mhz_10khz_altpll:auto_generated ; work         ;
 ;    |sel_disp:display|                            ; 65 (58)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|sel_disp:display                                                                   ; work         ;
 ;       |bcd2ssd:bcd0|                             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|sel_disp:display|bcd2ssd:bcd0                                                      ; work         ;
-;    |timer:t0|                                    ; 45 (45)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|timer:t0                                                                           ; work         ;
+;    |timer:t0|                                    ; 42 (42)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_timer_de2_115|timer:t0                                                                           ; work         ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -279,19 +277,19 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 69    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 27    ;
+; Number of registers using Clock Enable       ; 31    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_timer_de2_115|machine:fsm|Mux3      ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |top_timer_de2_115|sel_disp:display|Mux1 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_timer_de2_115|machine:fsm|min_u_sleep_reg[3] ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |top_timer_de2_115|sel_disp:display|Mux3          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
@@ -685,34 +683,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+----------------------------------------------+
 
 
-+------------------------------------------+
-; Port Connectivity Checks: "bcd2ssd:bin1" ;
-+------+-------+----------+----------------+
-; Port ; Type  ; Severity ; Details        ;
-+------+-------+----------+----------------+
-; bcd  ; Input ; Info     ; Stuck at GND   ;
-+------+-------+----------+----------------+
-
-
-+----------------------------------------------------+
-; Port Connectivity Checks: "machine:fsm"            ;
-+------------------+-------+----------+--------------+
-; Port             ; Type  ; Severity ; Details      ;
-+------------------+-------+----------+--------------+
-; hra_d_load       ; Input ; Info     ; Stuck at GND ;
-; hra_u_load       ; Input ; Info     ; Stuck at GND ;
-; min_d_load       ; Input ; Info     ; Stuck at GND ;
-; min_u_load[3..1] ; Input ; Info     ; Stuck at GND ;
-; min_u_load[0]    ; Input ; Info     ; Stuck at VCC ;
-+------------------+-------+----------+--------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -722,7 +698,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Oct 14 12:48:51 2019
+    Info: Processing started: Fri Oct 18 17:26:50 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcd_timer_2019_2 -c top_timer_de2_115
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file top_timer_de2_115.vhd
@@ -813,26 +789,18 @@ Info (12128): Elaborating entity "counter" for hierarchy "counter:counter0"
 Info (12128): Elaborating entity "sel_disp" for hierarchy "sel_disp:display"
 Info (12128): Elaborating entity "bcd2ssd" for hierarchy "sel_disp:display|bcd2ssd:bcd0"
 Info (12128): Elaborating entity "machine" for hierarchy "machine:fsm"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX7[0]" is stuck at GND
-    Warning (13410): Pin "HEX7[1]" is stuck at GND
-    Warning (13410): Pin "HEX7[2]" is stuck at GND
-    Warning (13410): Pin "HEX7[3]" is stuck at GND
-    Warning (13410): Pin "HEX7[4]" is stuck at GND
-    Warning (13410): Pin "HEX7[5]" is stuck at GND
-    Warning (13410): Pin "HEX7[6]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 275 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 62 output pins
-    Info (21061): Implemented 207 logic cells
+Info (21057): Implemented 261 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 43 output pins
+    Info (21061): Implemented 196 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 404 megabytes
-    Info: Processing ended: Mon Oct 14 12:48:55 2019
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Fri Oct 18 17:26:57 2019
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

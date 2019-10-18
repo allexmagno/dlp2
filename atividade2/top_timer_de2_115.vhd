@@ -15,24 +15,14 @@ entity top_timer_de2_115 is
 		HEX3	: out std_logic_vector (6 downto 0);
 		HEX4	: out std_logic_vector (6 downto 0);
 		HEX5	: out std_logic_vector (6 downto 0);
-		HEX6	: out std_logic_vector (6 downto 0);
-		HEX7	: out std_logic_vector (6 downto 0);
-		idle_s, load_s, on_alarm_s, alarm_s, sleep_s : out std_logic
+		hra_d_load, hra_u_load	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		min_d_load, min_u_load	: IN STD_LOGIC_VECTOR (3 DOWNTO 0)
 	);
 
 end entity;
 
 architecture top_a3_2019_2 of top_timer_de2_115 is
 	
-	component bcd2ssd
-	port 
-	(
-		BCD	: in std_logic_vector (3 downto 0);
-		SSD	: out std_logic_vector (6 downto 0)
-	);
-	end component;
-
-
     component timer
     	port 
     	(
@@ -86,9 +76,7 @@ architecture top_a3_2019_2 of top_timer_de2_115 is
 		hra_u_load : IN STD_LOGIC_VECTOR (3 downto 0);
 		min_d_load : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
 		min_u_load : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-		buzzer: OUT STD_LOGIC;
-		min_u_out	: out STD_LOGIC_VECTOR (3 DOWNTO 0);
-		idle_s, load_s, on_alarm_s, alarm_s, sleep_s : out std_logic
+		buzzer: OUT STD_LOGIC
 		   
 	);
 	END component;
@@ -108,11 +96,11 @@ architecture top_a3_2019_2 of top_timer_de2_115 is
 	signal reset, CLOCK_1Hz, CLOCK_10KHZ, en, en_360: std_logic;
 	signal sel_t: std_logic_vector(2 downto 0);
 	
-	signal hra_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);		
-	signal hra_u_loadd : STD_LOGIC_VECTOR (3 downto 0);
-	signal min_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);
-	signal min_u_loadd, min_u_out : STD_LOGIC_VECTOR (3 DOWNTO 0);
-		
+--	signal hra_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);		
+--	signal hra_u_loadd : STD_LOGIC_VECTOR (3 downto 0);
+--	signal min_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);
+--	signal min_u_loadd, min_u_out : STD_LOGIC_VECTOR (3 DOWNTO 0);
+--		
 		
 begin
 
@@ -135,10 +123,10 @@ begin
 
 	-- Habilita a contagem no clock
 	-- next-state logic
-	r_next  <=  (others=>'0') when r_reg=999 else 
+	r_next  <=  (others=>'0') when r_reg=9999 else 
 				r_reg + 1;
 	-- output logic
-	en <= '1' when r_reg = 500 else
+	en <= '1' when r_reg = 5000 else
 				 '0';
 	
 	-----------------------------------------------------
@@ -210,37 +198,14 @@ begin
 		hra_u_timer => hourU,
 		min_d_timer	=> minT,
 		min_u_timer	=> minU,
-		hra_d_load => hra_d_loadd,		
-		hra_u_load => hra_u_loadd,
-		min_d_load => min_d_loadd,
-		min_u_load => min_u_loadd,
-		buzzer => buzzer,
-		idle_s => idle_s,
-		load_s => load_s,
-		on_alarm_s => on_alarm_s,
-		alarm_s => alarm_s,
-		min_u_out => min_u_out,
-		sleep_s => sleep_s		
+		hra_d_load => hra_d_load,		
+		hra_u_load => hra_u_load,
+		min_d_load => min_d_load,
+		min_u_load => min_u_load,
+		buzzer => buzzer	
 	);
+
 	
-	hra_d_loadd <= "0000";
-	hra_u_loadd <= "0000";
-	min_d_loadd <= "0000";
-	min_u_loadd <= "0001";
-	
-	bin1: bcd2ssd
-	port map
-	(
-		BCD	=> min_d_loadd,
-		SSD	=> HEX7
-	);
-	
-	bin2: bcd2ssd
-	port map
-	(
-		BCD	=> min_u_out,
-		SSD	=> HEX6
-	);
 
 
 

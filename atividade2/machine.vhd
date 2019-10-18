@@ -11,10 +11,7 @@ ENTITY machine IS
 		min_d_timer, min_u_timer	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
 		hra_d_load, hra_u_load	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);		
 		min_d_load, min_u_load	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-		buzzer: OUT STD_LOGIC;
-		min_u_out	: out STD_LOGIC_VECTOR (3 DOWNTO 0);
-		idle_s, load_s, on_alarm_s, alarm_s, sleep_s : out std_logic
-		   
+		buzzer: OUT STD_LOGIC		   
 	);
 	END machine;
 	
@@ -172,41 +169,30 @@ ENTITY machine IS
 		buzzer_next <= '0';
 		sel_inc <= "00";
 		
-		idle_s <= '0';
-		on_alarm_s <= '0';
-		sleep_s <= '0';
-		alarm_s <= '0';
-		load_s <= '0';
-		
 		case state_next is
 			when idle =>
-				idle_s <= '1';
 			when on_alarm =>
-				on_alarm_s <= '1';
 			when inc_sleep =>
 				sel_inc <= "10"; -- Seleciona o incremento do sleep
 			when sleep => 
-				sleep_s <= '1';
 			when wait_button1 =>
 			when wait_button2 =>
 			when wait_button3 =>
 			when alarm =>
-				alarm_s <= '1';
 				buzzer_next <= '1'; -- ativa o buzzer
 			when load_time =>
-			   load_s <= '1';
 				sel_inc <= "01"; -- Seleciona o sleep definido no load
 		end case;
   end process;
   
   buzzer <= buzzer_buf_reg;
---  min_d_sleep_next <=	std_logic_vector(unsigned(min_d_sleep_reg) + 5) when sel_inc = "10" else
---								min_d_loadd when sel_inc = "01" else
---								min_d_sleep_reg;
+--  min_u_sleep_next <=	std_logic_vector(unsigned(min_u_sleep_reg) + 5) when sel_inc = "10" else
+--								min_u_loadd when sel_inc = "01" else
+--								min_u_sleep_reg;
+
 	with sel_inc select
    min_u_sleep_next <=	std_logic_vector(unsigned(min_u_sleep_reg) + 5) when "10",
 								min_u_loadd when "01",
 								min_u_sleep_reg when others;
 								
-	min_u_out <= min_u_sleep_next;
 END ARCHITECTURE;

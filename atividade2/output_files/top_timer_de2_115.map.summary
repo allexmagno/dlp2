@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Oct 14 12:48:55 2019
+Analysis & Synthesis Status : Successful - Fri Oct 18 17:26:57 2019
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : top_timer_de2_115
 Top-level Entity Name : top_timer_de2_115
 Family : Cyclone IV E
-Total logic elements : 198
-    Total combinational functions : 197
+Total logic elements : 194
+    Total combinational functions : 193
     Dedicated logic registers : 69
 Total registers : 69
-Total pins : 67
+Total pins : 64
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
