@@ -25,10 +25,10 @@ ENTITY machine IS
 		signal hra_u_timerr  : STD_LOGIC_VECTOR (3 downto 0);
 		signal min_d_timerr	: STD_LOGIC_VECTOR (3 DOWNTO 0);
 		signal min_u_timerr	: STD_LOGIC_VECTOR (3 DOWNTO 0);
-		signal hra_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);		
-		signal hra_u_loadd : STD_LOGIC_VECTOR (3 downto 0);
-		signal min_d_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);
-		signal min_u_loadd : STD_LOGIC_VECTOR (3 DOWNTO 0);
+		signal hra_d_loadd, hra_d_loadd_reg : STD_LOGIC_VECTOR (3 DOWNTO 0);		
+		signal hra_u_loadd, hra_u_loadd_reg : STD_LOGIC_VECTOR (3 downto 0);
+		signal min_d_loadd, min_d_loadd_reg : STD_LOGIC_VECTOR (3 DOWNTO 0);
+		signal min_u_loadd, min_u_loadd_reg : STD_LOGIC_VECTOR (3 DOWNTO 0);
 		signal min_d_sleep_next, min_d_sleep_reg, src0 : std_logic_vector (3 downto 0);
 		
 	BEGIN	
@@ -38,17 +38,16 @@ ENTITY machine IS
 	min_d_timerr <= min_d_timer;
 	min_u_timerr <= min_u_timer;
 							
-	
 	-- Comparacao para disparar o alarme
-	PROCESS (hra_d_timerr, hra_d_loadd, min_d_timerr, min_d_loadd, hra_u_timerr, hra_u_loadd, min_u_timerr, min_u_loadd, min_d_sleep_reg)
+	PROCESS (hra_d_timerr, hra_d_loadd_reg, min_d_timerr, min_d_loadd_reg, hra_u_timerr, hra_u_loadd_reg, min_u_timerr, min_u_loadd_reg, min_d_sleep_reg)
 	BEGIN
-		IF( hra_d_timerr = hra_d_loadd and hra_u_timerr = hra_u_loadd) THEN
-			if (min_d_timerr = min_d_loadd and min_u_timerr = min_u_loadd) then
+		IF( hra_d_timerr = hra_d_loadd_reg and hra_u_timerr = hra_u_loadd_reg) THEN
+			if (min_d_timerr = min_d_loadd_reg and min_u_timerr = min_u_loadd_reg) then
 				dispara <= '1';
 			ELSE
 				dispara <= '0';
 			END IF;
-			if (min_d_sleep_reg = min_u_timerr) then
+			if (min_d_sleep_reg = min_d_timerr and min_u_timerr = min_u_loadd_reg ) then
 				dispara_sleep <= '1';
 			ELSE
 				dispara_sleep <= '0';
@@ -58,6 +57,8 @@ ENTITY machine IS
 			dispara_sleep <= '0';
 		END IF;
 	END PROCESS;
+	
+
 	
 	-- state register
 	PROCESS (clk, rst)
@@ -70,15 +71,23 @@ ENTITY machine IS
 	END PROCESS;
 	
 	
-	-- output buffer
+	-- output buffer and reg loader
 	process (clk, rst)
 	begin
 	if (rst = '1') then
 		buzzer_buf_reg <= '0';
 		min_d_sleep_reg <= "0000";
+		hra_d_loadd_reg <= "0000";
+		hra_u_loadd_reg <= "0000"; 
+		min_d_loadd_reg <= "0000";
+		min_u_loadd_reg <= "0000";
 	elsif (clk'event and clk='1') then
 		buzzer_buf_reg <= buzzer_next;
 		min_d_sleep_reg <= min_d_sleep_next;
+		hra_u_loadd_reg <= hra_d_loadd;
+		hra_d_loadd_reg <= hra_u_loadd; 
+		min_d_loadd_reg <= min_d_loadd;
+		min_u_loadd_reg <= min_u_loadd;
 	end if;
 	end process;
 	
@@ -160,15 +169,11 @@ ENTITY machine IS
 	END PROCESS;
 	
   -- look-ahead output logic
-  process(state_next, hra_d_load, hra_u_load, min_u_load, min_d_load)
+  process(state_next)
   begin
 		buzzer_next <= '0';
 		sel_inc <= "00";
-		
-		hra_d_loadd <= "0000";
-		hra_u_loadd <= "0000";
-		min_d_loadd <= "0000";
-		min_u_loadd <= "0000";
+
 		
 		case state_next is
 			when idle =>
@@ -183,10 +188,6 @@ ENTITY machine IS
 				buzzer_next <= '1'; -- ativa o buzzer
 			when load_time =>
 				sel_inc <= "01"; -- Seleciona o sleep definido no load
-				hra_d_loadd <= hra_d_load;
-				hra_u_loadd <= hra_u_load;
-				min_d_loadd <= min_d_load;
-				min_u_loadd <= min_u_load;
 		end case;
   end process;
   
@@ -204,7 +205,24 @@ ENTITY machine IS
 				"0000";
 	with sel_inc select
    min_d_sleep_next <=	src0 when "10",
-								min_u_loadd when "01",
+								min_d_load when "01",
 								min_d_sleep_reg when others;
-								
+	
+	with sel_inc select
+	hra_d_loadd <= hra_d_load when "01",
+						hra_d_loadd_reg when others;
+						
+	with sel_inc select
+	hra_u_loadd <= hra_u_load when "01",
+						hra_u_loadd_reg when others;
+	
+	with sel_inc select
+	min_d_loadd <= min_d_load when "01",
+						min_d_loadd_reg when others;
+						
+	with sel_inc select
+	min_u_loadd <= min_u_load when "01",
+						min_u_loadd_reg when others;
+						
+
 END ARCHITECTURE;

@@ -1,5 +1,5 @@
 
-State Machine - |machine|state_reg
+State Machine - |top_timer_de2_115|machine:fsm|state_reg
 Name state_reg.wait_button3 state_reg.wait_button2 state_reg.wait_button1 state_reg.inc_sleep state_reg.load_time state_reg.alarm state_reg.sleep state_reg.on_alarm state_reg.idle 
 state_reg.idle 0 0 0 0 0 0 0 0 0 
 state_reg.on_alarm 0 0 0 0 0 0 0 1 1 
