@@ -9,6 +9,49 @@
 # ** Warning: Copied /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/db {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/db/pll_50mhz_10khz_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pll_50mhz_10khz_altpll
+# 
+# Top level modules:
+# 	pll_50mhz_10khz_altpll
+# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/top_timer_de2_115.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_timer_de2_115
+# -- Compiling architecture top_a3_2019_2 of top_timer_de2_115
+# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/bcd2ssd.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bcd2ssd
+# -- Compiling architecture arch of bcd2ssd
+# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture bcd_two_digits of timer
+# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/pll_50mhz_10khz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pll_50mhz_10khz
+# -- Compiling architecture SYN of pll_50mhz_10khz
+# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/sel_disp.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity sel_disp
+# -- Compiling architecture arch of sel_disp
 # vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/machine.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -17,6 +60,14 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity machine
 # -- Compiling architecture state of machine
+# vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/counter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture counter_0_to_5 of counter
 # 
 # vcom -93 -work work {/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -46,266 +97,14 @@
 # Loading ieee.numeric_std(body)
 # Loading modelsim_lib.util(body)
 # Loading work.timer_tb(bench)
-# ** Warning: (vsim-3473) Component instance "uut : timer" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /timer_tb File: /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001000' onto '/timer_tb/uut/sec_reg' at time 10000 ps.
-#    Time: 10 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001001' onto '/timer_tb/uut/min_reg' at time 10000 ps.
-#    Time: 10 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011000' onto '/timer_tb/uut/sec_reg' at time 170000 ps.
-#    Time: 170 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01001000' onto '/timer_tb/uut/min_reg' at time 170000 ps.
-#    Time: 170 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011000' onto '/timer_tb/uut/sec_reg' at time 230000 ps.
-#    Time: 230 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/min_reg' at time 230000 ps.
-#    Time: 230 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/sec_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/sec_reg' at time 290000 ps.
-#    Time: 290 ns  Iteration: 0  Instance: /timer_tb
-# ** Error: (vsim-3561) No objects found matching 'uut'.
-# ** Error: (vsim-4008) Object '/timer_tb/uut/min_reg' not found.
-# 
-# ** Error: (vsim-3897) signal_force [/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht] : Failed to force the value '01011001' onto '/timer_tb/uut/min_reg' at time 290000 ps.
-#    Time: 290 ns  Iteration: 0  Instance: /timer_tb
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/simulation/modelsim/wave.do
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-add wave -position 7  sim:/machine/hra_d_loadd_reg
-add wave -position 7  sim:/machine/hra_u_loadd_reg
-add wave -position 7  sim:/machine/min_d_loadd_reg
-add wave -position 7  sim:/machine/min_u_loadd_reg
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/simulation/modelsim/wave.do
-add wave -position 7  sim:/machine/min_u_loadd_reg
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-add wave -position 9  sim:/machine/hra_d_loadd_reg
-add wave -position 9  sim:/machine/hra_u_loadd_reg
-add wave -position 9  sim:/machine/min_d_loadd_reg
-add wave -position 9  sim:/machine/min_u_loadd_reg
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/simulation/modelsim/wave.do
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-add wave -position end  sim:/machine/hra_d_loadd_reg
-add wave -position end  sim:/machine/hra_u_loadd_reg
-add wave -position end  sim:/machine/min_d_loadd_reg
-add wave -position end  sim:/machine/min_u_loadd_reg
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-add wave -position end  sim:/machine/min_d_sleep_reg
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/simulation/modelsim/machine_wave.do
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
-do tb_machine.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity machine
-# -- Compiling architecture state of machine
-# vsim work.machine 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.machine(state)
+# Loading work.timer(bcd_two_digits)
+# ** Failure: (vsim-3817) Port "en" of entity "timer" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /timer_tb/uut File: /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer.vhd Line: 8
+# Fatal error in file /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer.vhd
+#  while elaborating region: /timer_tb/uut
+# Fatal error in file /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht
+#  while elaborating region: /timer_tb
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./top_timer_de2_115_run_msim_rtl_vhdl.do PAUSED at line 19

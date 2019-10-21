@@ -3,79 +3,315 @@ K3
 13
 cModel Technology
 Z0 d/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/simulation/modelsim
-Emachine
-Z1 w1571444456
-Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 d/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/simulation/modelsim
-Z6 8../../machine.vhd
-Z7 F../../machine.vhd
+Ebcd2ssd
+Z1 w1571438289
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 d/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/simulation/modelsim
+Z5 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/bcd2ssd.vhd
+Z6 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/bcd2ssd.vhd
 l0
-L5
-VLeIb=??DzfG[;?;^eW8E53
-!s100 8o^:cG3U6SWk7@N=KnPD21
-Z8 OV;C;10.1d;51
+L4
+VeLZ9VZ8Yh=21Vk0lBa`PL0
+Z7 OV;C;10.1d;51
 31
+Z8 !s108 1571622213.224360
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/bcd2ssd.vhd|
+Z10 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/bcd2ssd.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 GRl_MefYo@6GAoXe9XY471
 !i10b 1
-Z9 !s108 1571444829.808451
-Z10 !s90 -reportprogress|300|-93|-work|work|../../machine.vhd|
-Z11 !s107 ../../machine.vhd|
-Z12 o-93 -work work -O0
-Z13 tExplicit 1
-Astate
+Aarch
 R2
 R3
-R4
-Z14 DEx4 work 7 machine 0 22 LeIb=??DzfG[;?;^eW8E53
-l34
-L18
-Z15 VWl8eMRKAm3fVT7Agb3E623
-Z16 !s100 ZbX2A>RnRgaKoPP[Ddg3I3
-R8
+DEx4 work 7 bcd2ssd 0 22 eLZ9VZ8Yh=21Vk0lBa`PL0
+l14
+L13
+Vnh=TBaYnH>B>5:_N>:Ajf1
+R7
 31
-!i10b 1
+R8
 R9
 R10
 R11
 R12
-R13
-Etimer_tb
-Z17 w1571438301
-Z18 DPx12 modelsim_lib 4 util 0 22 Ci0SSDmVf2K[lFkJZoo=62
+!s100 d^;:`AeXE^[YB`7odET7K0
+!i10b 1
+Ecounter
+R1
+Z13 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R2
 R3
 R4
-R5
-Z19 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht
-Z20 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht
+Z14 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/counter.vhd
+Z15 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/counter.vhd
+l0
+L5
+V9f16>Jd^g18MjS=BgSSOK3
+R7
+31
+Z16 !s108 1571622216.615802
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/counter.vhd|
+Z18 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/counter.vhd|
+R11
+R12
+!s100 i^ooOQG^H`OB3ak@6;LXN0
+!i10b 1
+Acounter_0_to_5
+R13
+R2
+R3
+DEx4 work 7 counter 0 22 9f16>Jd^g18MjS=BgSSOK3
+l16
+L14
+V`neg^IHEkPPm?V<::]eYb3
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 4ajzM9=zCH2gmK[J5`f6E3
+!i10b 1
+Emachine
+Z19 w1571445028
+R13
+R2
+R3
+R4
+Z20 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/machine.vhd
+Z21 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/machine.vhd
+l0
+L5
+VLeIb=??DzfG[;?;^eW8E53
+R7
+31
+Z22 !s108 1571622215.885241
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/machine.vhd|
+Z24 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/machine.vhd|
+R11
+R12
+!s100 8o^:cG3U6SWk7@N=KnPD21
+!i10b 1
+Astate
+R13
+R2
+R3
+DEx4 work 7 machine 0 22 LeIb=??DzfG[;?;^eW8E53
+l34
+L18
+VWl8eMRKAm3fVT7Agb3E623
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 ZbX2A>RnRgaKoPP[Ddg3I3
+!i10b 1
+Epll_50mhz_10khz
+Z25 w1571438296
+R2
+R3
+R4
+Z26 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/pll_50mhz_10khz.vhd
+Z27 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/pll_50mhz_10khz.vhd
+l0
+L42
+VL@10ik_mSVkcz_^:V2bGB1
+R7
+31
+Z28 !s108 1571622214.393363
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/pll_50mhz_10khz.vhd|
+Z30 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/pll_50mhz_10khz.vhd|
+R11
+R12
+!s100 >nQ`oBCmYAN4YG4hlTV_;2
+!i10b 1
+Asyn
+R2
+R3
+DEx4 work 15 pll_50mhz_10khz 0 22 L@10ik_mSVkcz_^:V2bGB1
+l125
+L51
+V12z]R?YY@Oj3>ZK[PlP4=2
+R7
+31
+R28
+R29
+R30
+R11
+R12
+!s100 e]2T2^;098Q5KYldbLYZH1
+!i10b 1
+vpll_50mhz_10khz_altpll
+IaBj^1d2mM`OU@JjX[6^RT0
+VUAFe]7c1a2@9Z2nOJA6US3
+R4
+R1
+8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/db/pll_50mhz_10khz_altpll.v
+F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/db/pll_50mhz_10khz_altpll.v
+L0 29
+Z31 OV;L;10.1d;51
+r1
+31
+o-vlog01compat -work work -O0
+!i10b 1
+!s100 _S2imk040bfMKlYRI6m<c2
+!s85 0
+!s108 1571622212.397626
+!s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/db/pll_50mhz_10khz_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/db|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/db/pll_50mhz_10khz_altpll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/db -O0
+Esel_disp
+R25
+R2
+R3
+R4
+Z32 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/sel_disp.vhd
+Z33 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/sel_disp.vhd
+l0
+L4
+VUfR88T`=gf]O:SFg4_`oe0
+R7
+31
+Z34 !s108 1571622215.132215
+Z35 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/sel_disp.vhd|
+Z36 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/sel_disp.vhd|
+R11
+R12
+!s100 7ORRNA@^QIjm]O;]ZCk>f0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 8 sel_disp 0 22 UfR88T`=gf]O:SFg4_`oe0
+l39
+L25
+VPH?5WE?g3We4YW6BQ;;nZ2
+R7
+31
+R34
+R35
+R36
+R11
+R12
+!s100 `JoDfieG?o1KKAEUCHE@L0
+!i10b 1
+Etimer
+Z37 w1571438301
+R13
+R2
+R3
+R4
+Z38 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer.vhd
+Z39 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer.vhd
+l0
+L5
+VOJe1nE:gS`GoNPLa7<8O]3
+R7
+31
+Z40 !s108 1571622213.680735
+Z41 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer.vhd|
+Z42 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer.vhd|
+R11
+R12
+!s100 DhjG4OoR=>bCMQ^dCQm3R1
+!i10b 1
+Abcd_two_digits
+R13
+R2
+R3
+DEx4 work 5 timer 0 22 OJe1nE:gS`GoNPLa7<8O]3
+l22
+L16
+V>A<^3mNjTNH6imT85Fc_S0
+R7
+31
+R40
+R41
+R42
+R11
+R12
+!s100 cIEUZhJJ?Qi`9[]ceF`691
+!i10b 1
+Etimer_tb
+R37
+Z43 DPx12 modelsim_lib 4 util 0 22 Ci0SSDmVf2K[lFkJZoo=62
+R13
+R2
+R3
+R4
+Z44 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht
+Z45 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht
 l0
 L7
 V0]F?`2N[f9GjDCS2?7N_@2
-R8
-31
-Z21 !s108 1571438380.628283
-Z22 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht|
-Z23 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht|
-R12
-R13
 !s100 OZ0XG8RQ8dQYgDH`_i4eZ3
+R7
+31
 !i10b 1
+Z46 !s108 1571622217.406864
+Z47 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht|
+Z48 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/timer_tb.vht|
+R11
+R12
 Abench
-R18
+R43
+R13
 R2
 R3
-R4
 DEx4 work 8 timer_tb 0 22 0]F?`2N[f9GjDCS2?7N_@2
 l32
 L10
 V[:WaN:znf0Fo_OEL1n@k:3
-R8
-31
-R21
-R22
-R23
-R12
-R13
 !s100 gK=:7PL4a4`eh`Qoa?Wk21
+R7
+31
+!i10b 1
+R46
+R47
+R48
+R11
+R12
+Etop_timer_de2_115
+Z49 w1571438302
+R13
+R2
+R3
+R4
+Z50 8/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/top_timer_de2_115.vhd
+Z51 F/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/top_timer_de2_115.vhd
+l0
+L5
+Vhno];eG_B1Go?W2XZ`[H93
+R7
+31
+Z52 !s108 1571622212.767935
+Z53 !s90 -reportprogress|300|-93|-work|work|/home/allex.m/192/dlp2/dlp2/dlp2/atividade2/top_timer_de2_115.vhd|
+Z54 !s107 /home/allex.m/192/dlp2/dlp2/dlp2/atividade2/top_timer_de2_115.vhd|
+R11
+R12
+!s100 W;R>?^Mmjm2oce=QN?UQ_1
+!i10b 1
+Atop_a3_2019_2
+R13
+R2
+R3
+DEx4 work 17 top_timer_de2_115 0 22 hno];eG_B1Go?W2XZ`[H93
+l105
+L24
+VIK9z0^=oDjJh?fHGINXO02
+R7
+31
+R52
+R53
+R54
+R11
+R12
+!s100 eMz0?3>M][AEmh`JGGUAE3
 !i10b 1
