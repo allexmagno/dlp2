@@ -4,26 +4,26 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 1991-2011 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 */
 (header "graphic" (version "1.4"))
 (pin
 	(input)
 	(rect 608 408 800 424)
-	(text "INPUT" (rect 157 0 185 10)(font "Arial" (font_size 6)))
-	(text "PLD_CLOCKINPUT" (rect 5 0 102 12)(font "Arial" ))
+	(text "INPUT" (rect 157 0 186 9)(font "Arial" (font_size 6)))
+	(text "PLD_CLOCKINPUT" (rect 5 0 104 10)(font "Arial" ))
 	(pt 192 8)
 	(drawing
 		(line (pt 116 12)(pt 141 12))
@@ -33,14 +33,14 @@ applicable agreement for further details.
 		(line (pt 141 4)(pt 145 8))
 		(line (pt 141 12)(pt 145 8))
 	)
-	(text "VCC" (rect 160 7 180 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 160 7 181 16)(font "Arial" (font_size 6)))
 	(annotation_block (location)(rect 696 376 744 392))
 )
 (pin
 	(output)
-	(rect 608 520 784 536)
-	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "LEDG[7..0]" (rect 31 0 86 12)(font "Arial" ))
+	(rect 608 464 784 480)
+	(text "OUTPUT" (rect 137 0 177 9)(font "Arial" (font_size 6)))
+	(text "LEDG[7..0]" (rect 31 0 87 10)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -55,36 +55,99 @@ applicable agreement for further details.
 	(annotation_block (location)(rect 1240 464 1304 576))
 )
 (symbol
-	(rect 560 448 592 464)
-	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst2" (rect 3 5 26 17)(font "Arial" )(invisible))
+	(rect 552 504 584 520)
+	(text "VCC" (rect 7 0 28 9)(font "Arial" (font_size 6)))
+	(text "inst2" (rect 3 5 27 15)(font "Arial" )(invisible))
 	(port
 		(pt 16 16)
 		(output)
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 26 18)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 26 18)(font "Courier New" (bold))(invisible))
 		(line (pt 16 16)(pt 16 8))
 	)
 	(drawing
 		(line (pt 8 8)(pt 24 8))
 	)
 )
-(connector
-	(pt 576 472)
-	(pt 576 464)
+(symbol
+	(rect 896 368 1408 552)
+	(text "first_nios2_system" (rect 200 -1 329 14)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 168 26 178)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 40 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 44 73)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 224 72))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "reset_reset_n" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 141 85 153)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 224 152))
+	)
+	(port
+		(pt 0 112)
+		(output)
+		(text "led_pio_external_connection_export[7..0]" (rect 0 0 236 12)(font "Arial" (font_size 8)))
+		(text "led_pio_external_connection_export[7..0]" (rect 4 101 240 113)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 224 112)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 209 43 229 57)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 229 67 245 77)(font "Arial" (color 0 0 0)))
+		(text "led_pio_external_connection" (rect 60 83 247 97)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 107 260 117)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 195 123 229 137)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 229 147 266 157)(font "Arial" (color 0 0 0)))
+		(text " first_nios2_system " (rect 425 168 527 178)(font "Arial" ))
+		(line (pt 224 32)(pt 288 32))
+		(line (pt 288 32)(pt 288 168))
+		(line (pt 224 168)(pt 288 168))
+		(line (pt 224 32)(pt 224 168))
+		(line (pt 225 52)(pt 225 76))
+		(line (pt 226 52)(pt 226 76))
+		(line (pt 225 92)(pt 225 116))
+		(line (pt 226 92)(pt 226 116))
+		(line (pt 225 132)(pt 225 156))
+		(line (pt 226 132)(pt 226 156))
+		(line (pt 0 0)(pt 512 0))
+		(line (pt 512 0)(pt 512 184))
+		(line (pt 0 184)(pt 512 184))
+		(line (pt 0 0)(pt 0 184))
+	)
 )
 (connector
-	(pt 824 472)
-	(pt 576 472)
-)
-(connector
-	(pt 824 416)
 	(pt 800 416)
+	(pt 808 416)
 )
 (connector
-	(pt 824 528)
-	(pt 784 528)
+	(pt 784 472)
+	(pt 792 472)
 	(bus)
 )
-(text "This is the top level for the HW tutorial" (rect 768 264 982 278)(font "Arial" (color 0 0 0)(font_size 8)))
-(text "NiosII QuartusII Project" (rect 768 232 1059 259)(font "Arial" (color 0 0 0)(font_size 18)))
+(connector
+	(pt 808 416)
+	(pt 808 440)
+)
+(connector
+	(pt 792 472)
+	(pt 792 480)
+	(bus)
+)
+(connector
+	(pt 808 440)
+	(pt 896 440)
+)
+(connector
+	(pt 568 520)
+	(pt 896 520)
+)
+(connector
+	(pt 792 480)
+	(pt 896 480)
+	(bus)
+)
+(text "This is the top level for the HW tutorial" (rect 768 264 983 276)(font "Arial" (color 0 0 0)(font_size 8)))
+(text "NiosII QuartusII Project" (rect 768 232 1060 259)(font "Arial" (color 0 0 0)(font_size 18)))

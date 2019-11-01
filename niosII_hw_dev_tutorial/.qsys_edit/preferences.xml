@@ -3,12 +3,12 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="127" />
+   <connections preferredWidth="143" />
    <irq preferredWidth="34" />
    <name preferredWidth="204" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Basic Functions,Library,Project,Library/Basic Functions/Simulation; Debug and Verification,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance" />
- <window width="1172" height="800" x="278" y="199" />
+ <library expandedCategories="Library,Project" />
+ <window width="800" height="852" x="0" y="24" />
+ <generation synthesis="VHDL" path="_PROJECT_NAME_" greybox="1" />
 </preferences>
