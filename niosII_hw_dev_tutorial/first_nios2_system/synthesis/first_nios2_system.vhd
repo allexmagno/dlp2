@@ -8,9 +8,10 @@ use IEEE.numeric_std.all;
 
 entity first_nios2_system is
 	port (
-		clk_clk                            : in  std_logic                    := '0'; --                         clk.clk
-		led_pio_external_connection_export : out std_logic_vector(7 downto 0);        -- led_pio_external_connection.export
-		reset_reset_n                      : in  std_logic                    := '0'  --                       reset.reset_n
+		clk_clk                            : in  std_logic                    := '0';             --                         clk.clk
+		led_pio_external_connection_export : out std_logic_vector(7 downto 0);                    -- led_pio_external_connection.export
+		reset_reset_n                      : in  std_logic                    := '0';             --                       reset.reset_n
+		sw_pio_external_connection_export  : in  std_logic_vector(7 downto 0) := (others => '0')  --  sw_pio_external_connection.export
 	);
 end entity first_nios2_system;
 
@@ -91,6 +92,16 @@ architecture rtl of first_nios2_system is
 		);
 	end component first_nios2_system_onchip_mem;
 
+	component first_nios2_system_sw_pio is
+		port (
+			clk      : in  std_logic                     := 'X';             -- clk
+			reset_n  : in  std_logic                     := 'X';             -- reset_n
+			address  : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			readdata : out std_logic_vector(31 downto 0);                    -- readdata
+			in_port  : in  std_logic_vector(7 downto 0)  := (others => 'X')  -- export
+		);
+	end component first_nios2_system_sw_pio;
+
 	component first_nios2_system_sys_clk_timer is
 		port (
 			clk        : in  std_logic                     := 'X';             -- clk
@@ -157,6 +168,8 @@ architecture rtl of first_nios2_system is
 			onchip_mem_s1_byteenable                : out std_logic_vector(3 downto 0);                     -- byteenable
 			onchip_mem_s1_chipselect                : out std_logic;                                        -- chipselect
 			onchip_mem_s1_clken                     : out std_logic;                                        -- clken
+			sw_pio_s1_address                       : out std_logic_vector(1 downto 0);                     -- address
+			sw_pio_s1_readdata                      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			sys_clk_timer_s1_address                : out std_logic_vector(2 downto 0);                     -- address
 			sys_clk_timer_s1_write                  : out std_logic;                                        -- write
 			sys_clk_timer_s1_readdata               : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
@@ -290,6 +303,8 @@ architecture rtl of first_nios2_system is
 	signal mm_interconnect_0_led_pio_s1_address                          : std_logic_vector(1 downto 0);  -- mm_interconnect_0:led_pio_s1_address -> led_pio:address
 	signal mm_interconnect_0_led_pio_s1_write                            : std_logic;                     -- mm_interconnect_0:led_pio_s1_write -> mm_interconnect_0_led_pio_s1_write:in
 	signal mm_interconnect_0_led_pio_s1_writedata                        : std_logic_vector(31 downto 0); -- mm_interconnect_0:led_pio_s1_writedata -> led_pio:writedata
+	signal mm_interconnect_0_sw_pio_s1_readdata                          : std_logic_vector(31 downto 0); -- sw_pio:readdata -> mm_interconnect_0:sw_pio_s1_readdata
+	signal mm_interconnect_0_sw_pio_s1_address                           : std_logic_vector(1 downto 0);  -- mm_interconnect_0:sw_pio_s1_address -> sw_pio:address
 	signal irq_mapper_receiver0_irq                                      : std_logic;                     -- jtag_uart:av_irq -> irq_mapper:receiver0_irq
 	signal irq_mapper_receiver1_irq                                      : std_logic;                     -- sys_clk_timer:irq -> irq_mapper:receiver1_irq
 	signal cpu_d_irq_irq                                                 : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> cpu:d_irq
@@ -300,7 +315,7 @@ architecture rtl of first_nios2_system is
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:inv -> jtag_uart:av_write_n
 	signal mm_interconnect_0_sys_clk_timer_s1_write_ports_inv            : std_logic;                     -- mm_interconnect_0_sys_clk_timer_s1_write:inv -> sys_clk_timer:write_n
 	signal mm_interconnect_0_led_pio_s1_write_ports_inv                  : std_logic;                     -- mm_interconnect_0_led_pio_s1_write:inv -> led_pio:write_n
-	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [cpu:reset_n, jtag_uart:rst_n, led_pio:reset_n, sys_clk_timer:reset_n, sysid:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [cpu:reset_n, jtag_uart:rst_n, led_pio:reset_n, sw_pio:reset_n, sys_clk_timer:reset_n, sysid:reset_n]
 
 begin
 
@@ -376,6 +391,15 @@ begin
 			freeze     => '0'                                         -- (terminated)
 		);
 
+	sw_pio : component first_nios2_system_sw_pio
+		port map (
+			clk      => clk_clk,                                  --                 clk.clk
+			reset_n  => rst_controller_reset_out_reset_ports_inv, --               reset.reset_n
+			address  => mm_interconnect_0_sw_pio_s1_address,      --                  s1.address
+			readdata => mm_interconnect_0_sw_pio_s1_readdata,     --                    .readdata
+			in_port  => sw_pio_external_connection_export         -- external_connection.export
+		);
+
 	sys_clk_timer : component first_nios2_system_sys_clk_timer
 		port map (
 			clk        => clk_clk,                                            --   clk.clk
@@ -440,6 +464,8 @@ begin
 			onchip_mem_s1_byteenable                => mm_interconnect_0_onchip_mem_s1_byteenable,                --                                  .byteenable
 			onchip_mem_s1_chipselect                => mm_interconnect_0_onchip_mem_s1_chipselect,                --                                  .chipselect
 			onchip_mem_s1_clken                     => mm_interconnect_0_onchip_mem_s1_clken,                     --                                  .clken
+			sw_pio_s1_address                       => mm_interconnect_0_sw_pio_s1_address,                       --                         sw_pio_s1.address
+			sw_pio_s1_readdata                      => mm_interconnect_0_sw_pio_s1_readdata,                      --                                  .readdata
 			sys_clk_timer_s1_address                => mm_interconnect_0_sys_clk_timer_s1_address,                --                  sys_clk_timer_s1.address
 			sys_clk_timer_s1_write                  => mm_interconnect_0_sys_clk_timer_s1_write,                  --                                  .write
 			sys_clk_timer_s1_readdata               => mm_interconnect_0_sys_clk_timer_s1_readdata,               --                                  .readdata

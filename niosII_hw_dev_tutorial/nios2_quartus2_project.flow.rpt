@@ -1,5 +1,5 @@
 Flow report for nios2_quartus2_project
-Mon Nov  4 16:31:50 2019
+Fri Nov  8 16:21:59 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov  4 16:31:46 2019           ;
+; Flow Status                        ; Successful - Fri Nov  8 16:21:49 2019           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; nios2_quartus2_project                          ;
 ; Top-level Entity Name              ; nios2_quartus2_project                          ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 2,285 / 114,480 ( 2 % )                         ;
-;     Total combinational functions  ; 2,091 / 114,480 ( 2 % )                         ;
-;     Dedicated logic registers      ; 1,355 / 114,480 ( 1 % )                         ;
-; Total registers                    ; 1355                                            ;
-; Total pins                         ; 9 / 529 ( 2 % )                                 ;
+; Total logic elements               ; 2,321 / 114,480 ( 2 % )                         ;
+;     Total combinational functions  ; 2,122 / 114,480 ( 2 % )                         ;
+;     Dedicated logic registers      ; 1,376 / 114,480 ( 1 % )                         ;
+; Total registers                    ; 1376                                            ;
+; Total pins                         ; 17 / 529 ( 3 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 192,384 / 3,981,312 ( 5 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                 ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 11/04/2019 16:30:39    ;
+; Start date & time ; 11/08/2019 16:18:19    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; nios2_quartus2_project ;
 +-------------------+------------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------------+---------------+--------------------+------------+
 ; Assignment Name                     ; Value                                                                ; Default Value ; Entity Name        ; Section Id ;
 +-------------------------------------+----------------------------------------------------------------------+---------------+--------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 277807426740322.157289583908325                                      ; --            ; --                 ; --         ;
+; COMPILER_SIGNATURE_ID               ; 79965022112748.157324069903768                                       ; --            ; --                 ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                   ; --            ; --                 ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                    ; --            ; --                 ; --         ;
 ; MISC_FILE                           ; first_nios2_system/synthesis/../first_nios2_system.cmp               ; --            ; --                 ; --         ;
@@ -91,7 +91,7 @@ refer to the applicable agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                ; --            ; --                 ; --         ;
 ; SLD_FILE                            ; first_nios2_system/synthesis/first_nios2_system.regmap               ; --            ; --                 ; --         ;
 ; SLD_FILE                            ; first_nios2_system/synthesis/first_nios2_system.debuginfo            ; --            ; --                 ; --         ;
-; SLD_INFO                            ; QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1572895503 ; --            ; first_nios2_system ; --         ;
+; SLD_INFO                            ; QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1573239978 ; --            ; first_nios2_system ; --         ;
 ; SMART_RECOMPILE                     ; On                                                                   ; Off           ; --                 ; --         ;
 ; SOPCINFO_FILE                       ; first_nios2_system/synthesis/../../first_nios2_system.sopcinfo       ; --            ; --                 ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                   ; --            ; --                 ; --         ;
@@ -103,11 +103,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 1119 MB             ; 00:01:04                           ;
-; Fitter               ; 00:00:19     ; 1.0                     ; 1762 MB             ; 00:00:26                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 854 MB              ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 965 MB              ; 00:00:03                           ;
-; Total                ; 00:01:06     ; --                      ; --                  ; 00:01:38                           ;
+; Analysis & Synthesis ; 00:01:46     ; 1.0                     ; 1117 MB             ; 00:03:01                           ;
+; Fitter               ; 00:01:04     ; 1.0                     ; 1762 MB             ; 00:01:22                           ;
+; Assembler            ; 00:00:27     ; 1.0                     ; 852 MB              ; 00:00:16                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.2                     ; 971 MB              ; 00:00:09                           ;
+; Total                ; 00:03:25     ; --                      ; --                  ; 00:04:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,10 +116,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------------+------------------+------------+----------------+
 ; Module Name          ; Machine Hostname   ; OS Name          ; OS Version ; Processor type ;
 +----------------------+--------------------+------------------+------------+----------------+
-; Analysis & Synthesis ; sj-lin-prog-756051 ; Debian GNU/Linux ; 9          ; x86_64         ;
-; Fitter               ; sj-lin-prog-756051 ; Debian GNU/Linux ; 9          ; x86_64         ;
-; Assembler            ; sj-lin-prog-756051 ; Debian GNU/Linux ; 9          ; x86_64         ;
-; Timing Analyzer      ; sj-lin-prog-756051 ; Debian GNU/Linux ; 9          ; x86_64         ;
+; Analysis & Synthesis ; sj-lin-prog-866464 ; Debian GNU/Linux ; 9          ; x86_64         ;
+; Fitter               ; sj-lin-prog-866464 ; Debian GNU/Linux ; 9          ; x86_64         ;
+; Assembler            ; sj-lin-prog-866464 ; Debian GNU/Linux ; 9          ; x86_64         ;
+; Timing Analyzer      ; sj-lin-prog-866464 ; Debian GNU/Linux ; 9          ; x86_64         ;
 +----------------------+--------------------+------------------+------------+----------------+
 
 

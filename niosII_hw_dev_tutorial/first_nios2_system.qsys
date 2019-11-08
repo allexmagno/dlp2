@@ -45,7 +45,7 @@
    {
       datum baseAddress
       {
-         value = "69688";
+         value = "69704";
          type = "String";
       }
    }
@@ -61,7 +61,7 @@
    {
       datum baseAddress
       {
-         value = "69664";
+         value = "69680";
          type = "String";
       }
    }
@@ -78,6 +78,22 @@
       datum baseAddress
       {
          value = "32768";
+         type = "String";
+      }
+   }
+   element sw_pio
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element sw_pio.s1
+   {
+      datum baseAddress
+      {
+         value = "69664";
          type = "String";
       }
    }
@@ -117,7 +133,7 @@
    {
       datum baseAddress
       {
-         value = "69680";
+         value = "69696";
          type = "String";
       }
    }
@@ -149,6 +165,11 @@
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="sw_pio_external_connection"
+   internal="sw_pio.external_connection"
+   type="conduit"
+   dir="end" />
  <module name="clk_0" kind="clock_source" version="18.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -165,7 +186,7 @@
   <parameter name="cpuReset" value="false" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="dataAddrWidth" value="17" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_mem.s1' start='0x8000' end='0xD000' /><slave name='cpu.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='sys_clk_timer.s1' start='0x11000' end='0x11020' /><slave name='led_pio.s1' start='0x11020' end='0x11030' /><slave name='sysid.control_slave' start='0x11030' end='0x11038' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11038' end='0x11040' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_mem.s1' start='0x8000' end='0xD000' /><slave name='cpu.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='sys_clk_timer.s1' start='0x11000' end='0x11020' /><slave name='sw_pio.s1' start='0x11020' end='0x11030' /><slave name='led_pio.s1' start='0x11030' end='0x11040' /><slave name='sysid.control_slave' start='0x11040' end='0x11048' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11048' end='0x11050' /></address-map>]]></parameter>
   <parameter name="dcache_bursts" value="false" />
   <parameter name="dcache_lineSize" value="32" />
   <parameter name="dcache_numTCDM" value="0" />
@@ -347,6 +368,20 @@
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
+ <module name="sw_pio" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
+ </module>
  <module
    name="sys_clk_timer"
    kind="altera_avalon_timer"
@@ -376,7 +411,7 @@
    start="cpu.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011038" />
+  <parameter name="baseAddress" value="0x00011048" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -385,7 +420,7 @@
    start="cpu.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="baseAddress" value="0x00011040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -417,6 +452,11 @@
  </connection>
  <connection kind="avalon" version="18.1" start="cpu.data_master" end="led_pio.s1">
   <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="avalon" version="18.1" start="cpu.data_master" end="sw_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
@@ -443,6 +483,7 @@
  <connection kind="clock" version="18.1" start="clk_0.clk" end="sys_clk_timer.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="sysid.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="led_pio.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="sw_pio.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="onchip_mem.clk1" />
  <connection kind="interrupt" version="18.1" start="cpu.d_irq" end="jtag_uart.irq">
   <parameter name="irqNumber" value="16" />
@@ -470,6 +511,11 @@
    version="18.1"
    start="clk_0.clk_reset"
    end="led_pio.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="sw_pio.reset" />
  <connection
    kind="reset"
    version="18.1"
